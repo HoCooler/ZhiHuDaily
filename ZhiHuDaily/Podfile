@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+
+pod 'Mantle', '~>1.5'
+pod 'Masonry'
+pod 'SDWebImage', '~>3.7'
+pod 'ReactiveCocoa'
+pod 'AFNetworking'

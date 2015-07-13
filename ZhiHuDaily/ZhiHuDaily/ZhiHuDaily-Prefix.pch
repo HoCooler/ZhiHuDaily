@@ -1,0 +1,25 @@
+//
+//  ZhiHuDaily.pch
+//  ZhiHuDaily
+//
+//  Created by HoCooler on 15/7/9.
+//  Copyright (c) 2015年 HoCooler. All rights reserved.
+//
+
+#ifndef ZhiHuDaily_ZhiHuDaily_pch
+#define ZhiHuDaily_ZhiHuDaily_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
+#import <AFNetworking/AFNetworking.h>
+#import <Masonry/Masonry.h>
+#import <SDWebImage/SDImageCache.h>
+#import <SDWebImage/SDWebImageManager.h>
+#import <UIKit/UIKit.h>
+#import "UIImageView+WebCache.h"
+
+#endif
