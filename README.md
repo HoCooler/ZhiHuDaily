@@ -12,3 +12,6 @@
 
 
 3. 工程中使用的第三方库包括
+CocoaPod : 工程库的管理
+AFnetworking ：网络请求
+Masonry ：Autolayout自动布局
