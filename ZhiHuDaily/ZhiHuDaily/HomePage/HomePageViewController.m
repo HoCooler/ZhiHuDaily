@@ -8,12 +8,14 @@
 
 #import "HomePageViewController.h"
 #import "HomePageViewModel.h"
-#import "newsListView.h"
+#import "NewsListView.h"
+#import "NewsBannerView.h"
 
 @interface HomePageViewController ()
 
 @property (nonatomic, strong) HomePageViewModel *viewModel;
-@property (nonatomic, strong) newsListView *listView;
+@property (nonatomic, strong) NewsListView *listView;
+@property (nonatomic, strong) NewsBannerView *bannerView;
 @property (nonatomic, strong) UIView *headView;
 @end
 
@@ -21,23 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor grayColor];
     [[self.viewModel fetchNewsListCommand] execute:nil];
-    RAC(self, listView.newsDataSource) = RACObserve(self, viewModel.newsListInfo);
+    RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
+    RAC(self, bannerView.banners) = RACObserve(self, viewModel.newsListInfo.items);
 }
 
 - (void)updateViewConstraints
 {
     [self.headView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@50);
+        make.height.equalTo(@40);
+    }];
+    
+    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.headView.mas_bottom);
     }];
     
     [self.listView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.headView.mas_bottom).offset(10);
+        make.right.bottom.equalTo(self.view).offset(-10);
+        make.top.equalTo(self.bannerView.mas_bottom).offset(10);
         make.left.equalTo(self.view.mas_left).offset(10);
-//        make.edges.equalTo(self);
     }];
     
     [super updateViewConstraints];
@@ -51,13 +58,22 @@
     return _viewModel;
 }
 
-- (newsListView *)listView
+- (NewsListView *)listView
 {
     if (!_listView) {
-        _listView = [[newsListView alloc] init];
+        _listView = [[NewsListView alloc] init];
         [self.view addSubview:_listView];
     }
     return _listView;
+}
+
+- (NewsBannerView *)bannerView
+{
+    if (!_bannerView) {
+        _bannerView = [NewsBannerView new];
+        [self.view addSubview:_bannerView];
+    }
+    return _bannerView;
 }
 
 - (UIView *)headView

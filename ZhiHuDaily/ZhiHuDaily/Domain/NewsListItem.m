@@ -14,7 +14,8 @@
 {
     return @{@keypath(NewsListItem.new, title) : @"title",
               @keypath(NewsListItem.new, newsID) : @"id",
-              @keypath(NewsListItem.new, imagesURL) : @"images"
+              @keypath(NewsListItem.new, imagesURL) : @"images",
+              @keypath(NewsListItem.new, isMultiPic) : @"multipic"
              };
 }
 

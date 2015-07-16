@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "NewsListItem.h"
 
-@interface newsListCell : UITableViewCell
+@interface NewsListCell : UITableViewCell
 
-//@property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NewsListItem *newsItem;
 
 @end

@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSArray *imagesURL; //NSArray of NSURL;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *newsID;
+@property (nonatomic, assign) BOOL isMultiPic;
+
 @end

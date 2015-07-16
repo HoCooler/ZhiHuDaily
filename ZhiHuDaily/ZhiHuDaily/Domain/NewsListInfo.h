@@ -12,6 +12,7 @@
 @interface NewsListInfo : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSDate *newsDate;
-@property (nonatomic, strong) NSArray *items; //Array of newsListItem
+@property (nonatomic, strong) NSArray *items; //Array of NewsListItem
+@property (nonatomic, strong) NSArray *banners; // NSArray of NewsListItem
 
 @end

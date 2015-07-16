@@ -14,8 +14,18 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{@keypath(NewsListInfo.new, newsDate): @"date",
-        @keypath(NewsListInfo.new, items): @"stories"
+              @keypath(NewsListInfo.new, items): @"stories",
+              @keypath(NewsListInfo.new, banners) : @"top_stories"
     };
+}
+
++ (NSValueTransformer *)bannersJSONTransformer
+{
+    return [MTLValueTransformer transformerWithBlock:^id(NSArray *banners) {
+        return [[[banners rac_sequence] map:^id(NSDictionary *value) {
+            return [MTLJSONAdapter modelOfClass:[NewsListItem class] fromJSONDictionary:value error:nil];
+        }] array];
+    }];
 }
 
 + (NSValueTransformer *)newsDateJSONTransformer

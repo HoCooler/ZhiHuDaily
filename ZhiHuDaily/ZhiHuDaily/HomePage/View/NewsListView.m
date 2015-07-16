@@ -6,19 +6,19 @@
 //  Copyright (c) 2015年 HoCooler. All rights reserved.
 //
 
-#import "newsListView.h"
-#import "newsListCell.h"
+#import "NewsListView.h"
+#import "NewsListCell.h"
 #import "NewsListItem.h"
 
 static NSString *cellIdentifier = @"newsListCell";
 
-@interface newsListView()
+@interface NewsListView()
 
 @property (nonatomic, strong) UILabel* dateLabel;
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
 @end
 
-@implementation newsListView
+@implementation NewsListView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -33,13 +33,19 @@ static NSString *cellIdentifier = @"newsListCell";
     return self;
 }
 
--(void)setNewsDataSource:(NewsListInfo *)newsDataSource
+- (void)setNews:(NSArray *)news
 {
-    if (_newsDataSource != newsDataSource) {
-        _newsDataSource = newsDataSource;
-        self.dateLabel.text = [self.dateFormat stringFromDate:newsDataSource.newsDate];
+    if (_news != news) {
+        _news = news;
         [self reloadData];
+    }
+}
 
+- (void)setNewsDate:(NSDate *)newsDate
+{
+    if (_newsDate != newsDate) {
+        _newsDate = newsDate;
+        self.dateLabel.text = [self.dateFormat stringFromDate:newsDate];
     }
 }
 
@@ -88,7 +94,7 @@ static NSString *cellIdentifier = @"newsListCell";
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.newsDataSource.items count];
+    return [self.news count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,17 +102,17 @@ static NSString *cellIdentifier = @"newsListCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[newsListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[NewsListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    ((newsListCell *)cell).newsItem = self.newsDataSource.items[indexPath.row];
+    ((NewsListCell *)cell).newsItem = self.news[indexPath.row];
 
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [self.dateFormat stringFromDate:self.newsDataSource.newsDate];
+    return [self.dateFormat stringFromDate:self.newsDate];
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

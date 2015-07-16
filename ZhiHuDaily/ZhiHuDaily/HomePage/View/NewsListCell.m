@@ -6,20 +6,22 @@
 //  Copyright (c) 2015年 HoCooler. All rights reserved.
 //
 
-#import "newsListCell.h"
+#import "NewsListCell.h"
 
-@interface newsListCell()
+@interface NewsListCell()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *headImageView;
+@property (nonatomic, strong) UIImageView *multiPicFlagImageView;
 @end
 
-@implementation newsListCell
+@implementation NewsListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.backgroundColor = [UIColor lightGrayColor];
         [self updateConstraints];
     }
     return self;
@@ -43,6 +45,12 @@
         make.right.equalTo(self.headImageView.mas_left).offset(-10);
     }];
     
+    [self.multiPicFlagImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.right.bottom.equalTo(self.headImageView);
+        make.height.equalTo(@15);
+        make.width.equalTo(@25);
+    }];
+    
     [super updateConstraints];
 }
 
@@ -50,10 +58,10 @@
 {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.numberOfLines = 0;
         _titleLabel.font = [UIFont systemFontOfSize:18];
-        [self.contentView addSubview:_titleLabel];
+        [self addSubview:_titleLabel];
     }
     return _titleLabel;
 }
@@ -62,9 +70,28 @@
 {
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc] init];
-        [self.contentView addSubview:_headImageView];
+        [self addSubview:_headImageView];
     }
     return _headImageView;
+}
+
+- (UIImageView *)multiPicFlagImageView
+{
+    if (!_multiPicFlagImageView) {
+        _multiPicFlagImageView = [UIImageView new];
+        UILabel *multiPicLabel = [[UILabel alloc] init];
+        multiPicLabel.text = @"多图";
+        multiPicLabel.textAlignment = NSTextAlignmentRight;
+        multiPicLabel.font = [UIFont systemFontOfSize:8];
+        multiPicLabel.textColor = [UIColor whiteColor];
+        [_multiPicFlagImageView addSubview:multiPicLabel];
+        [multiPicLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(_multiPicFlagImageView);
+        }];
+        _multiPicFlagImageView.backgroundColor = [UIColor colorWithRed:0x33 green:0x33 blue:0x33 alpha:0.2];
+        [self addSubview:_multiPicFlagImageView];
+    }
+    return _multiPicFlagImageView;
 }
 
 - (void)setNewsItem:(NewsListItem *)newsItem
@@ -75,6 +102,7 @@
         if ([newsItem.imagesURL count]) {
             [self.headImageView sd_setImageWithURL:newsItem.imagesURL[0]];
         }
+        self.multiPicFlagImageView.hidden = newsItem.isMultiPic;
     }
 }
 
