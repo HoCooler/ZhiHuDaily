@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *headImageView;
 @property (nonatomic, strong) UIImageView *multiPicFlagImageView;
+@property (nonatomic, strong) UIImageView *mainView;
 @end
 
 @implementation NewsListCell
@@ -21,7 +22,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
+        self.backgroundColor = [UIColor grayColor];
         [self updateConstraints];
     }
     return self;
@@ -29,17 +30,20 @@
 
 - (void) updateConstraints
 {
+    [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 5, 15, 0));
+    }];
+    
     [self.headImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        //        make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 5, 5, 5));
-        make.right.equalTo(self).offset(-10);
-        make.top.equalTo(self).offset(10);
-        make.bottom.equalTo(self).offset(-10);
+        make.right.equalTo(self.mainView).offset(-10);
+        make.top.equalTo(self.mainView).offset(10);
+        make.bottom.equalTo(self.mainView).offset(-10);
         make.width.equalTo(@60);
         make.height.equalTo(@60);
     }];
 
     [self.titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(10);
+        make.left.equalTo(self.mainView).offset(10);
         make.top.equalTo(self.headImageView.mas_top);
         make.bottom.lessThanOrEqualTo(self.headImageView.mas_bottom);
         make.right.equalTo(self.headImageView.mas_left).offset(-10);
@@ -92,6 +96,16 @@
         [self addSubview:_multiPicFlagImageView];
     }
     return _multiPicFlagImageView;
+}
+
+- (UIImageView *)mainView
+{
+    if (!_mainView) {
+        _mainView = [UIImageView new];
+        _mainView.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:_mainView];
+    }
+    return _mainView;
 }
 
 - (void)setNewsItem:(NewsListItem *)newsItem

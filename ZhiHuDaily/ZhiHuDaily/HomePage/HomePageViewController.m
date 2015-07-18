@@ -26,7 +26,18 @@
     self.view.backgroundColor = [UIColor grayColor];
     [[self.viewModel fetchNewsListCommand] execute:nil];
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
-    RAC(self, bannerView.banners) = RACObserve(self, viewModel.newsListInfo.items);
+    RACSignal *bannerSignal = RACObserve(self, viewModel.newsListInfo.banners);
+    RAC(self, bannerView.banners) = bannerSignal;
+    [[bannerSignal filter:^BOOL(NSArray *banners) {
+        return [banners count];
+    }] subscribeNext:^(id x) {
+        [self.bannerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            make.top.equalTo(self.headView.mas_bottom);
+            make.height.equalTo(@160);
+        }];
+    }];
+
 }
 
 - (void)updateViewConstraints
@@ -39,6 +50,7 @@
     [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.top.equalTo(self.headView.mas_bottom);
+        make.height.equalTo(@0);
     }];
     
     [self.listView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -70,7 +82,7 @@
 - (NewsBannerView *)bannerView
 {
     if (!_bannerView) {
-        _bannerView = [NewsBannerView new];
+        _bannerView = [[NewsBannerView alloc] initWithFrame:CGRectZero];
         [self.view addSubview:_bannerView];
     }
     return _bannerView;

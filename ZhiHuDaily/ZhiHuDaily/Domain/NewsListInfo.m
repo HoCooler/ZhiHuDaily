@@ -8,6 +8,7 @@
 
 #import "NewsListInfo.h"
 #import "NewsListItem.h"
+#import "NewsBannerView.h"
 
 @implementation NewsListInfo
 
@@ -23,7 +24,7 @@
 {
     return [MTLValueTransformer transformerWithBlock:^id(NSArray *banners) {
         return [[[banners rac_sequence] map:^id(NSDictionary *value) {
-            return [MTLJSONAdapter modelOfClass:[NewsListItem class] fromJSONDictionary:value error:nil];
+            return [MTLJSONAdapter modelOfClass:[NewsBannerItem class] fromJSONDictionary:value error:nil];
         }] array];
     }];
 }

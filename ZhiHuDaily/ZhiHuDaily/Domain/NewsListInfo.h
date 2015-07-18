@@ -13,6 +13,6 @@
 
 @property (nonatomic, strong) NSDate *newsDate;
 @property (nonatomic, strong) NSArray *items; //Array of NewsListItem
-@property (nonatomic, strong) NSArray *banners; // NSArray of NewsListItem
+@property (nonatomic, strong) NSArray *banners; // NSArray of NewsBannerItem
 
 @end

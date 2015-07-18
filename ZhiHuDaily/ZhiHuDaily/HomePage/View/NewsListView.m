@@ -27,7 +27,7 @@ static NSString *cellIdentifier = @"newsListCell";
         self.delegate = self;
         self.dataSource = self;
         self.backgroundColor = [UIColor clearColor];
-        self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.scrollsToTop = YES;
     }
     return self;
@@ -84,7 +84,7 @@ static NSString *cellIdentifier = @"newsListCell";
 //TODO
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 100;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

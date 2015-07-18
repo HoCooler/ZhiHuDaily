@@ -11,9 +11,9 @@
 @interface NewsListItem : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSArray *imagesURL; //NSArray of NSURL;
-@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *newsID;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, assign) BOOL isMultiPic;
+@property (nonatomic, strong) NSArray *imagesURL; //NSArray of NSURL;
 
 @end

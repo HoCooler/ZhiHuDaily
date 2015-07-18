@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0FFF1C1B5AA48D000CB182 /* NewsBannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */; };
 		1C3F06141B4ADE8800756388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F06131B4ADE8800756388 /* main.m */; };
 		1C3F06171B4ADE8800756388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F06161B4ADE8800756388 /* AppDelegate.m */; };
 		1C3F061D1B4ADE8800756388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F061B1B4ADE8800756388 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0FFF1A1B5AA48D000CB182 /* NewsBannerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsBannerItem.h; path = Domain/NewsBannerItem.h; sourceTree = "<group>"; };
+		1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsBannerItem.m; path = Domain/NewsBannerItem.m; sourceTree = "<group>"; };
 		1C3F060E1B4ADE8800756388 /* ZhiHuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3F06121B4ADE8800756388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C3F06131B4ADE8800756388 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				1CAF1C471B4C2BE0009244C5 /* NewsListItem.m */,
 				1CAF1C4D1B4C33CC009244C5 /* NewsListInfo.h */,
 				1CAF1C4E1B4C33CC009244C5 /* NewsListInfo.m */,
+				1C0FFF1A1B5AA48D000CB182 /* NewsBannerItem.h */,
+				1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				1CAF1C4F1B4C33CC009244C5 /* NewsListInfo.m in Sources */,
 				1CAF1C411B4C2B96009244C5 /* HomePageViewController.m in Sources */,
 				1C3F06171B4ADE8800756388 /* AppDelegate.m in Sources */,
+				1C0FFF1C1B5AA48D000CB182 /* NewsBannerItem.m in Sources */,
 				1C3F06141B4ADE8800756388 /* main.m in Sources */,
 				1CAF1C481B4C2BE0009244C5 /* NewsListItem.m in Sources */,
 			);

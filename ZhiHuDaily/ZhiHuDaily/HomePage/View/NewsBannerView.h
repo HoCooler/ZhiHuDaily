@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewsListItem.h"
+#import "NewsBannerItem.h"
 
-@interface NewsBannerView : UIView
-@property(nonatomic, strong) NSArray *banners; // NSArray of NewsListItem
+@interface NewsBannerView : UIScrollView <UIScrollViewDelegate>
+@property(nonatomic, strong) NSArray *banners; // NSArray of NewsBannerItem
 @end
