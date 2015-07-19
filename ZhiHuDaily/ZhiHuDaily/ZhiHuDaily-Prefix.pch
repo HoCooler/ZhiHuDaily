@@ -12,6 +12,7 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+// 3rd party
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Foundation/Foundation.h>
 #import <Mantle/Mantle.h>
@@ -22,4 +23,6 @@
 #import <UIKit/UIKit.h>
 #import "UIImageView+WebCache.h"
 
+//
+#import "ZhiHuDailyMacros.h"
 #endif
