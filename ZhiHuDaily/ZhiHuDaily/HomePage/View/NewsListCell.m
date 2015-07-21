@@ -30,7 +30,7 @@
 
 - (void) updateConstraints
 {
-    [self.mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.mainView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 5, 15, 0));
     }];
     
@@ -65,7 +65,7 @@
         _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.numberOfLines = 0;
         _titleLabel.font = [UIFont systemFontOfSize:18];
-        [self addSubview:_titleLabel];
+        [self.mainView addSubview:_titleLabel];
     }
     return _titleLabel;
 }
@@ -74,7 +74,7 @@
 {
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc] init];
-        [self addSubview:_headImageView];
+        [self.mainView addSubview:_headImageView];
     }
     return _headImageView;
 }
@@ -93,7 +93,7 @@
             make.edges.equalTo(_multiPicFlagImageView);
         }];
         _multiPicFlagImageView.backgroundColor = [UIColor colorWithRed:0x33 green:0x33 blue:0x33 alpha:0.2];
-        [self addSubview:_multiPicFlagImageView];
+        [self.mainView addSubview:_multiPicFlagImageView];
     }
     return _multiPicFlagImageView;
 }
