@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray *imageViewArray;
 @property (nonatomic, strong) NSArray *titlesArray;
 
+@property (nonatomic, strong) NSNumber *height;
 @end
 
 @implementation NewsBannerView
@@ -23,10 +24,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.height = @(frame.size.height);
         self.backgroundColor = [UIColor clearColor];
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
         self.delegate = self;
+        self.decelerationRate = 0.1;
+        
         [self setContentOffset:CGPointMake(SCREEN_WIDTH, 0)];
     }
     return self;
@@ -34,42 +38,44 @@
 
 - (void)updateConstraints
 {
+    CGFloat defaultSpace = 15.0;
+    CGFloat textHeight = 2.0 / 3.0 * [self.height integerValue];
     if (self.banners.count > 0) {
-        [self.imageViewArray[0] mas_remakeConstraints:^(MASConstraintMaker *make) {
+        [self.imageViewArray[0] mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(self.mas_height);
             make.left.top.equalTo(self);
             make.width.equalTo(@(SCREEN_WIDTH));
         }];
+
+        [self.titlesArray[0] mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(defaultSpace);
+            make.top.equalTo(self).offset(textHeight);
+            make.width.equalTo(@(SCREEN_WIDTH- 2*defaultSpace));
+            make.height.equalTo(@50);
+        }];
         
-        [self.titlesArray[0] mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.mas_bottom).offset(-15);
-            make.left.equalTo(self.mas_left).offset(15);
-            make.right.equalTo(((UIImageView *)self.imageViewArray[0]).mas_left).offset(-10);
-            make.centerX.equalTo(((UIImageView *)self.imageViewArray[0]).mas_centerX);
+        [self.pageControl mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@7);
+            make.left.equalTo(((UILabel *)self.titlesArray[0]).mas_left).offset(SCREEN_WIDTH / 2 - 30);
+            make.top.equalTo(((UILabel *)self.titlesArray[0]).mas_bottom).offset(5);
         }];
     }
     
     for (NSInteger i = 1; i < self.banners.count; ++i) {
-        [self.imageViewArray[i] mas_remakeConstraints:^(MASConstraintMaker *make) {
+        [self.imageViewArray[i] mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(self.mas_height);
             make.width.equalTo(@(SCREEN_WIDTH));
             make.left.equalTo(((UIImageView *)self.imageViewArray[i-1]).mas_right);
             make.top.equalTo(self);
         }];
         
-        [self.titlesArray[i] mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self).offset(-15);
-            make.left.equalTo(((UIImageView *)self.imageViewArray[i]).mas_left).offset(15);
-            make.right.equalTo(((UIImageView *)self.imageViewArray[i]).mas_right).offset(-10);
-            make.centerX.equalTo(((UIImageView *)self.imageViewArray[i]).mas_centerX);
+        [self.titlesArray[i] mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(i * SCREEN_WIDTH + defaultSpace);
+            make.top.equalTo(self).offset(textHeight);
+            make.width.equalTo(@(SCREEN_WIDTH- 2*defaultSpace));
+            make.height.equalTo(@50);
         }];
     }
-    
-    [self.pageControl mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.mas_centerX);
-        make.height.equalTo(@7);
-        make.bottom.equalTo(self.mas_bottom).offset(-5);
-    }];
     
     [super updateConstraints];
 }
@@ -96,12 +102,8 @@
         
         self.pageControl.numberOfPages = number;
 
-        for (UIImageView *imageView in self.imageViewArray) {
-            [imageView removeFromSuperview];
-        }
-        
-        for (UILabel *titleLabel in self.titlesArray) {
-            [titleLabel removeFromSuperview];
+        for (id subView in self.subviews) {
+            [subView removeFromSuperview];
         }
         
         NSMutableArray *imageViews = [NSMutableArray new];
@@ -116,37 +118,40 @@
             UILabel *title = [UILabel new];
             title.numberOfLines = 3;
             title.text = ((NewsBannerItem *)banners[i]).title;
+            title.font = [UIFont boldSystemFontOfSize:20];
+            title.textColor = [UIColor whiteColor];
             [titles addObject:title];
-//            [self addSubview:title];
-            [self insertSubview:title aboveSubview:imageView];
+            [self addSubview:title];
         }
         
         self.imageViewArray = imageViews;
         self.titlesArray = titles;
         
+        [self addSubview:self.pageControl];
         [self setNeedsUpdateConstraints];
     }
 }
 
 #pragma UIScrollView delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSInteger number = [self.banners count];
-    if (number > 1) {
-        NSInteger index = floor((scrollView.contentOffset.x + SCREEN_WIDTH / 2) / SCREEN_WIDTH);
-        self.pageControl.currentPage = index;
-        [self setContentOffset:CGPointMake(index * SCREEN_WIDTH, 0) animated:YES];
-    }
-}
-
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    NSInteger number = [self.banners count];
+    if (number > 1) {
+        NSInteger index = floor((scrollView.contentOffset.x - SCREEN_WIDTH / 2) / SCREEN_WIDTH) + 1;
+        self.pageControl.currentPage = index;
+        [self setContentOffset:CGPointMake(index * SCREEN_WIDTH, 0) animated:YES];
+        
+        [self.pageControl mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@7);
+            make.left.equalTo(((UILabel *)self.titlesArray[index]).mas_left).offset(SCREEN_WIDTH / 2 - 30);
+            make.top.equalTo(((UILabel *)self.titlesArray[index]).mas_bottom).offset(5);
+        }];
+    }
 }
-
 
 
 @end

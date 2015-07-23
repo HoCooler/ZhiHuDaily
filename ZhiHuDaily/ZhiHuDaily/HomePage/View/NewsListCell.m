@@ -37,7 +37,6 @@
     [self.headImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mainView).offset(-10);
         make.top.equalTo(self.mainView).offset(10);
-        make.bottom.equalTo(self.mainView).offset(-10);
         make.width.equalTo(@60);
         make.height.equalTo(@60);
     }];
@@ -86,7 +85,7 @@
         UILabel *multiPicLabel = [[UILabel alloc] init];
         multiPicLabel.text = @"多图";
         multiPicLabel.textAlignment = NSTextAlignmentRight;
-        multiPicLabel.font = [UIFont systemFontOfSize:8];
+        multiPicLabel.font = [UIFont boldSystemFontOfSize:9];
         multiPicLabel.textColor = [UIColor whiteColor];
         [_multiPicFlagImageView addSubview:multiPicLabel];
         [multiPicLabel mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -116,7 +115,7 @@
         if ([newsItem.imagesURL count]) {
             [self.headImageView sd_setImageWithURL:newsItem.imagesURL[0]];
         }
-        self.multiPicFlagImageView.hidden = newsItem.isMultiPic;
+        self.multiPicFlagImageView.hidden = !newsItem.isMultiPic;
     }
 }
 
