@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) NewsListItem *newsItem;
 
+- (void)didSelectCell;
+
 @end

@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSArray *titlesArray;
 
 @property (nonatomic, strong) NSNumber *height;
+
+@property (nonatomic, strong) NSArray *clickButtons;
 @end
 
 @implementation NewsBannerView
@@ -59,6 +61,10 @@
             make.left.equalTo(((UILabel *)self.titlesArray[0]).mas_left).offset(SCREEN_WIDTH / 2 - 30);
             make.top.equalTo(((UILabel *)self.titlesArray[0]).mas_bottom).offset(5);
         }];
+        
+        [self.clickButtons[0] mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.imageViewArray[0]);
+        }];
     }
     
     for (NSInteger i = 1; i < self.banners.count; ++i) {
@@ -74,6 +80,10 @@
             make.top.equalTo(self).offset(textHeight);
             make.width.equalTo(@(SCREEN_WIDTH- 2*defaultSpace));
             make.height.equalTo(@50);
+        }];
+        
+        [self.clickButtons[i] mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.imageViewArray[i]);
         }];
     }
     
@@ -108,26 +118,41 @@
         
         NSMutableArray *imageViews = [NSMutableArray new];
         NSMutableArray *titles = [NSMutableArray new];
+        NSMutableArray *buttons = [NSMutableArray new];
         for (NSInteger i = 0; i < number; ++i) {
+            NewsBannerItem *banner = banners[i];
+
             UIImageView *imageView = [UIImageView new];
             [imageView setContentMode:UIViewContentModeScaleAspectFill];
             [imageViews addObject:imageView];
-            [imageView sd_setImageWithURL:((NewsBannerItem *)banners[i]).imageURL];
+            [imageView sd_setImageWithURL:banner.imageURL];
             [self addSubview:imageView];
             
             UILabel *title = [UILabel new];
             title.numberOfLines = 3;
-            title.text = ((NewsBannerItem *)banners[i]).title;
+            title.text = banner.title;
             title.font = [UIFont boldSystemFontOfSize:20];
             title.textColor = [UIColor whiteColor];
             [titles addObject:title];
             [self addSubview:title];
+
+            UIButton *button = [UIButton new];
+            button.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+                if (self.jumpCommand && banner.newsID) {
+                    [self.jumpCommand execute:banner.newsID];
+                }
+                return [RACSignal empty];
+            }];
+            [self addSubview:button];
+            [buttons addObject:button];
         }
         
         self.imageViewArray = imageViews;
         self.titlesArray = titles;
+        self.clickButtons = buttons;
         
         [self addSubview:self.pageControl];
+        
         [self setNeedsUpdateConstraints];
     }
 }
@@ -135,6 +160,12 @@
 #pragma UIScrollView delegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
+//    [self.animationTimer pauseTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+//    [self.animationTimer resumeTimerAfterTimeInterval:self.animationDuration];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

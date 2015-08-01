@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSArray *news; //NSArray of NewsListItem;
 @property (nonatomic, strong) NSDate *newsDate;
 
+@property (nonatomic, strong) RACCommand *jumpCommand;
+
 @end

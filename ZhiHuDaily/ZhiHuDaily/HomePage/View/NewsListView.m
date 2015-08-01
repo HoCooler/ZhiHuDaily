@@ -9,6 +9,7 @@
 #import "NewsListView.h"
 #import "NewsListCell.h"
 #import "NewsListItem.h"
+#import "NewsDetailViewController.h"
 
 static NSString *cellIdentifier = @"newsListCell";
 
@@ -48,17 +49,6 @@ static NSString *cellIdentifier = @"newsListCell";
         self.dateLabel.text = [self.dateFormat stringFromDate:newsDate];
     }
 }
-
-//- (void)updateConstraints
-//{
-//    [self.dateLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.mas_left).offset(10);
-//        make.top.equalTo(self.mas_top).offset(10);
-//    }];
-//    
-//    
-//    [super updateConstraints];
-//}
 
 - (UILabel *)dateLabel
 {
@@ -104,7 +94,6 @@ static NSString *cellIdentifier = @"newsListCell";
     if (cell == nil) {
         cell = [[NewsListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
     ((NewsListCell *)cell).newsItem = self.news[indexPath.row];
 
     return cell;
@@ -117,6 +106,10 @@ static NSString *cellIdentifier = @"newsListCell";
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   //TODO
+    
+    NSString *newsID =((NewsListItem *)self.news[indexPath.row]).newsID;
+    if (newsID && self.jumpCommand) {
+        [self.jumpCommand execute:newsID];
+    }
 }
 @end

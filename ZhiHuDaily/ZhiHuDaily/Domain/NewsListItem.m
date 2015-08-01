@@ -27,7 +27,7 @@
 + (NSValueTransformer *)newsIDJSONTransformer
 {
     return [MTLValueTransformer transformerWithBlock:^id(NSNumber *number) {
-        return [NSString stringWithFormat:@"%f", [number floatValue]];
+        return [NSString stringWithFormat:@"%d", [number intValue]];
     }];
 }
 @end

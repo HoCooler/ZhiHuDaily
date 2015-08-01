@@ -31,7 +31,7 @@
 - (void) updateConstraints
 {
     [self.mainView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 5, 15, 0));
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(5, 5, 5, 0));
     }];
     
     [self.headImageView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -119,4 +119,10 @@
     }
 }
 
+//- (void)didSelectCell
+//{
+//    self.titleLabel.textColor = [UIColor redColor];
+//    self.imageView.backgroundColor = [UIColor grayColor];
+//    self.backgroundColor = [UIColor clearColor];
+//}
 @end

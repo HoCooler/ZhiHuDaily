@@ -7,10 +7,10 @@
 //
 
 #import "HomePageViewModel.h"
-#import "HomePageModel.h"
+#import "NewsListModel.h"
 
 @interface HomePageViewModel()
-@property (nonatomic, strong) HomePageModel *homePageModel;
+@property (nonatomic, strong) NewsListModel *homePageModel;
 @end
 
 @implementation HomePageViewModel
@@ -29,10 +29,10 @@
     return _fetchNewsListCommand;
 }
 
-- (HomePageModel *)homePageModel
+- (NewsListModel *)homePageModel
 {
     if (!_homePageModel) {
-        _homePageModel = [[HomePageModel alloc] init];
+        _homePageModel = [[NewsListModel alloc] init];
     }
     return _homePageModel;
 }

@@ -10,6 +10,8 @@
 #import "HomePageViewModel.h"
 #import "NewsListView.h"
 #import "NewsBannerView.h"
+#import "NewsDetailViewController.h"
+#import "AppDelegate.h"
 
 @interface HomePageViewController ()
 
@@ -17,6 +19,9 @@
 @property (nonatomic, strong) NewsListView *listView;
 @property (nonatomic, strong) NewsBannerView *bannerView;
 @property (nonatomic, strong) UIView *headView;
+
+@property (nonatomic, strong) RACCommand *jumpCommand;
+
 @end
 
 @implementation HomePageViewController
@@ -27,8 +32,11 @@
     self.view.backgroundColor = [UIColor grayColor];
     [[self.viewModel fetchNewsListCommand] execute:nil];
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
+    self.listView.jumpCommand = self.jumpCommand;
+    
     RACSignal *bannerSignal = RACObserve(self, viewModel.newsListInfo.banners);
     RAC(self, bannerView.banners) = bannerSignal;
+    self.bannerView.jumpCommand = self.jumpCommand;
     
     [bannerSignal subscribeNext:^(NSArray *banners) {
         if ([banners count]) {
@@ -37,24 +45,28 @@
             self.listView.tableHeaderView = nil;
         }
     }];
+    
+    [self updateViewConstraints];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.listView deselectRowAtIndexPath:[self.listView indexPathForSelectedRow] animated:YES];
+
 }
 
 - (void)updateViewConstraints
 {
     [self.headView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@40);
+        make.height.equalTo(@0);
     }];
 
     [self.listView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(self.view);
-        make.top.equalTo(self.headView.mas_bottom).offset(10);
+        make.top.equalTo(self.headView.mas_bottom);
     }];
-    
-//    [self.bannerView mas_updateConstraints:^(MASConstraintMaker *make) {
-////        make.left.right.top.equalTo(self.view);
-//        make.height.equalTo(@160);
-//    }];
     
     [super updateViewConstraints];
 }
@@ -92,6 +104,19 @@
         [self.view addSubview:_headView];
     }
     return _headView;
+}
+
+- (RACCommand *)jumpCommand
+{
+    if (!_jumpCommand) {
+        _jumpCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *newsID) {
+            NewsDetailViewController *detailVC = [[NewsDetailViewController alloc] init];
+            detailVC.newsID = newsID;
+            [self.navigationController pushViewController:detailVC animated:YES];
+            return [RACSignal empty];
+        }];
+    }
+    return _jumpCommand;
 }
 
 @end
