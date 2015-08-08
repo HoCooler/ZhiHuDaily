@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ECSlidingViewController (2.0.3)
   - Mantle (1.5.4):
     - Mantle/extobjc (= 1.5.4)
   - Mantle/extobjc (1.5.4)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - ECSlidingViewController (~> 2.0.3)
   - Mantle (~> 1.5)
   - Masonry
   - ReactiveCocoa
@@ -44,6 +46,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a

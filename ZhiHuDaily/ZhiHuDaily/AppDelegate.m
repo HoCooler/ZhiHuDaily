@@ -8,9 +8,11 @@
 
 #import "AppDelegate.h"
 #import "HomePageViewController.h"
+#import "MineViewController.h"
+#import <ECSlidingViewController.h>
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ECSlidingViewController *slidingViewController;
 @end
 
 @implementation AppDelegate
@@ -20,7 +22,22 @@
     // Override point for customization after application launch.
     HomePageViewController *homePageVC = [[HomePageViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *homePageNavigation = [[UINavigationController alloc] initWithRootViewController:homePageVC];
-    self.window.rootViewController = homePageNavigation;
+    
+    MineViewController *leftVC = [[MineViewController alloc] init];
+     UINavigationController *leftNavigation = [[UINavigationController alloc] initWithRootViewController:leftVC];
+    
+    // configure sliding view controller
+    self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:homePageNavigation];
+    self.slidingViewController.underLeftViewController  = leftNavigation;
+    
+    // enable swiping on the top view
+    [homePageNavigation.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
+    // configure anchored layout
+    self.slidingViewController.anchorRightPeekAmount  = 100.0;
+    
+    self.window.rootViewController = self.slidingViewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

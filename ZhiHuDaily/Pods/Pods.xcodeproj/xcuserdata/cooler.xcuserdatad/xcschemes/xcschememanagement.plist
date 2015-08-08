@@ -4,32 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>Pods-ZhiHuDaily-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Mantle.xcscheme</key>
+		<key>Pods-ZhiHuDaily-ECSlidingViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Masonry.xcscheme</key>
+		<key>Pods-ZhiHuDaily-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<key>Pods-ZhiHuDaily-Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
+		<key>Pods-ZhiHuDaily-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-ZhiHuDaily-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ZhiHuDaily.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3FB60223303A0E42AAFB9E0E</key>
+		<key>3AD2AC81C35B6D61EAFDDC80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62ADDE82C3A55BE50E90561E</key>
+		<key>4214943655FE8180A793659A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFC82AA839723580F1CBC131</key>
+		<key>5C7B35114FA310697E25A553</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA4FFC345FDBBD6AC7F946B0</key>
+		<key>8A41B63D68924F41B4A11979</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E63CB8AD5F5B3252EC1829AF</key>
+		<key>BD4F62BDAEE7A78BA09B1815</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F77D98A026A53CAD5CE9FE3A</key>
+		<key>D60303167D3E59481905E5ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5580FC27D794DC1B0433B99</key>
 		<dict>
 			<key>primary</key>
 			<true/>

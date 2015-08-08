@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1515170CC36462EA051A8D6F /* libPods-ZhiHuDaily.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E21A4FA8C58F18813206F9 /* libPods-ZhiHuDaily.a */; };
 		1C0FFF1C1B5AA48D000CB182 /* NewsBannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */; };
 		1C2A88381B63F4240065F915 /* NewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A88371B63F4240065F915 /* NewsDetailModel.m */; };
 		1C2A883B1B63F5350065F915 /* NewsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A883A1B63F5350065F915 /* NewsDetailViewModel.m */; };
@@ -16,6 +17,8 @@
 		1C3F061F1B4ADE8800756388 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F061E1B4ADE8800756388 /* Images.xcassets */; };
 		1C3F06221B4ADE8800756388 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F06201B4ADE8800756388 /* LaunchScreen.xib */; };
 		1C3F062E1B4ADE8800756388 /* ZhiHuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */; };
+		1C4607DE1B7641020002337A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607DD1B7641020002337A /* MineViewController.m */; };
+		1C4607E11B76510C0002337A /* menu_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4607E01B76510C0002337A /* menu_background.png */; };
 		1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C541B5807BF0015CDF4 /* NewsBannerView.m */; };
 		1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C561B5807BF0015CDF4 /* NewsListCell.m */; };
 		1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C581B5807BF0015CDF4 /* NewsListView.m */; };
@@ -44,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AA1C4458927512CFFDD4690 /* Pods-ZhiHuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHuDaily/Pods-ZhiHuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		1C0FFF1A1B5AA48D000CB182 /* NewsBannerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsBannerItem.h; path = Domain/NewsBannerItem.h; sourceTree = "<group>"; };
 		1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsBannerItem.m; path = Domain/NewsBannerItem.m; sourceTree = "<group>"; };
 		1C2A88361B63F4240065F915 /* NewsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailModel.h; path = Model/NewsDetailModel.h; sourceTree = "<group>"; };
@@ -61,6 +65,9 @@
 		1C3F06271B4ADE8800756388 /* ZhiHuDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhiHuDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3F062C1B4ADE8800756388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuDailyTests.m; sourceTree = "<group>"; };
+		1C4607DC1B7641020002337A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = Mine/MineViewController.h; sourceTree = "<group>"; };
+		1C4607DD1B7641020002337A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = Mine/MineViewController.m; sourceTree = "<group>"; };
+		1C4607E01B76510C0002337A /* menu_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_background.png; path = Resource/menu_background.png; sourceTree = "<group>"; };
 		1C486B801B4EBDAA006CA099 /* ZhiHuDaily-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhiHuDaily-Prefix.pch"; sourceTree = "<group>"; };
 		1C731C531B5807BF0015CDF4 /* NewsBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsBannerView.h; path = HomePage/View/NewsBannerView.h; sourceTree = "<group>"; };
 		1C731C541B5807BF0015CDF4 /* NewsBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsBannerView.m; path = HomePage/View/NewsBannerView.m; sourceTree = "<group>"; };
@@ -92,6 +99,8 @@
 		1CF7811A1B6141B8008583D8 /* NSTimer+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Extention.m"; path = "Util/NSTimer+Extention.m"; sourceTree = "<group>"; };
 		291C20FDB12AA200F7F27131 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		362D0F643511FD639CB6B01F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E21A4FA8C58F18813206F9 /* libPods-ZhiHuDaily.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhiHuDaily.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA4BD59F1A06D3E794F6364 /* Pods-ZhiHuDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhiHuDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhiHuDaily/Pods-ZhiHuDaily.release.xcconfig"; sourceTree = "<group>"; };
 		C8072BD3A93C61211C275FA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4690C3E2623451E0DBCA94 /* libPods.a in Frameworks */,
+				1515170CC36462EA051A8D6F /* libPods-ZhiHuDaily.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				362D0F643511FD639CB6B01F /* libPods.a */,
+				B4E21A4FA8C58F18813206F9 /* libPods-ZhiHuDaily.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 		1C3F06101B4ADE8800756388 /* ZhiHuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				1C4607DF1B764FF40002337A /* Resource */,
 				1CC66FA81B63375800E4C791 /* NewsDetail */,
 				1CF781151B61401A008583D8 /* Util */,
 				1CAF1C391B4C2A4C009244C5 /* Domain */,
@@ -190,6 +202,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1C4607DF1B764FF40002337A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1C4607E01B76510C0002337A /* menu_background.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		1CAF1C2D1B4C2934009244C5 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +225,8 @@
 		1CAF1C2E1B4C293C009244C5 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				1C4607DC1B7641020002337A /* MineViewController.h */,
+				1C4607DD1B7641020002337A /* MineViewController.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -285,6 +307,8 @@
 			children = (
 				291C20FDB12AA200F7F27131 /* Pods.debug.xcconfig */,
 				C8072BD3A93C61211C275FA0 /* Pods.release.xcconfig */,
+				1AA1C4458927512CFFDD4690 /* Pods-ZhiHuDaily.debug.xcconfig */,
+				BBA4BD59F1A06D3E794F6364 /* Pods-ZhiHuDaily.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -373,6 +397,7 @@
 			files = (
 				1CA02DD81B67C0BF00E83C97 /* news_qa.css in Resources */,
 				1C3F061D1B4ADE8800756388 /* Main.storyboard in Resources */,
+				1C4607E11B76510C0002337A /* menu_background.png in Resources */,
 				1C3F06221B4ADE8800756388 /* LaunchScreen.xib in Resources */,
 				1C3F061F1B4ADE8800756388 /* Images.xcassets in Resources */,
 			);
@@ -400,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhiHuDaily/Pods-ZhiHuDaily-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66943C0633DFDCB4CE11AAB5 /* Check Pods Manifest.lock */ = {
@@ -431,6 +456,7 @@
 				1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */,
 				1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */,
 				1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */,
+				1C4607DE1B7641020002337A /* MineViewController.m in Sources */,
 				1CAF1C451B4C2BBB009244C5 /* NewsListModel.m in Sources */,
 				1CAF1C4F1B4C33CC009244C5 /* NewsListInfo.m in Sources */,
 				1CC66FAE1B6338CB00E4C791 /* NewsDetailInfo.m in Sources */,
@@ -520,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -557,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -566,7 +592,7 @@
 		};
 		1C3F06321B4ADE8800756388 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 291C20FDB12AA200F7F27131 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1AA1C4458927512CFFDD4690 /* Pods-ZhiHuDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZhiHuDaily-Prefix.pch";
@@ -578,7 +604,7 @@
 		};
 		1C3F06331B4ADE8800756388 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8072BD3A93C61211C275FA0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = BBA4BD59F1A06D3E794F6364 /* Pods-ZhiHuDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZhiHuDaily-Prefix.pch";

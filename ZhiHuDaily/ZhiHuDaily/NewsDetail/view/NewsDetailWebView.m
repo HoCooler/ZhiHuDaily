@@ -46,6 +46,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    //The default stick headView like tableView' HeadView
     float bottomOfHeaderView = MAX(0, -scrollView.contentOffset.y);
     self.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(bottomOfHeaderView, 0, 0, 0);
     

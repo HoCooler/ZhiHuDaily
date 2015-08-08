@@ -20,6 +20,9 @@
 @property (nonatomic, strong) NewsBannerView *bannerView;
 @property (nonatomic, strong) UIView *headView;
 
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *menuButton;
+
 @property (nonatomic, strong) RACCommand *jumpCommand;
 
 @end
@@ -28,8 +31,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"今日要闻";
+//    self.title = @"今日要闻";
+    
+    _menuButton = [UIButton new];
+    UIImage *buttonImage = [UIImage imageNamed:@"menu_background"];
+    [_menuButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    _menuButton.frame = CGRectMake(0, 0, 30, 20);
+    UIBarButtonItem *menuButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_menuButton];
+    
+    _titleLabel = [UILabel new];
+    _titleLabel.text = @"首页";
+    _titleLabel.frame = CGRectMake(0, 0, 150, 20);
+    UIBarButtonItem *titleItem = [[UIBarButtonItem alloc] initWithCustomView:_titleLabel];
+    
+    self.navigationItem.leftBarButtonItems = @[menuButtonItem, titleItem];
+    
     self.view.backgroundColor = [UIColor grayColor];
+    
     [[self.viewModel fetchNewsListCommand] execute:nil];
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
     self.listView.jumpCommand = self.jumpCommand;
@@ -51,9 +69,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
     [self.listView deselectRowAtIndexPath:[self.listView indexPathForSelectedRow] animated:YES];
-
+    [super viewWillAppear:animated];
 }
 
 - (void)updateViewConstraints

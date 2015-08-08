@@ -77,16 +77,6 @@
     return _actionView;
 }
 
-//- (NewsDetailWebView *)webView
-//{
-//    if (!_webView) {
-//        _webView = [[NewsDetailWebView alloc] init];
-//        _webView.backgroundColor = [UIColor grayColor];
-//        [self.view addSubview:_webView];
-//    }
-//    return _webView;
-//}
-
 - (UIView *)mainView
 {
     if (!_mainView) {
