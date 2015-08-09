@@ -22,8 +22,8 @@
         
         self.frame = newFrame;
         self.headView = header;
-        self.scrollView.contentInset = UIEdgeInsetsMake(self.headView.frame.size.height, 0.0f, 0.0f, 0.0f);
-        self.headView.frame = CGRectMake(0, 0, self.headView.frame.size.width, -self.headView.frame.size.height);
+//        self.scrollView.contentInset = UIEdgeInsetsMake(header.frame.size.height, 0.0f, 0.0f, 0.0f);
+        self.headView.frame = CGRectMake(0, 0, header.frame.size.width, header.frame.size.height);
         [self.scrollView addSubview:self.headView];
     }
     return self;
@@ -33,15 +33,10 @@
 {
     if (![_info isEqual:info]) {
         _info = info;
-        NSURL *url = [NSURL URLWithString:(info.cssArray.count ? info.cssArray[0] : nil)];
-        [self loadHTMLString:info.body baseURL:url];
+        NSURL *cssURL = [NSURL URLWithString:(info.cssArray.count ? info.cssArray[0] : nil)];
+        NSString *htmlString = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=%@ /></head><body>%@</body></html>", cssURL.absoluteString, info.body];
+        [self loadHTMLString:htmlString baseURL:nil];
     }
-}
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    NSLog(@"Web - Request-URL : %@",request.URL);
-    return YES;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

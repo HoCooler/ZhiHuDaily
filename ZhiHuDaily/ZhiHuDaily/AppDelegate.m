@@ -23,12 +23,14 @@
     HomePageViewController *homePageVC = [[HomePageViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *homePageNavigation = [[UINavigationController alloc] initWithRootViewController:homePageVC];
     
-    MineViewController *leftVC = [[MineViewController alloc] init];
-     UINavigationController *leftNavigation = [[UINavigationController alloc] initWithRootViewController:leftVC];
+    MineViewController *leftViewController = [[MineViewController alloc] init];
+//     UINavigationController *leftNavigation = [[UINavigationController alloc] initWithRootViewController:leftViewController];
+//    leftViewController.navigationController.navigationBarHidden = YES;
     
     // configure sliding view controller
     self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:homePageNavigation];
-    self.slidingViewController.underLeftViewController  = leftNavigation;
+//    self.slidingViewController.underLeftViewController  = leftNavigation;
+    self.slidingViewController.underLeftViewController = leftViewController;
     
     // enable swiping on the top view
     [homePageNavigation.view addGestureRecognizer:self.slidingViewController.panGesture];

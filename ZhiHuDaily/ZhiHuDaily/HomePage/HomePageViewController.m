@@ -12,13 +12,13 @@
 #import "NewsBannerView.h"
 #import "NewsDetailViewController.h"
 #import "AppDelegate.h"
+#import <ECSlidingViewController.h>
 
 @interface HomePageViewController ()
 
 @property (nonatomic, strong) HomePageViewModel *viewModel;
 @property (nonatomic, strong) NewsListView *listView;
 @property (nonatomic, strong) NewsBannerView *bannerView;
-@property (nonatomic, strong) UIView *headView;
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *menuButton;
@@ -31,12 +31,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title = @"今日要闻";
+    
+//    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+//    self.navigationController.navigationBar.alpha = 0.0;
     
     _menuButton = [UIButton new];
     UIImage *buttonImage = [UIImage imageNamed:@"menu_background"];
     [_menuButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     _menuButton.frame = CGRectMake(0, 0, 30, 20);
+    [_menuButton addTarget:self action:@selector(anchorRight) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *menuButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_menuButton];
     
     _titleLabel = [UILabel new];
@@ -75,14 +78,8 @@
 
 - (void)updateViewConstraints
 {
-    [self.headView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@0);
-    }];
-
     [self.listView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.right.equalTo(self.view);
-        make.top.equalTo(self.headView.mas_bottom);
+        make.edges.equalTo(self.view);
     }];
     
     [super updateViewConstraints];
@@ -114,15 +111,6 @@
     return _bannerView;
 }
 
-- (UIView *)headView
-{
-    if (!_headView) {
-        _headView = [[UIView alloc] init];
-        [self.view addSubview:_headView];
-    }
-    return _headView;
-}
-
 - (RACCommand *)jumpCommand
 {
     if (!_jumpCommand) {
@@ -136,4 +124,10 @@
     return _jumpCommand;
 }
 
+- (void)anchorRight
+{
+    ECSlidingViewController *slidingViewController = (ECSlidingViewController *)([UIApplication sharedApplication].keyWindow.rootViewController);
+
+    [slidingViewController anchorTopViewToRightAnimated:YES];
+}
 @end

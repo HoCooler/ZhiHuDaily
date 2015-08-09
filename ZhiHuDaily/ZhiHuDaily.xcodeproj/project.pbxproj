@@ -19,6 +19,7 @@
 		1C3F062E1B4ADE8800756388 /* ZhiHuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */; };
 		1C4607DE1B7641020002337A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607DD1B7641020002337A /* MineViewController.m */; };
 		1C4607E11B76510C0002337A /* menu_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4607E01B76510C0002337A /* menu_background.png */; };
+		1C4607E51B7731000002337A /* MenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607E41B7731000002337A /* MenuTableView.m */; };
 		1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C541B5807BF0015CDF4 /* NewsBannerView.m */; };
 		1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C561B5807BF0015CDF4 /* NewsListCell.m */; };
 		1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C581B5807BF0015CDF4 /* NewsListView.m */; };
@@ -68,6 +69,8 @@
 		1C4607DC1B7641020002337A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = Mine/MineViewController.h; sourceTree = "<group>"; };
 		1C4607DD1B7641020002337A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = Mine/MineViewController.m; sourceTree = "<group>"; };
 		1C4607E01B76510C0002337A /* menu_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_background.png; path = Resource/menu_background.png; sourceTree = "<group>"; };
+		1C4607E31B7731000002337A /* MenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableView.h; path = Mine/Menu/MenuTableView.h; sourceTree = "<group>"; };
+		1C4607E41B7731000002337A /* MenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableView.m; path = Mine/Menu/MenuTableView.m; sourceTree = "<group>"; };
 		1C486B801B4EBDAA006CA099 /* ZhiHuDaily-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhiHuDaily-Prefix.pch"; sourceTree = "<group>"; };
 		1C731C531B5807BF0015CDF4 /* NewsBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsBannerView.h; path = HomePage/View/NewsBannerView.h; sourceTree = "<group>"; };
 		1C731C541B5807BF0015CDF4 /* NewsBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsBannerView.m; path = HomePage/View/NewsBannerView.m; sourceTree = "<group>"; };
@@ -156,7 +159,6 @@
 		1C3F06101B4ADE8800756388 /* ZhiHuDaily */ = {
 			isa = PBXGroup;
 			children = (
-				1C4607DF1B764FF40002337A /* Resource */,
 				1CC66FA81B63375800E4C791 /* NewsDetail */,
 				1CF781151B61401A008583D8 /* Util */,
 				1CAF1C391B4C2A4C009244C5 /* Domain */,
@@ -169,6 +171,7 @@
 				1C3F061E1B4ADE8800756388 /* Images.xcassets */,
 				1C3F06201B4ADE8800756388 /* LaunchScreen.xib */,
 				1C3F06111B4ADE8800756388 /* Supporting Files */,
+				1C4607DF1B764FF40002337A /* Resource */,
 			);
 			path = ZhiHuDaily;
 			sourceTree = "<group>";
@@ -210,6 +213,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		1C4607E21B7730C20002337A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C4607E31B7731000002337A /* MenuTableView.h */,
+				1C4607E41B7731000002337A /* MenuTableView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		1CAF1C2D1B4C2934009244C5 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		1CAF1C2E1B4C293C009244C5 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				1C4607E21B7730C20002337A /* View */,
 				1C4607DC1B7641020002337A /* MineViewController.h */,
 				1C4607DD1B7641020002337A /* MineViewController.m */,
 			);
@@ -454,6 +467,7 @@
 				1CF7811B1B6141B8008583D8 /* NSTimer+Extention.m in Sources */,
 				1C2A883B1B63F5350065F915 /* NewsDetailViewModel.m in Sources */,
 				1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */,
+				1C4607E51B7731000002337A /* MenuTableView.m in Sources */,
 				1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */,
 				1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */,
 				1C4607DE1B7641020002337A /* MineViewController.m in Sources */,
