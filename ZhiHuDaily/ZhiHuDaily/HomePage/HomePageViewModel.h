@@ -15,4 +15,6 @@
 
 @property (nonatomic, strong) NewsListInfo *newsListInfo;
 
+-(instancetype)initWithThemeID:(NSString *)themeID;
+
 @end

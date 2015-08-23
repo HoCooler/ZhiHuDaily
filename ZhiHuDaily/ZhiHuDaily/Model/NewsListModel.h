@@ -10,5 +10,7 @@
 
 @interface NewsListModel : NSObject
 
+- (instancetype)initWithThemeID:(NSString *)themeID;
+
 - (RACSignal *)fetchNewsList;
 @end

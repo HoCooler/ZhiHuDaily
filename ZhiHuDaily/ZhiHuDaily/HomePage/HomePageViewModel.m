@@ -10,10 +10,21 @@
 #import "NewsListModel.h"
 
 @interface HomePageViewModel()
+
 @property (nonatomic, strong) NewsListModel *homePageModel;
+
 @end
 
 @implementation HomePageViewModel
+
+-(instancetype)initWithThemeID:(NSString *)themeID
+{
+    self = [super init];
+    if (self) {
+        _homePageModel = [[NewsListModel alloc] initWithThemeID:themeID];
+    }
+    return self;
+}
 
 - (RACCommand *)fetchNewsListCommand
 {
@@ -29,11 +40,4 @@
     return _fetchNewsListCommand;
 }
 
-- (NewsListModel *)homePageModel
-{
-    if (!_homePageModel) {
-        _homePageModel = [[NewsListModel alloc] init];
-    }
-    return _homePageModel;
-}
 @end

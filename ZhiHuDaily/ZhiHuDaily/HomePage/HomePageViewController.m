@@ -29,12 +29,22 @@
 
 @implementation HomePageViewController
 
+- (instancetype)initWithThemeID:(NSString *)themeID
+{
+    self = [super init];
+    if (self) {
+        _viewModel = [[HomePageViewModel alloc] initWithThemeID:themeID];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-//    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
-//    self.navigationController.navigationBar.alpha = 0.0;
-    
+    self.view.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:_listView];
+
     _menuButton = [UIButton new];
     UIImage *buttonImage = [UIImage imageNamed:@"menu_background"];
     [_menuButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
@@ -48,8 +58,7 @@
     UIBarButtonItem *titleItem = [[UIBarButtonItem alloc] initWithCustomView:_titleLabel];
     
     self.navigationItem.leftBarButtonItems = @[menuButtonItem, titleItem];
-    
-    self.view.backgroundColor = [UIColor grayColor];
+
     
     [[self.viewModel fetchNewsListCommand] execute:nil];
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
@@ -85,15 +94,7 @@
     [super updateViewConstraints];
 }
 
-- (HomePageViewModel *)viewModel
-{
-    if (!_viewModel) {
-        _viewModel = [[HomePageViewModel alloc] init];
-    }
-    return _viewModel;
-}
-
-- (NewsListView *)listView
+-(NewsListView *)listView
 {
     if (!_listView) {
         _listView = [[NewsListView alloc] init];

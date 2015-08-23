@@ -92,12 +92,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZhiHuDaily/HomePage/HomePageViewController.m"
-            timestampString = "460809766.829613"
+            timestampString = "462039140.381896"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-anchorLeft"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-anchorRight"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

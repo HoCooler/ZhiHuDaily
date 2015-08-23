@@ -10,14 +10,42 @@
 #import "NewsListInfo.h"
 #import "NewsListItem.h"
 
+@interface NewsListModel()
+
+@property (nonatomic, strong) NSString *themeID;
+
+@end
+
 @implementation NewsListModel
+
+- (instancetype)initWithThemeID:(NSString *)themeID
+{
+    self = [super init];
+    if (self) {
+        _themeID = themeID;
+    }
+    return self;
+}
 
 - (RACSignal *)fetchNewsList
 {
  
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//        NSString *path = @"http://news-at.zhihu.com/api/4/story/latest";
-        NSString *path = @"http://news-at.zhihu.com/api/4/news/latest";
+//        
+//        self.themeID = @"12";
+//        NSString *path = [NSString stringWithFormat:@"http://news-at.zhihu.com/api/4/theme/%@", self.themeID];
+        
+//        NSString *path = @"http://news-at.zhihu.com/api/4/news/latest";
+
+        NSString *path;
+        if (!self.themeID || [self.themeID integerValue] == 1) {
+            path = @"http://news-at.zhihu.com/api/4/news/latest";
+        } else if ([self.themeID integerValue] > 1 && [self.themeID integerValue] <= 13){
+            path = [NSString stringWithFormat:@"http://news-at.zhihu.com/api/4/theme/%@", self.themeID];
+        } else {
+            NSLog(@"ThemeID has out of rang (1-13)");
+            path = nil;
+        }
         
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {

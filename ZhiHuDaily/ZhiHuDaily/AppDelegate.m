@@ -20,7 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    HomePageViewController *homePageVC = [[HomePageViewController alloc] initWithNibName:nil bundle:nil];
+//    HomePageViewController *homePageVC = [[HomePageViewController alloc] initWithNibName:nil bundle:nil];
+    HomePageViewController *homePageVC = [[HomePageViewController alloc] initWithThemeID:@"1"];
     UINavigationController *homePageNavigation = [[UINavigationController alloc] initWithRootViewController:homePageVC];
     
     MineViewController *leftViewController = [[MineViewController alloc] init];

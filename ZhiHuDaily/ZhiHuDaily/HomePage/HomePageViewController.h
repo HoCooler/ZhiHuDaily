@@ -10,4 +10,6 @@
 
 @interface HomePageViewController : UIViewController
 
+- (instancetype)initWithThemeID:(NSString *)themeID;
+
 @end

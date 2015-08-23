@@ -7,13 +7,13 @@
 //
 
 #import "MenuTableView.h"
+#import "HomePageViewController.h"
 
 @interface MenuTableView ()
 
 @property (nonatomic, strong) NSArray *themeNames;  //主题名称
 @property (nonatomic, strong) NSArray *themeStatus; //主题是否被订阅
 @property (nonatomic, strong) NSArray *orders; //默认列表展示顺序（版本号：2.5.2）
-//@property (nonatomic, strong) 
 @end
 
 @implementation MenuTableView
@@ -24,7 +24,7 @@
     if (self) {
         _themeNames = @[@"首页"/*1*/, @"开始游戏"/*2*/, @"电影日报"/*3*/, @"设计日报"/*4*/, @"大公司日报"/*5*/, @"财经日报"/*6*/, @"音乐日报"/*7*/, @"体育日报"/*8*/, @"动漫日报"/*9*/, @"互联网安全"/*10*/, @"不许无聊"/*11*/, @"用户推荐日报"/*12*/, @"日常心理学"/*13*/];
         _orders = @[@1, @13, @12, @3, @11, @4, @5, @6, @10, @2, @7, @9, @8];
-        _themeStatus = @[@YES, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO];
+        _themeStatus = @[@YES/*NO USE*/, @YES, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO];
         self.dataSource = self;
         self.delegate = self;
     }
@@ -52,24 +52,31 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kThemeIdentifier];
     }
     
-    cell.textLabel.text = self.themeNames[[self.orders[indexPath.row] integerValue] - 1];
+    NSInteger index = [self.orders[indexPath.row] integerValue];
+
+    cell.textLabel.text = self.themeNames[index - 1];
     
-    NSInteger index = [self.orders[indexPath.row] integerValue] - 1;
+    for (UIView *subView in cell.contentView.subviews) {
+        [subView removeFromSuperview];
+    }
     
     UIButton *subscribeButton = [UIButton new];
     subscribeButton.backgroundColor = [UIColor clearColor];
-    [subscribeButton addTarget:self action:@selector(tapSubscribe:) forControlEvents:UIControlEventTouchUpInside];
-    if ([self.themeStatus[index] boolValue]) {
-        if (index == 0) {
-            [subscribeButton setTitle:@"" forState:UIControlStateNormal];
-        } else {
-            [subscribeButton setTitle:@">" forState:UIControlStateNormal];
+    @weakify(self)
+    subscribeButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
+        if (![self.themeStatus[index] boolValue]) {
+            [self themeReorder:index];
         }
+        return [RACSignal empty];
+    }];
+    if ([self.themeStatus[index] boolValue]) {
+        [subscribeButton setTitle:@">" forState:UIControlStateNormal];
     } else {
         [subscribeButton setTitle:@"+" forState:UIControlStateNormal];
     }
     [subscribeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-
+    
     [cell.contentView addSubview:subscribeButton];
     
     [subscribeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -78,17 +85,34 @@
         make.width.equalTo(@40);
     }];
     
+    UIButton *jumpButton = [UIButton new];
+    jumpButton.backgroundColor = [UIColor clearColor];
+    jumpButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        
+        return [RACSignal empty];
+    }];
     return cell;
 }
 
-- (void)tapSubscribe:(id)sender
+- (void)themeReorder:(NSInteger )index
 {
-    if ([sender isKindOfClass:[UIButton class]]) {
-        UIButton *subButton = (UIButton *)sender;
-        if ([subButton.currentTitle isEqual:@"+"]) {
-            [subButton setTitle:@">" forState:UIControlStateNormal];
+    NSMutableArray *newThemeStatus = [NSMutableArray arrayWithArray:self.themeStatus];
+    NSMutableArray *newOrders = [NSMutableArray arrayWithArray:self.orders];
+    
+    for (NSInteger i = 0; i < self.themeStatus.count - 1; ++i) {
+        NSInteger trueIndex = [self.orders[i] integerValue];
+        if (![self.themeStatus[trueIndex] boolValue]) {
+            newThemeStatus[index] = @YES;
+            [newOrders removeObject:@(index)];
+            [newOrders insertObject:@(index) atIndex:i];
+            i = self.themeStatus.count;
         }
     }
+    
+    self.orders = [newOrders copy];
+    self.themeStatus = [newThemeStatus copy];
+    
+    [self reloadData];
 }
 
 @end
