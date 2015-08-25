@@ -52,7 +52,7 @@
     [self.view addSubview:_listView];
 
     _menuButton = [UIButton new];
-    UIImage *buttonImage = [UIImage imageNamed:@"menu_background"];
+    UIImage *buttonImage = [UIImage imageNamed:@"Home_Icon"];
     [_menuButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     _menuButton.frame = CGRectMake(0, 0, 30, 20);
     [_menuButton addTarget:self action:@selector(anchorRight) forControlEvents:UIControlEventTouchUpInside];

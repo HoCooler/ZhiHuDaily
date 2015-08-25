@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
     
     _headView = [UIView new];
-    _headView.backgroundColor = [UIColor redColor];
+    _headView.backgroundColor = [UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0];
     [self.view addSubview:_headView];
     
     [_headView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -41,6 +41,11 @@
     
     self.window.rootViewController = self.slidingViewController;
     
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBar_background"] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
+
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
