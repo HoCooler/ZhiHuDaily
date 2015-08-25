@@ -21,6 +21,7 @@
 {
     self = [super init];
     if (self) {
+        _themeID = themeID;
         _homePageModel = [[NewsListModel alloc] initWithThemeID:themeID];
     }
     return self;
@@ -40,4 +41,11 @@
     return _fetchNewsListCommand;
 }
 
+- (void)setThemeID:(NSString *)themeID
+{
+    if (_themeID != themeID) {
+        _themeID = themeID;
+        self.homePageModel.themeID = themeID;
+    }
+}
 @end

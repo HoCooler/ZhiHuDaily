@@ -10,7 +10,10 @@
 
 @interface NewsListModel : NSObject
 
+@property (nonatomic, strong) NSString *themeID;
+
 - (instancetype)initWithThemeID:(NSString *)themeID;
 
 - (RACSignal *)fetchNewsList;
+
 @end

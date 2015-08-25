@@ -17,6 +17,7 @@
 @interface HomePageViewController ()
 
 @property (nonatomic, strong) HomePageViewModel *viewModel;
+
 @property (nonatomic, strong) NewsListView *listView;
 @property (nonatomic, strong) NewsBannerView *bannerView;
 
@@ -33,6 +34,7 @@
 {
     self = [super init];
     if (self) {
+        _themeID = themeID;
         _viewModel = [[HomePageViewModel alloc] initWithThemeID:themeID];
     }
     return self;
@@ -41,6 +43,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+//        [[NSUserDefaults standardUserDefaults] setBool:NO
+//                                                forKey:@"UIViewShowAlignmentRects"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
     
     self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_listView];
@@ -59,8 +65,6 @@
     
     self.navigationItem.leftBarButtonItems = @[menuButtonItem, titleItem];
 
-    
-    [[self.viewModel fetchNewsListCommand] execute:nil];
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
     self.listView.jumpCommand = self.jumpCommand;
     
@@ -76,6 +80,8 @@
         }
     }];
     
+    [[self.viewModel fetchNewsListCommand] execute:nil];
+
     [self updateViewConstraints];
 }
 
@@ -115,7 +121,9 @@
 - (RACCommand *)jumpCommand
 {
     if (!_jumpCommand) {
+        @weakify(self)
         _jumpCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *newsID) {
+            @strongify(self)
             NewsDetailViewController *detailVC = [[NewsDetailViewController alloc] init];
             detailVC.newsID = newsID;
             [self.navigationController pushViewController:detailVC animated:YES];
@@ -124,6 +132,22 @@
     }
     return _jumpCommand;
 }
+
+- (void)refresh
+{
+    [[self.viewModel fetchNewsListCommand] execute:nil]; 
+}
+
+- (void)setThemeID:(NSString *)themeID
+{
+    if (_themeID != themeID) {
+        _themeID = themeID;
+        self.viewModel.themeID = themeID;
+        [self refresh];
+    }
+}
+
+#pragma mark ======= ECSlidingViewController Delegate =============
 
 - (void)anchorRight
 {

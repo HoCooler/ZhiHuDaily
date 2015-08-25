@@ -12,8 +12,6 @@
 
 @interface NewsListModel()
 
-@property (nonatomic, strong) NSString *themeID;
-
 @end
 
 @implementation NewsListModel

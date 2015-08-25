@@ -11,6 +11,8 @@
 
 @interface HomePageViewModel : NSObject
 
+@property (nonatomic, strong) NSString *themeID;
+
 @property (nonatomic, strong) RACCommand *fetchNewsListCommand;
 
 @property (nonatomic, strong) NewsListInfo *newsListInfo;

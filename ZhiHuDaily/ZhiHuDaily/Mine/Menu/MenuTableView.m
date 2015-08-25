@@ -8,12 +8,15 @@
 
 #import "MenuTableView.h"
 #import "HomePageViewController.h"
+#import <ECSlidingViewController.h>
 
 @interface MenuTableView ()
 
 @property (nonatomic, strong) NSArray *themeNames;  //主题名称
 @property (nonatomic, strong) NSArray *themeStatus; //主题是否被订阅
 @property (nonatomic, strong) NSArray *orders; //默认列表展示顺序（版本号：2.5.2）
+//@property (nonatomic, strong) ECSlidingViewController *rootViewController;
+
 @end
 
 @implementation MenuTableView
@@ -88,9 +91,18 @@
     UIButton *jumpButton = [UIButton new];
     jumpButton.backgroundColor = [UIColor clearColor];
     jumpButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        
+        ECSlidingViewController *rootViewController = (ECSlidingViewController *)[[UIApplication sharedApplication] keyWindow].rootViewController;
+        HomePageViewController *homePageVC = (HomePageViewController *)((UINavigationController *)rootViewController.topViewController).topViewController;
+        homePageVC.themeID = [@(index) stringValue];
+        [rootViewController resetTopViewAnimated:YES];
         return [RACSignal empty];
     }];
+    [cell.contentView addSubview:jumpButton];
+    [jumpButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.top.equalTo(cell.contentView);
+        make.right.equalTo(subscribeButton.mas_left);
+    }];
+    
     return cell;
 }
 

@@ -10,7 +10,9 @@
 #import "NewsDetailModel.h"
 
 @interface NewsDetailViewModel()
+
 @property (nonatomic, strong) NewsDetailModel *model;
+
 @end
 
 @implementation NewsDetailViewModel

@@ -10,7 +10,9 @@
 #import "NewsBannerItem.h"
 
 @interface NewsBannerView : UIScrollView <UIScrollViewDelegate>
+
 @property (nonatomic, strong) NSArray *banners; // NSArray of NewsBannerItem
 
 @property (nonatomic, strong) RACCommand *jumpCommand;
+
 @end

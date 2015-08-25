@@ -10,6 +10,8 @@
 
 @interface HomePageViewController : UIViewController
 
+@property (nonatomic, strong) NSString *themeID;
+
 - (instancetype)initWithThemeID:(NSString *)themeID;
 
 @end

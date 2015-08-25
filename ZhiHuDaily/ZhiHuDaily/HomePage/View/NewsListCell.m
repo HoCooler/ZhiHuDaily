@@ -119,10 +119,10 @@
     }
 }
 
-//- (void)didSelectCell
-//{
-//    self.titleLabel.textColor = [UIColor redColor];
-//    self.imageView.backgroundColor = [UIColor grayColor];
-//    self.backgroundColor = [UIColor clearColor];
-//}
+- (void)didSelectCell
+{
+    self.titleLabel.textColor = [UIColor redColor];
+    self.imageView.backgroundColor = [UIColor grayColor];
+    self.backgroundColor = [UIColor clearColor];
+}
 @end

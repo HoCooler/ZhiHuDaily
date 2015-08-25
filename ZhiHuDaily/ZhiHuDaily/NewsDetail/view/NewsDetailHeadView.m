@@ -66,7 +66,7 @@
         _titleLabel.numberOfLines = 2;
         _titleLabel.font = [UIFont systemFontOfSize:20];
         _titleLabel.textColor = [UIColor whiteColor];
-        _titleLabel.textAlignment = UITextAlignmentLeft;
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:_titleLabel];
     }
     return _titleLabel;
@@ -78,7 +78,7 @@
         _sourceLabel = [UILabel new];
         _sourceLabel.font = [UIFont systemFontOfSize:10];
         _sourceLabel.textColor = [UIColor whiteColor];
-        _sourceLabel.textAlignment = UITextAlignmentRight;
+        _sourceLabel.textAlignment = NSTextAlignmentRight;
         [self addSubview:_sourceLabel];
     }
     return _sourceLabel;

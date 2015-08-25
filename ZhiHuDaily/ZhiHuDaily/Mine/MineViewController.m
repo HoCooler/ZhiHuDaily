@@ -29,6 +29,7 @@
         self.view.layer.borderColor     = [UIColor colorWithWhite:0.8 alpha:1.0].CGColor;
         self.edgesForExtendedLayout     = UIRectEdgeTop | UIRectEdgeBottom | UIRectEdgeLeft; // don't go under the top view
     }
+    
     return self;
 }
 - (void)viewDidLoad {
