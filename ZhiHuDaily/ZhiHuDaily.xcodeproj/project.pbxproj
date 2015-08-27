@@ -21,6 +21,8 @@
 		1C3F062E1B4ADE8800756388 /* ZhiHuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */; };
 		1C4607DE1B7641020002337A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607DD1B7641020002337A /* MineViewController.m */; };
 		1C4607E51B7731000002337A /* MenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607E41B7731000002337A /* MenuTableView.m */; };
+		1C5A0BF81B8F6D3A005F8D2C /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A0BF71B8F6D3A005F8D2C /* ThemeModel.m */; };
+		1C5A0BFB1B8F7225005F8D2C /* ThemeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A0BFA1B8F7225005F8D2C /* ThemeViewModel.m */; };
 		1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C541B5807BF0015CDF4 /* NewsBannerView.m */; };
 		1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C561B5807BF0015CDF4 /* NewsListCell.m */; };
 		1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C581B5807BF0015CDF4 /* NewsListView.m */; };
@@ -74,6 +76,10 @@
 		1C4607E31B7731000002337A /* MenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableView.h; path = Mine/Menu/MenuTableView.h; sourceTree = "<group>"; };
 		1C4607E41B7731000002337A /* MenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableView.m; path = Mine/Menu/MenuTableView.m; sourceTree = "<group>"; };
 		1C486B801B4EBDAA006CA099 /* ZhiHuDaily-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhiHuDaily-Prefix.pch"; sourceTree = "<group>"; };
+		1C5A0BF61B8F6D3A005F8D2C /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeModel.h; path = Model/ThemeModel.h; sourceTree = "<group>"; };
+		1C5A0BF71B8F6D3A005F8D2C /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeModel.m; path = Model/ThemeModel.m; sourceTree = "<group>"; };
+		1C5A0BF91B8F7225005F8D2C /* ThemeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeViewModel.h; path = Mine/ThemeViewModel.h; sourceTree = "<group>"; };
+		1C5A0BFA1B8F7225005F8D2C /* ThemeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeViewModel.m; path = Mine/ThemeViewModel.m; sourceTree = "<group>"; };
 		1C731C531B5807BF0015CDF4 /* NewsBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsBannerView.h; path = HomePage/View/NewsBannerView.h; sourceTree = "<group>"; };
 		1C731C541B5807BF0015CDF4 /* NewsBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsBannerView.m; path = HomePage/View/NewsBannerView.m; sourceTree = "<group>"; };
 		1C731C551B5807BF0015CDF4 /* NewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsListCell.h; path = HomePage/View/NewsListCell.h; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 				1C4607E21B7730C20002337A /* View */,
 				1C4607DC1B7641020002337A /* MineViewController.h */,
 				1C4607DD1B7641020002337A /* MineViewController.m */,
+				1C5A0BF91B8F7225005F8D2C /* ThemeViewModel.h */,
+				1C5A0BFA1B8F7225005F8D2C /* ThemeViewModel.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -250,6 +258,8 @@
 		1CAF1C351B4C2A33009244C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C5A0BF61B8F6D3A005F8D2C /* ThemeModel.h */,
+				1C5A0BF71B8F6D3A005F8D2C /* ThemeModel.m */,
 				1CAF1C431B4C2BBB009244C5 /* NewsListModel.h */,
 				1CAF1C441B4C2BBB009244C5 /* NewsListModel.m */,
 				1C2A88361B63F4240065F915 /* NewsDetailModel.h */,
@@ -475,7 +485,9 @@
 				1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */,
 				1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */,
 				1C4607DE1B7641020002337A /* MineViewController.m in Sources */,
+				1C5A0BFB1B8F7225005F8D2C /* ThemeViewModel.m in Sources */,
 				1CAF1C451B4C2BBB009244C5 /* NewsListModel.m in Sources */,
+				1C5A0BF81B8F6D3A005F8D2C /* ThemeModel.m in Sources */,
 				1CAF1C4F1B4C33CC009244C5 /* NewsListInfo.m in Sources */,
 				1CC66FAE1B6338CB00E4C791 /* NewsDetailInfo.m in Sources */,
 				1CC66FB21B63D3EB00E4C791 /* NewsDetailWebView.m in Sources */,
@@ -613,6 +625,7 @@
 			baseConfigurationReference = 1AA1C4458927512CFFDD4690 /* Pods-ZhiHuDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZhiHuDaily-Prefix.pch";
 				INFOPLIST_FILE = ZhiHuDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -625,6 +638,7 @@
 			baseConfigurationReference = BBA4BD59F1A06D3E794F6364 /* Pods-ZhiHuDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZhiHuDaily-Prefix.pch";
 				INFOPLIST_FILE = ZhiHuDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

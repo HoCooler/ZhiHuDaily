@@ -24,6 +24,8 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *menuButton;
 
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 @property (nonatomic, strong) RACCommand *jumpCommand;
 
 @end
@@ -64,6 +66,11 @@
     UIBarButtonItem *titleItem = [[UIBarButtonItem alloc] initWithCustomView:_titleLabel];
     
     self.navigationItem.leftBarButtonItems = @[menuButtonItem, titleItem];
+    
+    _refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"刷新中"];
+    [self.listView addSubview:self.refreshControl];
 
     RAC(self, listView.news) = RACObserve(self, viewModel.newsListInfo.items);
     self.listView.jumpCommand = self.jumpCommand;
@@ -135,7 +142,10 @@
 
 - (void)refresh
 {
-    [[self.viewModel fetchNewsListCommand] execute:nil]; 
+    [[self.viewModel fetchNewsListCommand] execute:nil];
+    if (self.refreshControl.isRefreshing) {
+        [self.refreshControl endRefreshing];
+    }
 }
 
 - (void)setThemeID:(NSString *)themeID

@@ -23,7 +23,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = [UIColor grayColor];
-        [self updateConstraints];
+        [self setNeedsUpdateConstraints];
     }
     return self;
 }

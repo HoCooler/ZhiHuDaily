@@ -9,13 +9,14 @@
 #import "MenuTableView.h"
 #import "HomePageViewController.h"
 #import <ECSlidingViewController.h>
+#import "ThemeViewModel.h"
 
 @interface MenuTableView ()
 
 @property (nonatomic, strong) NSArray *themeNames;  //主题名称
 @property (nonatomic, strong) NSArray *themeStatus; //主题是否被订阅
 @property (nonatomic, strong) NSArray *orders; //默认列表展示顺序（版本号：2.5.2）
-//@property (nonatomic, strong) ECSlidingViewController *rootViewController;
+@property (nonatomic, strong) ThemeViewModel *viewModel;
 
 @end
 
@@ -28,6 +29,7 @@
         _themeNames = @[@"首页"/*1*/, @"开始游戏"/*2*/, @"电影日报"/*3*/, @"设计日报"/*4*/, @"大公司日报"/*5*/, @"财经日报"/*6*/, @"音乐日报"/*7*/, @"体育日报"/*8*/, @"动漫日报"/*9*/, @"互联网安全"/*10*/, @"不许无聊"/*11*/, @"用户推荐日报"/*12*/, @"日常心理学"/*13*/];
         _orders = @[@1, @13, @12, @3, @11, @4, @5, @6, @10, @2, @7, @9, @8];
         _themeStatus = @[@YES/*NO USE*/, @YES, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO];
+        _viewModel = [[ThemeViewModel alloc] init];
         self.dataSource = self;
         self.delegate = self;
     }
@@ -69,7 +71,15 @@
     subscribeButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
         if (![self.themeStatus[index] boolValue]) {
+            self.viewModel.themeID = [@(index) stringValue];
+            [[self.viewModel.themeSubscribeCommand execute:nil] subscribeNext:^(id x) {
+                @strongify(self)
+                //需要验证身份
+                NSLog(@"Theme %@ has subscribed", self.themeNames[index]);
+//                [self themeReorder:index];
+            }];
             [self themeReorder:index];
+ 
         }
         return [RACSignal empty];
     }];
