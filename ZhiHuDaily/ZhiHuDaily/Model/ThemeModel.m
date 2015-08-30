@@ -18,7 +18,7 @@
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
             NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
             parameters[@"theme_id"] = themeID;
-            [manager POST:path parameters:parameters success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
+            [manager POST:path parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
                 [subscriber sendNext:nil];
                 [subscriber sendCompleted];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -8,10 +8,14 @@
 
 #import "MineViewController.h"
 #import "MenuTableView.h"
+#import "UIColor+ZHDAddition.h"
 
 @interface MineViewController ()
+
 @property (nonatomic, strong) UIView *headView;
 @property (nonatomic, strong) MenuTableView *listView;
+@property (nonatomic, strong) UIView *footView;
+
 @end
 
 @implementation MineViewController
@@ -37,21 +41,29 @@
     // Do any additional setup after loading the view.
     
     _headView = [UIView new];
-    _headView.backgroundColor = [UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0];
+    _headView.backgroundColor = [UIColor ZHDbackgroundcolor];
     [self.view addSubview:_headView];
     
     [_headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@150);
+        make.height.equalTo(@100);
         make.left.right.top.equalTo(self.view);
+    }];
+    
+    _footView = [UIView new];
+    _footView.backgroundColor = [UIColor ZHDbackgroundcolor];
+    [self.view addSubview:_footView];
+    [_footView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.height.equalTo(@44);
     }];
     
     _listView = [[MenuTableView alloc] init];
     [self.view addSubview:_listView];
     [_listView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
+        make.left.right.equalTo(self.view);
         make.top.equalTo(self.headView.mas_bottom);
+        make.bottom.equalTo(self.footView.mas_top);
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning {

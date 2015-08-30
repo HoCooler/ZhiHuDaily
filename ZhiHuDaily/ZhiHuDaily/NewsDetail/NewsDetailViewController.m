@@ -16,11 +16,7 @@
 @property (nonatomic, strong) NewsDetailWebView *webView;
 @property (nonatomic, strong) UIView *actionView;
 @property (nonatomic, strong) NewsDetailHeadView *headView;
-
 @property (nonatomic, strong) NewsDetailViewModel *viewModel;
-
-//test
-@property (nonatomic, strong) UIView *mainView;
 
 @end
 
@@ -75,16 +71,6 @@
         [self.view addSubview:_actionView];
     }
     return _actionView;
-}
-
-- (UIView *)mainView
-{
-    if (!_mainView) {
-        _mainView = [[UIView alloc] init];
-        _mainView.backgroundColor = [UIColor redColor];
-        [self.view addSubview:_mainView];
-    }
-    return _mainView;
 }
 
 @end

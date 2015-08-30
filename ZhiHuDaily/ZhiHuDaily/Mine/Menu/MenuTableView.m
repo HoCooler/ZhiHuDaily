@@ -10,6 +10,7 @@
 #import "HomePageViewController.h"
 #import <ECSlidingViewController.h>
 #import "ThemeViewModel.h"
+#import "TKAlertCenter.h"
 
 @interface MenuTableView ()
 
@@ -79,7 +80,7 @@
 //                [self themeReorder:index];
             }];
             [self themeReorder:index];
- 
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"原本应该订阅成功，但是现在请求验证错误"];
         }
         return [RACSignal empty];
     }];

@@ -30,6 +30,7 @@
     
     // configure sliding view controller
     self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:homePageNavigation];
+//    self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:homePageVC];
 //    self.slidingViewController.underLeftViewController  = leftNavigation;
     self.slidingViewController.underLeftViewController = leftViewController;
     
@@ -43,9 +44,11 @@
     
 //    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBar_background"] forBarMetrics:UIBarMetricsDefault];
 //    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:0.0]];
+//    self.slidingViewController.navigationController.navigationBar.alpha = 0.0;
+//    self.slidingViewController.navigationController.navigationBarHidden = YES;
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithWhite:249.0f/255.0f alpha:0]];
 
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

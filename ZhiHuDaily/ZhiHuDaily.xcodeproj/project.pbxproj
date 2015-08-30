@@ -19,6 +19,9 @@
 		1C3F061F1B4ADE8800756388 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F061E1B4ADE8800756388 /* Images.xcassets */; };
 		1C3F06221B4ADE8800756388 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F06201B4ADE8800756388 /* LaunchScreen.xib */; };
 		1C3F062E1B4ADE8800756388 /* ZhiHuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */; };
+		1C4520051B9340E600305548 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4520041B9340E600305548 /* TKAlertCenter.m */; };
+		1C4520091B93455400305548 /* UIColor+ZHDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4520081B93455400305548 /* UIColor+ZHDAddition.m */; };
+		1C45200C1B934B1000305548 /* NewsDetailFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C45200B1B934B1000305548 /* NewsDetailFootView.m */; };
 		1C4607DE1B7641020002337A /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607DD1B7641020002337A /* MineViewController.m */; };
 		1C4607E51B7731000002337A /* MenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4607E41B7731000002337A /* MenuTableView.m */; };
 		1C5A0BF81B8F6D3A005F8D2C /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A0BF71B8F6D3A005F8D2C /* ThemeModel.m */; };
@@ -71,6 +74,12 @@
 		1C3F06271B4ADE8800756388 /* ZhiHuDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhiHuDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3F062C1B4ADE8800756388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C3F062D1B4ADE8800756388 /* ZhiHuDailyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuDailyTests.m; sourceTree = "<group>"; };
+		1C4520031B9340E600305548 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKAlertCenter.h; path = ZHDKit/TKAlertCenter.h; sourceTree = "<group>"; };
+		1C4520041B9340E600305548 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKAlertCenter.m; path = ZHDKit/TKAlertCenter.m; sourceTree = "<group>"; };
+		1C4520071B93455400305548 /* UIColor+ZHDAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZHDAddition.h"; sourceTree = "<group>"; };
+		1C4520081B93455400305548 /* UIColor+ZHDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZHDAddition.m"; sourceTree = "<group>"; };
+		1C45200A1B934B1000305548 /* NewsDetailFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailFootView.h; path = NewsDetail/view/NewsDetailFootView.h; sourceTree = "<group>"; };
+		1C45200B1B934B1000305548 /* NewsDetailFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsDetailFootView.m; path = NewsDetail/view/NewsDetailFootView.m; sourceTree = "<group>"; };
 		1C4607DC1B7641020002337A /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = Mine/MineViewController.h; sourceTree = "<group>"; };
 		1C4607DD1B7641020002337A /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = Mine/MineViewController.m; sourceTree = "<group>"; };
 		1C4607E31B7731000002337A /* MenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableView.h; path = Mine/Menu/MenuTableView.h; sourceTree = "<group>"; };
@@ -167,6 +176,8 @@
 		1C3F06101B4ADE8800756388 /* ZhiHuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				1C4520061B9344BE00305548 /* ZHDUtil */,
+				1C4520021B9340D200305548 /* ZHDKit */,
 				1CC66FA81B63375800E4C791 /* NewsDetail */,
 				1CF781151B61401A008583D8 /* Util */,
 				1CAF1C391B4C2A4C009244C5 /* Domain */,
@@ -211,6 +222,24 @@
 				1C3F062C1B4ADE8800756388 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C4520021B9340D200305548 /* ZHDKit */ = {
+			isa = PBXGroup;
+			children = (
+				1C4520031B9340E600305548 /* TKAlertCenter.h */,
+				1C4520041B9340E600305548 /* TKAlertCenter.m */,
+			);
+			name = ZHDKit;
+			sourceTree = "<group>";
+		};
+		1C4520061B9344BE00305548 /* ZHDUtil */ = {
+			isa = PBXGroup;
+			children = (
+				1C4520071B93455400305548 /* UIColor+ZHDAddition.h */,
+				1C4520081B93455400305548 /* UIColor+ZHDAddition.m */,
+			);
+			name = ZHDUtil;
 			sourceTree = "<group>";
 		};
 		1C4607DF1B764FF40002337A /* Resource */ = {
@@ -315,6 +344,8 @@
 				1CC66FB11B63D3EB00E4C791 /* NewsDetailWebView.m */,
 				1CA02DDE1B6C956F00E83C97 /* NewsDetailHeadView.h */,
 				1CA02DDF1B6C956F00E83C97 /* NewsDetailHeadView.m */,
+				1C45200A1B934B1000305548 /* NewsDetailFootView.h */,
+				1C45200B1B934B1000305548 /* NewsDetailFootView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -479,6 +510,7 @@
 			files = (
 				1CAF1C421B4C2B96009244C5 /* HomePageViewModel.m in Sources */,
 				1CF7811B1B6141B8008583D8 /* NSTimer+Extention.m in Sources */,
+				1C4520051B9340E600305548 /* TKAlertCenter.m in Sources */,
 				1C2A883B1B63F5350065F915 /* NewsDetailViewModel.m in Sources */,
 				1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */,
 				1C4607E51B7731000002337A /* MenuTableView.m in Sources */,
@@ -494,10 +526,12 @@
 				1CAF1C411B4C2B96009244C5 /* HomePageViewController.m in Sources */,
 				1C3F06171B4ADE8800756388 /* AppDelegate.m in Sources */,
 				1CA02DE01B6C956F00E83C97 /* NewsDetailHeadView.m in Sources */,
+				1C4520091B93455400305548 /* UIColor+ZHDAddition.m in Sources */,
 				1C0FFF1C1B5AA48D000CB182 /* NewsBannerItem.m in Sources */,
 				1C3F06141B4ADE8800756388 /* main.m in Sources */,
 				1C2A88381B63F4240065F915 /* NewsDetailModel.m in Sources */,
 				1CAF1C481B4C2BE0009244C5 /* NewsListItem.m in Sources */,
+				1C45200C1B934B1000305548 /* NewsDetailFootView.m in Sources */,
 				1CC66FAB1B6337B200E4C791 /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
