@@ -11,5 +11,7 @@
 @interface NewsDetailViewController : UIViewController
 
 @property (nonatomic, strong) NSString *newsID;
+@property (nonatomic, strong) NSArray *newsListItems;
+@property (nonatomic, assign) NSInteger index;
 
 @end

@@ -29,6 +29,16 @@
 		1C731C591B5807BF0015CDF4 /* NewsBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C541B5807BF0015CDF4 /* NewsBannerView.m */; };
 		1C731C5A1B5807BF0015CDF4 /* NewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C561B5807BF0015CDF4 /* NewsListCell.m */; };
 		1C731C5B1B5807BF0015CDF4 /* NewsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C731C581B5807BF0015CDF4 /* NewsListView.m */; };
+		1C9615EB1B949C010005FC4B /* News_Navigation_Arrow_Highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E11B949C000005FC4B /* News_Navigation_Arrow_Highlight@2x.png */; };
+		1C9615EC1B949C010005FC4B /* News_Navigation_Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E21B949C000005FC4B /* News_Navigation_Arrow@2x.png */; };
+		1C9615ED1B949C010005FC4B /* News_Navigation_Comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E31B949C010005FC4B /* News_Navigation_Comment@2x.png */; };
+		1C9615EE1B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E41B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png */; };
+		1C9615EF1B949C010005FC4B /* News_Navigation_Next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E51B949C010005FC4B /* News_Navigation_Next@2x.png */; };
+		1C9615F01B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E61B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png */; };
+		1C9615F11B949C010005FC4B /* News_Navigation_Share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E71B949C010005FC4B /* News_Navigation_Share@2x.png */; };
+		1C9615F21B949C010005FC4B /* News_Navigation_Unnext@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E81B949C010005FC4B /* News_Navigation_Unnext@2x.png */; };
+		1C9615F31B949C010005FC4B /* News_Navigation_Vote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615E91B949C010005FC4B /* News_Navigation_Vote@2x.png */; };
+		1C9615F41B949C010005FC4B /* News_Navigation_Voted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615EA1B949C010005FC4B /* News_Navigation_Voted@2x.png */; };
 		1CA02DE01B6C956F00E83C97 /* NewsDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA02DDF1B6C956F00E83C97 /* NewsDetailHeadView.m */; };
 		1CAF1C411B4C2B96009244C5 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF1C3E1B4C2B96009244C5 /* HomePageViewController.m */; };
 		1CAF1C421B4C2B96009244C5 /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF1C401B4C2B96009244C5 /* HomePageViewModel.m */; };
@@ -95,6 +105,16 @@
 		1C731C561B5807BF0015CDF4 /* NewsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsListCell.m; path = HomePage/View/NewsListCell.m; sourceTree = "<group>"; };
 		1C731C571B5807BF0015CDF4 /* NewsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsListView.h; path = HomePage/View/NewsListView.h; sourceTree = "<group>"; };
 		1C731C581B5807BF0015CDF4 /* NewsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsListView.m; path = HomePage/View/NewsListView.m; sourceTree = "<group>"; };
+		1C9615E11B949C000005FC4B /* News_Navigation_Arrow_Highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Arrow_Highlight@2x.png"; path = "Resource/News_Navigation/News_Navigation_Arrow_Highlight@2x.png"; sourceTree = "<group>"; };
+		1C9615E21B949C000005FC4B /* News_Navigation_Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Arrow@2x.png"; path = "Resource/News_Navigation/News_Navigation_Arrow@2x.png"; sourceTree = "<group>"; };
+		1C9615E31B949C010005FC4B /* News_Navigation_Comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Comment@2x.png"; path = "Resource/News_Navigation/News_Navigation_Comment@2x.png"; sourceTree = "<group>"; };
+		1C9615E41B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Next_Highlight@2x.png"; path = "Resource/News_Navigation/News_Navigation_Next_Highlight@2x.png"; sourceTree = "<group>"; };
+		1C9615E51B949C010005FC4B /* News_Navigation_Next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Next@2x.png"; path = "Resource/News_Navigation/News_Navigation_Next@2x.png"; sourceTree = "<group>"; };
+		1C9615E61B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Share_Highlight@2x.png"; path = "Resource/News_Navigation/News_Navigation_Share_Highlight@2x.png"; sourceTree = "<group>"; };
+		1C9615E71B949C010005FC4B /* News_Navigation_Share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Share@2x.png"; path = "Resource/News_Navigation/News_Navigation_Share@2x.png"; sourceTree = "<group>"; };
+		1C9615E81B949C010005FC4B /* News_Navigation_Unnext@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Unnext@2x.png"; path = "Resource/News_Navigation/News_Navigation_Unnext@2x.png"; sourceTree = "<group>"; };
+		1C9615E91B949C010005FC4B /* News_Navigation_Vote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Vote@2x.png"; path = "Resource/News_Navigation/News_Navigation_Vote@2x.png"; sourceTree = "<group>"; };
+		1C9615EA1B949C010005FC4B /* News_Navigation_Voted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News_Navigation_Voted@2x.png"; path = "Resource/News_Navigation/News_Navigation_Voted@2x.png"; sourceTree = "<group>"; };
 		1CA02DDE1B6C956F00E83C97 /* NewsDetailHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsDetailHeadView.h; path = NewsDetail/view/NewsDetailHeadView.h; sourceTree = "<group>"; };
 		1CA02DDF1B6C956F00E83C97 /* NewsDetailHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsDetailHeadView.m; path = NewsDetail/view/NewsDetailHeadView.m; sourceTree = "<group>"; };
 		1CAF1C3D1B4C2B96009244C5 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = HomePage/HomePageViewController.h; sourceTree = "<group>"; };
@@ -245,6 +265,7 @@
 		1C4607DF1B764FF40002337A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1C9615DE1B949BB50005FC4B /* News_Navigation */,
 				1C2AF0411B8CBE5A0073659C /* NavigationBar_background@2x.png */,
 				1C2AF03F1B8CBCDA0073659C /* Home_Icon@2x.png */,
 			);
@@ -258,6 +279,23 @@
 				1C4607E41B7731000002337A /* MenuTableView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		1C9615DE1B949BB50005FC4B /* News_Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1C9615E11B949C000005FC4B /* News_Navigation_Arrow_Highlight@2x.png */,
+				1C9615E21B949C000005FC4B /* News_Navigation_Arrow@2x.png */,
+				1C9615E31B949C010005FC4B /* News_Navigation_Comment@2x.png */,
+				1C9615E41B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png */,
+				1C9615E51B949C010005FC4B /* News_Navigation_Next@2x.png */,
+				1C9615E61B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png */,
+				1C9615E71B949C010005FC4B /* News_Navigation_Share@2x.png */,
+				1C9615E81B949C010005FC4B /* News_Navigation_Unnext@2x.png */,
+				1C9615E91B949C010005FC4B /* News_Navigation_Vote@2x.png */,
+				1C9615EA1B949C010005FC4B /* News_Navigation_Voted@2x.png */,
+			);
+			name = News_Navigation;
 			sourceTree = "<group>";
 		};
 		1CAF1C2D1B4C2934009244C5 /* HomePage */ = {
@@ -454,10 +492,20 @@
 			files = (
 				1C2AF0421B8CBE5A0073659C /* NavigationBar_background@2x.png in Resources */,
 				1C3F061D1B4ADE8800756388 /* Main.storyboard in Resources */,
+				1C9615F11B949C010005FC4B /* News_Navigation_Share@2x.png in Resources */,
 				1CE81F261B8CB90E009DBCF5 /* icon.png in Resources */,
+				1C9615EB1B949C010005FC4B /* News_Navigation_Arrow_Highlight@2x.png in Resources */,
+				1C9615F21B949C010005FC4B /* News_Navigation_Unnext@2x.png in Resources */,
+				1C9615F41B949C010005FC4B /* News_Navigation_Voted@2x.png in Resources */,
+				1C9615F01B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png in Resources */,
 				1C3F06221B4ADE8800756388 /* LaunchScreen.xib in Resources */,
 				1C2AF0401B8CBCDA0073659C /* Home_Icon@2x.png in Resources */,
 				1C3F061F1B4ADE8800756388 /* Images.xcassets in Resources */,
+				1C9615F31B949C010005FC4B /* News_Navigation_Vote@2x.png in Resources */,
+				1C9615EC1B949C010005FC4B /* News_Navigation_Arrow@2x.png in Resources */,
+				1C9615EF1B949C010005FC4B /* News_Navigation_Next@2x.png in Resources */,
+				1C9615ED1B949C010005FC4B /* News_Navigation_Comment@2x.png in Resources */,
+				1C9615EE1B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

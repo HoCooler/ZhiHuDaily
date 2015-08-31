@@ -12,6 +12,8 @@
 #import "NewsDetailHeadView.h"
 #import "NewsDetailFootView.h"
 #import "UIColor+ZHDAddition.h"
+#import "NewsListItem.h"
+#import "TKAlertCenter.h"
 
 @interface NewsDetailViewController ()
 
@@ -21,6 +23,10 @@
 
 @property (nonatomic, strong) NewsDetailViewModel *viewModel;
 
+@property (nonatomic, strong) RACCommand *backCommand;
+@property (nonatomic, strong) RACCommand *nextCommand;
+@property (nonatomic, strong) RACCommand *previousCommand;
+
 @end
 
 @implementation NewsDetailViewController
@@ -29,11 +35,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"新闻详情";
     
+    _newsID = ((NewsListItem *)self.newsListItems[self.index]).newsID;
+    
     _viewModel = [[NewsDetailViewModel alloc] init];
-    self.viewModel.newsID = self.newsID;
     
     _headView = [[NewsDetailHeadView alloc] init];
     _headView.backgroundColor = [UIColor grayColor];
@@ -48,9 +55,13 @@
     RACSignal *viewModelSignal = RACObserve(self, viewModel.info);
     RAC(self, webView.info) = viewModelSignal;
     RAC(self, headView.headInfo) = viewModelSignal;
+    RAC(self, viewModel.newsID) = RACObserve(self, newsID);
+    self.footView.backCommand = self.backCommand;
+    self.footView.nextCommand = self.nextCommand;
+    self.webView.previousCommand = self.previousCommand;
 
-    [self.viewModel.fetchNewsDetailCommand execute:nil];
-
+    [self refresh];
+    
     [self updateViewConstraints];
 }
 
@@ -67,6 +78,67 @@
     }];
     
     [super updateViewConstraints];
+}
+
+-(void)refresh
+{
+    [self.viewModel.fetchNewsDetailCommand execute:nil];
+}
+
+- (RACCommand *)backCommand
+{
+    if (!_backCommand) {
+        @weakify(self)
+        _backCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            [self.navigationController popViewControllerAnimated:YES];
+            return [RACSignal empty];
+        }];
+    }
+    return _backCommand;
+}
+
+-(RACCommand *)nextCommand
+{
+    if (!_nextCommand) {
+        @weakify(self)
+        _nextCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            if ((self.index + 1)< self.newsListItems.count) {
+                self.index = self.index + 1;
+            } else {
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"已经是最后一篇了"];
+            }
+            return [RACSignal empty];
+        }];
+    }
+    return _nextCommand;
+}
+
+-(RACCommand *)previousCommand
+{
+    if (!_previousCommand) {
+        @weakify(self)
+        _previousCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            if (self.index > 0) {
+                self.index = self.index - 1;
+            } else {
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"已经是第一篇了"];
+            }
+            return [RACSignal empty];
+        }];
+    }
+    return _previousCommand;
+}
+
+-(void)setIndex:(NSInteger)index
+{
+    if (_index != index) {
+        _index = index;
+        self.newsID = ((NewsListItem *)self.newsListItems[self.index]).newsID;
+        [self refresh];
+    }
 }
 
 @end

@@ -1,0 +1,1927 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Introduction | Zen and the Art of the Objective-C Craftsmanship</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="0" data-basepath="." data-revision="Wed May 06 2015 13:24:21 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter active" data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Zen and the Art of the Objective-C Craftsmanship</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="zen-and-the-art-of-the-objective-c-craftsmanship">Zen and the Art of the Objective-C Craftsmanship</h1>
+<p><img src="images/zen-logo-thumb.png" alt=""></p>
+<ul>
+<li><a href="#preface">Preface</a><ul>
+<li><a href="#swift">Swift</a></li>
+<li><a href="#for-the-community">For the Community</a></li>
+<li><a href="#authors">Authors</a></li>
+</ul>
+</li>
+<li><a href="#conditionals">Conditionals</a><ul>
+<li><a href="#yoda-conditions">Yoda conditions</a></li>
+<li><a href="#nil-and-bool-checks">nil and BOOL checks</a></li>
+<li><a href="#golden-path">Golden Path</a></li>
+<li><a href="#complex-conditions">Complex Conditions</a></li>
+<li><a href="#ternary-operator">Ternary Operator</a></li>
+<li><a href="#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li><a href="#case-statements">Case Statements</a><ul>
+<li><a href="#enumerated-types">Enumerated Types</a></li>
+</ul>
+</li>
+<li><a href="#naming">Naming</a><ul>
+<li><a href="#general-conventions">General conventions</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#literals">Literals</a></li>
+</ul>
+</li>
+<li><a href="#class">Class</a><ul>
+<li><a href="#class-name">Class name</a></li>
+<li><a href="#initializer-and-dealloc">Initializer and dealloc</a><ul>
+<li><a href="#designated-and-secondary-initializers">Designated and Secondary Initializers</a><ul>
+<li><a href="#designated-initializer">Designated Initializer</a></li>
+<li><a href="#secondary-initializer">Secondary Initializer</a><ul>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#instancetype">instancetype</a><ul>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</li>
+<li><a href="#initialization-patterns">Initialization Patterns</a><ul>
+<li><a href="#class-cluster">Class cluster</a></li>
+<li><a href="#singleton">Singleton</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#properties">Properties</a><ul>
+<li><a href="#init-and-dealloc">Init and Dealloc</a></li>
+<li><a href="#dot-notation">Dot-Notation</a><ul>
+<li><a href="#property-declaration">Property Declaration</a></li>
+</ul>
+</li>
+<li><a href="#private-properties">Private Properties</a><ul>
+<li><a href="#mutable-object">Mutable Object</a></li>
+<li><a href="#lazy-loading">Lazy Loading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#parameter-assert">Parameter Assert</a></li>
+<li><a href="#private-methods">Private methods</a></li>
+</ul>
+</li>
+<li><a href="#equality">Equality</a></li>
+</ul>
+</li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#protocols">Protocols</a></li>
+<li><a href="#nsnotification">NSNotification</a></li>
+<li><a href="#beautifying-the-code">Beautifying the code</a><ul>
+<li><a href="#spacing">Spacing</a></li>
+<li><a href="#line-breaks">Line Breaks</a></li>
+<li><a href="#brackets">Brackets</a></li>
+</ul>
+</li>
+<li><a href="#code-organization">Code Organization</a><ul>
+<li><a href="#exploit-code-block">Exploit Code Block</a></li>
+<li><a href="#pragma">Pragma</a><ul>
+<li><a href="#pragma-mark">Pragma Mark</a></li>
+</ul>
+</li>
+<li><a href="#explicit-warnings-and-errors">Explicit warnings and errors</a></li>
+<li><a href="#docstrings">Docstrings</a></li>
+<li><a href="#comments">Comments</a><ul>
+<li><a href="#header-documentation">Header Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#inter-object-communication">Inter-Object Communication</a><ul>
+<li><a href="#blocks">Blocks</a><ul>
+<li><a href="#under-the-hood">Under the Hood</a></li>
+<li><a href="#retain-cycles-on-self">Retain cycles on self</a></li>
+</ul>
+</li>
+<li><a href="#delegate-and-datasource">Delegate and DataSource</a><ul>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#multiple-delegation">Multiple Delegation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#aspect-oriented-programming">Aspect Oriented Programming</a></li>
+<li><a href="#references">References</a><ul>
+<li><a href="#other-objective-c-style-guides">Other Objective-C Style Guides</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="preface">Preface</h1>
+<p>We started writing this book on November 2013. The initial goal was to provide guidelines to write the most clean Objective-C code possible: there are too many guidelines out there and all of them are debatable. We didn&apos;t aim introducing hard rules but, instead, a way for writing code to be more uniform as possible across different developers.
+With time the scope moved to explain how to design and architecture good code.</p>
+<p>The idea underneath is that the code should not only compile, instead it should &quot;validate&quot;. Good code has several characteristics: should be concise, self-explanatory, well organized, well documented, well named, well designed and stand the test of time.
+The main goals behind the curtain are that clarity always wins over performance and a rationale for a choice should always be provided.
+Some topics discussed here are general and independent from the language even if everything is tied up to Objective-C.</p>
+<h2 id="swift">Swift</h2>
+<p>On June 6th, 2014 Apple announced the new programming language to be used for iOS and Mac development in future: Swift.
+This new language is a radical departure from Objective-C and, of course, has caused a change in our plan for writing this book. It boiled down to the decision of releasing the current status of this essay without continuing our journey in unfolding the topics we originally planned to include.
+Objective-C is not going anywhere but at the same time continuing to write a book on a language that will not receive the same attention as it used to, is not a wise move.</p>
+<h2 id="for-the-community">For the Community</h2>
+<p>We have released this book for free and for the community because we hope to provide value to the reader, if each one of you can learn at least one best practice we have reached our goal.</p>
+<p>We have done our best to polish this text and make it pleasant to the reader but we may have made typos, mistakes or left any part incomplete. We strongly encourage you to give us feedback and suggest improvements, so please get in touch with us if have any. We particularly appreciate pull requests.</p>
+<h2 id="authors">Authors</h2>
+<p><strong>Luca Bernardi</strong></p>
+<ul>
+<li><a href="http://lucabernardi.com" target="_blank">http://lucabernardi.com</a></li>
+<li>@luka_bernardi</li>
+<li><a href="http://github.com/lukabernardi" target="_blank">http://github.com/lukabernardi</a></li>
+</ul>
+<p><strong>Alberto De Bortoli</strong></p>
+<ul>
+<li><a href="http://albertodebortoli.com" target="_blank">http://albertodebortoli.com</a></li>
+<li>@albertodebo</li>
+<li><a href="http://github.com/albertodebortoli" target="_blank">http://github.com/albertodebortoli</a></li>
+</ul>
+<h1 id="conditionals">Conditionals</h1>
+<p>Conditional bodies should always use braces even when a conditional body could be written without braces (e.g., it is one line only) to prevent errors. These errors include adding a second line and expecting it to be part of the if-statement. Another, even more dangerous defect, may happen where the line &quot;inside&quot; the if-statement is commented out, and the next line unwittingly becomes part of the if-statement.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">if (!error) {
+    return success;
+}
+</code></pre>
+<p><strong>Not preferred:</strong></p>
+<pre><code class="lang-objective-c">if (!error)
+    return success;
+</code></pre>
+<p>or</p>
+<pre><code class="lang-objective-c">if (!error) return success;
+</code></pre>
+<p>In February 2014 the well-know <a href="https://gotofail.com/" target="_blank">goto fail</a> was found in the Apple&apos;s SSL/TLS implementation. 
+The bug was due to a repeated <code>goto</code> statement after an <code>if</code> condition, wrapping the <code>if</code> branch in parentheses would have prevented the issue.</p>
+<p>The code extract:</p>
+<pre><code class="lang-objective-c">static OSStatus
+SSLVerifySignedServerKeyExchange(SSLContext *ctx, bool isRsa, SSLBuffer signedParams,
+                                 uint8_t *signature, UInt16 signatureLen)
+{
+  OSStatus        err;
+  ...
+
+  if ((err = SSLHashSHA1.update(&amp;hashCtx, &amp;serverRandom)) != 0)
+    goto fail;
+  if ((err = SSLHashSHA1.update(&amp;hashCtx, &amp;signedParams)) != 0)
+    goto fail;
+    goto fail;
+  if ((err = SSLHashSHA1.final(&amp;hashCtx, &amp;hashOut)) != 0)
+    goto fail;
+  ...
+
+fail:
+  SSLFreeBuffer(&amp;signedHashes);
+  SSLFreeBuffer(&amp;hashCtx);
+  return err;
+}
+</code></pre>
+<p>Easy to spot, there are 2 <code>goto fail;</code> lines one after the other without parentheses. We definitely don&apos;t want to risk creating bugs like the one above right?</p>
+<p>In addition, this style is more consistent with all other conditionals, and therefore more easily scannable.</p>
+<h2 id="yoda-conditions">Yoda conditions</h2>
+<p>Always avoid Yoda conditions. A Yoda condition is when comparing a constant to a variable instead of the other way around. It&apos;s like saying &quot;if blue is the sky&quot; or &quot;if tall is the man&quot; instead of &quot;if the sky is blue&quot; or &quot;if the man is tall&quot;.</p>
+<p><img src="images/yoda.png" alt="Yoda"></p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">if ([myValue isEqual:@42]) { ...
+</code></pre>
+<p><strong>Not preferred:</strong></p>
+<pre><code class="lang-objective-c">if ([@42 isEqual:myValue]) { ...
+</code></pre>
+<h2 id="nil-and-bool-checks">nil and BOOL checks</h2>
+<p>On a similar note of the Yoda conditions, also the nil check has been at the centre of debates. Some notous libraries out there use to check for an object to be or not to be nil as so:</p>
+<pre><code class="lang-objective-c">if (nil == myValue) { ...
+</code></pre>
+<p>One could argue that this is amiss or similar to a Yoda condition as nil is kind of a constant. The reason why sometimes programmers use this approach to prevent error that are difficult to debug. Consider the following code:</p>
+<pre><code class="lang-objective-c">if (myValue == nil) { ...
+</code></pre>
+<p>If a typo occurs and the programmer actually types:</p>
+<pre><code class="lang-objective-c">if (myValue = nil) { ...
+</code></pre>
+<p>it would be a valid assignment, indeed hard to debug if you are an experienced programmer (and therefore probably with some kind of visual impairment). That could never occur putting <code>nil</code> as argument on the left as it is nor assignable. There is also to be said that if the programmer uses this approach, he or she is perfectly aware of the underlying motivation and therefore the whole thing decades as it would be better to just double check what just typed.</p>
+<p>More on this, to avoid all this fuss the approach that leave no space to doubt is to use the exclamation mark. Since <code>nil</code> resolves to <code>NO</code> it is unnecessary to compare it in conditions. Also, never compare something directly to <code>YES</code>, because <code>YES</code> is defined to 1 and a <code>BOOL</code> can be up to 8 bits as it is a char underneath.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">if (someObject) { ...
+if (![someObject boolValue]) { ...
+if (!someObject) { ...
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">if (someObject == YES) { ... // Wrong
+if (myRawValue == YES) { ... // Never do this.
+if ([someObject boolValue] == NO) { ...
+</code></pre>
+<p>This allows also for more consistency across files and greater visual clarity.</p>
+<h2 id="golden-path">Golden Path</h2>
+<p>When coding with conditionals, the left hand margin of the code should be the &quot;golden&quot; or &quot;happy&quot; path.  That is, don&apos;t nest <code>if</code> statements.  Multiple return statements are OK. This will avoid the growth of cyclomatic complexity and make the code easier to read because the important part of your method is not nested inside a branch but you have a visual clue of what is the most relevant code. </p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">- (void)someMethod {
+  if (![someOther boolValue]) {
+      return;
+  }
+
+  //Do something important
+}
+</code></pre>
+<p><strong>Not preferred:</strong></p>
+<pre><code class="lang-objective-c">- (void)someMethod {
+  if ([someOther boolValue]) {
+    //Do something important
+  }
+}
+</code></pre>
+<h2 id="complex-conditions">Complex Conditions</h2>
+<p>When you have complex condition in the <code>if</code> clause you should always extract them and assign to a <code>BOOL</code> variable to make more clear the logic and the meaning of every single conditions.</p>
+<pre><code class="lang-objective-c">BOOL nameContainsSwift  = [sessionName containsString:@&quot;Swift&quot;];
+BOOL isCurrentYear      = [sessionDateCompontents year] == 2014;
+BOOL isSwiftSession     = nameContainsSwift &amp;&amp; isCurrentYear;
+
+if (isSwiftSession) {
+    // Do something very cool
+}
+</code></pre>
+<h2 id="ternary-operator">Ternary Operator</h2>
+<p>The Ternary operator, <code>?</code> , should only be used when it increases clarity or code neatness. A single condition is usually all that should be evaluated. Evaluating multiple conditions is usually more understandable as an if statement, or refactored into instance variables.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">result = a &gt; b ? x : y;
+</code></pre>
+<p><strong>Not preferred:</strong></p>
+<pre><code class="lang-objective-c">result = a &gt; b ? x = c &gt; d ? c : d : y;
+</code></pre>
+<p>When the second argument of the ternary operator (the if branch) returns the same object that was checked for existence in the condition, the following syntax is neat:</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">result = object ? : [self createObject];
+</code></pre>
+<p><strong>Not preferred:</strong></p>
+<pre><code class="lang-objective-c">result = object ? object : [self createObject];
+</code></pre>
+<h2 id="error-handling">Error handling</h2>
+<p>When methods return an error parameter by reference, check the returned value, not the error variable.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">NSError *error = nil;
+if (![self trySomethingWithError:&amp;error]) {
+    // Handle Error
+}
+</code></pre>
+<p>Moreover, some of Apple&apos;s APIs write garbage values to the error parameter (if non-NULL) in successful cases, so checking the error can cause false negatives (and subsequently crash).</p>
+<h1 id="case-statements">Case Statements</h1>
+<p>Braces are not required for case statements, unless enforced by the complier.<br>When a case contains more than one line, braces should be added.</p>
+<pre><code class="lang-objective-c">switch (condition) {
+    case 1:
+        // ...
+        break;
+    case 2: {
+        // ...
+        // Multi-line example using braces
+        break;
+       }
+    case 3:
+        // ...
+        break;
+    default: 
+        // ...
+        break;
+}
+</code></pre>
+<p>There are times when the same code can be used for multiple cases, and a fall-through should be used.  A fall-through is the removal of the &apos;break&apos; statement for a case thus allowing the flow of execution to pass to the next case value.</p>
+<pre><code class="lang-objective-c">switch (condition) {
+    case 1:
+    case 2:
+        // code executed for values 1 and 2
+        break;
+    default: 
+        // ...
+        break;
+}
+</code></pre>
+<p>When using an enumerated type for a switch, <code>default</code> is not needed. For example:</p>
+<pre><code class="lang-objective-c">switch (menuType) {
+    case ZOCEnumNone:
+        // ...
+        break;
+    case ZOCEnumValue1:
+        // ...
+        break;
+    case ZOCEnumValue2:
+        // ...
+        break;
+}
+</code></pre>
+<p>Moreover, avoiding the default case, if new values are added to the enum, the programmer is immediately notified with a warning:</p>
+<p><code>Enumeration value &apos;ZOCEnumValue3&apos; not handled in switch.</code></p>
+<h3 id="enumerated-types">Enumerated Types</h3>
+<p>When using <code>enum</code>s, it is recommended to use the new fixed underlying type specification because it has stronger type checking and code completion. The SDK now includes a macro to facilitate and encourage use of fixed underlying types &#x2014; <code>NS_ENUM()</code></p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-objective-c">typedef NS_ENUM(NSUInteger, ZOCMachineState) {
+    ZOCMachineStateNone,
+    ZOCMachineStateIdle,
+    ZOCMachineStateRunning,
+    ZOCMachineStatePaused
+};
+</code></pre>
+<h1 id="naming">Naming</h1>
+<h2 id="general-conventions">General conventions</h2>
+<p>Apple naming conventions should be adhered to wherever possible, especially those related to <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html" target="_blank">memory management rules</a> (<a href="http://stackoverflow.com/a/2865194/340508" target="_blank">NARC</a>).</p>
+<p>Long, descriptive method and variable names are good.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">UIButton *settingsButton;
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">UIButton *setBut;
+</code></pre>
+<h2 id="constants">Constants</h2>
+<p>Constants should be camel-case with all words capitalized and prefixed by the related class name for clarity.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">static const NSTimeInterval ZOCSignInViewControllerFadeOutAnimationDuration = 0.4;
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">static const NSTimeInterval fadeOutTime = 0.4;
+</code></pre>
+<p>Constants are preferred over in-line string literals or numbers, as they allow for easy reproduction of commonly used variables and can be quickly changed without the need for find and replace. Constants should be declared as <code>static</code> constants and not <code>#define</code>s unless explicitly being used as a macro.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">static NSString * const ZOCCacheControllerDidClearCacheNotification = @&quot;ZOCCacheControllerDidClearCacheNotification&quot;;
+static const CGFloat ZOCImageThumbnailHeight = 50.0f;
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">#define CompanyName @&quot;Apple Inc.&quot;
+#define magicNumber 42
+</code></pre>
+<p>Constants exposed externally should use this pattern in the interface file:</p>
+<pre><code class="lang-objective-c">extern NSString *const ZOCCacheControllerDidClearCacheNotification;
+</code></pre>
+<p>and the previously defined assignment should be in the implementation file.</p>
+<p>You only need to add the namespace to a constant that is made public. Even though constants used within an implementation could follow a different pattern, there is no need not to be consistent with the rule.</p>
+<h2 id="methods">Methods</h2>
+<p>In method signatures, there should be a space after the method type (<code>-</code>/<code>+</code> symbol). There should be a space between the method segments (matching Apple&apos;s style).  Always include a keyword and be descriptive with the word before the argument which describes the argument.</p>
+<p>The usage of the word &quot;and&quot; is reserved.  It should not be used for multiple parameters as illustrated in the <code>initWithWidth:height:</code> example below.</p>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">- (void)setExampleText:(NSString *)text image:(UIImage *)image;
+- (void)sendAction:(SEL)aSelector to:(id)anObject forAllCells:(BOOL)flag;
+- (id)viewWithTag:(NSInteger)tag;
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height;
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">- (void)setT:(NSString *)text i:(UIImage *)image;
+- (void)sendAction:(SEL)aSelector :(id)anObject :(BOOL)flag;
+- (id)taggedView:(NSInteger)tag;
+- (instancetype)initWithWidth:(CGFloat)width andHeight:(CGFloat)height;
+- (instancetype)initWith:(int)width and:(int)height;  // Never do this.
+</code></pre>
+<h2 id="literals">Literals</h2>
+<p><code>NSString</code>, <code>NSDictionary</code>, <code>NSArray</code>, and <code>NSNumber</code> literals should be used whenever creating immutable instances of those objects. Pay special care that <code>nil</code> values not be passed into <code>NSArray</code> and <code>NSDictionary</code> literals, as this will cause a crash.</p>
+<p><strong>For example:</strong></p>
+<pre><code class="lang-objective-c">NSArray *names = @[@&quot;Brian&quot;, @&quot;Matt&quot;, @&quot;Chris&quot;, @&quot;Alex&quot;, @&quot;Steve&quot;, @&quot;Paul&quot;];
+NSDictionary *productManagers = @{@&quot;iPhone&quot; : @&quot;Kate&quot;, @&quot;iPad&quot; : @&quot;Kamal&quot;, @&quot;Mobile Web&quot; : @&quot;Bill&quot;};
+NSNumber *shouldUseLiterals = @YES;
+NSNumber *buildingZIPCode = @10018;
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">NSArray *names = [NSArray arrayWithObjects:@&quot;Brian&quot;, @&quot;Matt&quot;, @&quot;Chris&quot;, @&quot;Alex&quot;, @&quot;Steve&quot;, @&quot;Paul&quot;, nil];
+NSDictionary *productManagers = [NSDictionary dictionaryWithObjectsAndKeys: @&quot;Kate&quot;, @&quot;iPhone&quot;, @&quot;Kamal&quot;, @&quot;iPad&quot;, @&quot;Bill&quot;, @&quot;Mobile Web&quot;, nil];
+NSNumber *shouldUseLiterals = [NSNumber numberWithBool:YES];
+NSNumber *buildingZIPCode = [NSNumber numberWithInteger:10018];
+</code></pre>
+<p>For the mutable counterparts of these classes we recommend, instead, the use of the explicit classes such as <code>NSMutableArray</code>, <code>NSMutableString</code>, and so on. </p>
+<p>The following <strong>should be avoided</strong>:</p>
+<pre><code class="lang-objective-c">NSMutableArray *aMutableArray = [@[] mutableCopy];
+</code></pre>
+<p>The problems with the previous notation are both of efficiency and readability. 
+On the efficiency side, an unnecessarily immutable object is created and immediately thrown away; this unlikely will slow down your app (unless the method here is called frequently) but there is really no reason to do this just to save some characters. 
+Regarding the readability, we can see two problems here: the first is that when scanning through the code and seeing <code>@[]</code> your mind is immediately connected to and instance of <code>NSArray</code>, but in this case you need to stop and check more thoughtfully. Another aspect to take into account is that it would be very likely that someone with less experience will see your code and depending on his background he might not be very comfortable with the dichotomy between mutable and immutable objects. He or she could not be very familiar with the meaning of creating a mutable copy (obviously we are not suggesting that this knowledge is not necessary). Again, this is not something absolutely wrong but is more about code usability (that includes readability).</p>
+<h1 id="class">Class</h1>
+<h2 id="class-name">Class name</h2>
+<p>You should always prefix your class with <strong>three</strong> capital-case letters (two letters are reserved for Apple classes), this looking-weird practice is done to mitigate the notable absence of namespaces in our favorite language.
+Some developers don&apos;t follow this practice for model objects (we observed this practice especially for Core Data objects), we advice to strictly follow this convention also in the case of Core Data objects because you might end up merging your Managed Object Model with other MOMs, maybe coming from third party library. 
+As you may already have noticed, in this book the class (but not only) prefix is <code>ZOC</code>.</p>
+<p>There is another good practice that you might want to follow while choosing the name for your classes: when you&apos;re creating a subclass, you should put the specifying name part between the class prefix and the superclass name. This is better explained with an example: if you have a class named <code>ZOCNetworkClient</code>, example of subclass name will be <code>ZOCTwitterNetworkClient</code> (note &quot;Twitter&quot; between &quot;ZOC&quot; and &quot;NetworkClient&quot;); or, following the same rule, a <code>UIViewController</code> subclass would <code>ZOCTimelineViewController</code>.</p>
+<h2 id="initializer-and-dealloc">Initializer and dealloc</h2>
+<p>The recommended way to organize the  code is to  have <code>dealloc</code> method placed at the top of the implementation (directly after the <code>@synthesize</code> and <code>@dynamic</code> statements) and the <code>init</code> should be placed directly below the <code>dealloc</code> methods of any class. In case of multiple initializer the designated initializer should be placed as first method, because is the one where most likely there is more logic, and the secondary initializers should follow.
+In these days with ARC, it is less likely that you will need to implement the dealloc method, but still the rationale is that by having the dealloc very close to your init methods, you are visually emphasizing the pairing between the methods. Usually in the dealloc method you will undo things that you have done in the init methods.</p>
+<p><code>init</code> methods should be structured like this:</p>
+<pre><code class="lang-objective-c">- (instancetype)init
+{
+    self = [super init]; // call the designated initializer
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+</code></pre>
+<p>It&apos;s interesting to understand why do we need to set the value of <code>self</code> with the return value of <code>[super init]</code> and what happens if we don&apos;t do that.</p>
+<p>Let&apos;s do a step back: we are so used to type expressions like <code>[[NSObject alloc] init]</code> that the difference between <code>alloc</code> and <code>init</code> fades away. A peculiarity of Objective-C  is the so called <em>two stage creation</em>. This means that the allocation and the initialization are two separate steps, and therefore two different methods need to be called: <code>alloc</code> and <code>init</code>.</p>
+<ul>
+<li><code>alloc</code> is responsible for the object allocation. This process involve the allocation of enough memory to hold the object from the application virtual memory, writing the <code>isa</code> pointer, initializes the retain count, and zeroing all the instance variables. </li>
+<li><code>init</code> is responsible for initializing the object, that means brings the object in an usable state. This typically means set the instance variable of an object to reasonable and useful initial values.</li>
+</ul>
+<p>The <code>alloc</code> method will return a valid instance of an uninitialized object. Every message sent to this instance will be translated into an <code>objc_msgSend()</code> call where the parameter named <code>self</code> will be the pointer returned by <code>alloc</code>; in this way <code>self</code> is implicitly available in the scope of every methods. 
+To conclude the two step creation the first method sent to a newly allocated instance should, by convention, be an <code>init</code> method. Notably the <code>init</code> implementation of <code>NSObject</code> is not doing more than simply return <code>self</code>. </p>
+<p>There is another important part of the contract with <code>init</code>: the method can (and should) signal to the caller that it wasn&apos;t able to successfully finish the initialization by returning <code>nil</code>; the initialization can fail for various reasons such as an input passed in the wrong format or the failure in successfully initialize a needed object.
+This is lead us to understand why you should always call <code>self = [super init]</code>, if your superclass is stating that it wasn&apos;t able to successfully initialize itself, you must assume that you are in an inconsistent state and therefore do not proceed with your own initialization and return <code>nil</code> as well in your implementation. If you fail to do so you might end up dealing with an object that is not usable, that will not behave as expected and that might eventually lead to crash your app.</p>
+<p>The ability to re-assign <code>self</code> can also be exploited by the <code>init</code> methods to return a different instance than the one they have been called on. Examples of this behavior are <a href="#class-cluster">Class cluster</a> or some Cocoa classes that returns the same instance for identical (immutable) objects.</p>
+<h3 id="designated-and-secondary-initializers">Designated and Secondary Initializers</h3>
+<p>Objective-C have the concept of designated and secondary initializers. 
+The designated initializer is the initializer that takes the full complement of initialization parameters, the secondary initializers are one or more initializer methods that calls the designated initializer providing one or more default values for the initialization parameter.</p>
+<pre><code class="lang-objective-c">@implementation ZOCEvent
+
+- (instancetype)initWithTitle:(NSString *)title
+                         date:(NSDate *)date
+                     location:(CLLocation *)location
+{
+    self = [super init];
+    if (self) {
+        _title    = title;
+        _date     = date;
+        _location = location;
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+                         date:(NSDate *)date
+{
+    return [self initWithTitle:title date:date location:nil];
+}
+
+- (instancetype)initWithTitle:(NSString *)title
+{
+    return [self initWithTitle:title date:[NSDate date] location:nil];
+}
+
+@end
+</code></pre>
+<p>Given the above example <code>initWithTitle:date:location:</code> is the designated initializer. The other two init methods are the secondary initializers because they are just calling the designated initializer of the class where they are implemented.</p>
+<h4 id="designated-initializer">Designated Initializer</h4>
+<p>A class should always have one and only one designated initializer, all other init methods should call the designated one (even though there are an exception to this case).
+This dichotomy does not dictate any requirement about which initializer should be called.
+It should rather be valid to call any designated initializer in the class hierarchy, and it should be guaranteed that <em>all</em> the designated initializer in the class hierarchy are called starting from the furthest ancestor (typically <code>NSObject</code>) down to your class. 
+Practically speaking this means that the first initialization code executed is the furthest ancestor, and then going down to the class hierarchy; giving to all the classes in the hierarchy the chance to do their specific part of initialization. This totally make sense: you want that everything you inherit from your superclass is in an usable state before doing your actual work.
+Even though it isn&apos;t explicitly stated, all the classes in Apple&apos;s frameworks are guaranteed to respect this contract and your classes should do the same to be sure to be a good citizen and behave correctly and as expected.</p>
+<p>There are three different situations that may present when defining a new class:</p>
+<ol>
+<li>No need to override any initializers</li>
+<li>Overriding designated initializer</li>
+<li>Define a new designated initializer</li>
+</ol>
+<p>The first case is the most trivial: you don&apos;t need to add any specific logic at the initialization of your class you simply rely on you parent designated initializer.
+When you want to provide additional initialization logic you can decide to override the designated initializer. You should only override your immediate superclass&apos;s designated initializer and be sure that your implementation calls the super of the method you&apos;re overriding.<br>A typical example is whether you create a <code>UIViewController</code> subclass overriding <code>initWithNibName:bundle:</code>:</p>
+<pre><code class="lang-objective-c">@implementation ZOCViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    // call to the superclass designated initializer
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+@end
+</code></pre>
+<p>In case of <code>UIViewController</code> subclass it would be an error to override <code>init</code> as, in the case that the caller will try to initialize your class by calling <code>initWithNib:bundle</code>, your implementation will not be called. This also contradicts the rule that states that it should be valid to call any designated initializer.</p>
+<p>In case you want to provide your own designated initializer there are three steps that you need to follow in order to guarantee the correct behavior:</p>
+<ol>
+<li>Declare your designated initializer, being sure to call your immediate superclass&apos;s designated initializer.</li>
+<li>Override the immediate superclass&apos;s designated initializer calling your new designated initializer.</li>
+<li>Document the new designated initializer. </li>
+</ol>
+<p>Lots of developers often miss the last two steps, this is not only a sign of little care, but in the case of the step two is clearly against the contract with the framework and can lead to very non-deterministic behaviors and bugs.
+Let&apos;s see an example of the correct way to implement this:</p>
+<pre><code class="lang-objective-c">@implementation ZOCNewsViewController
+
+- (id)initWithNews:(ZOCNews *)news
+{
+    // call to the immediate superclass&apos;s designated initializer
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _news = news;
+    }
+    return self;
+}
+
+// Override the immediate superclass&apos;s designated initializer
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    // call the new designated initializer
+    return [self initWithNews:nil];
+}
+
+@end
+</code></pre>
+<p>In case you don&apos;t override <code>initWithNibName:bundle:</code> and the caller decides to initialize you class with this method (that would be a perfectly valid option) the method <code>initWithNews:</code> will never get called and this will bring to an incorrect initialization sequence where the specific initialization logic of your class is not executed.</p>
+<p>Even though it should be possible to infer what method is the designate initializer, it is always good to be clear and explicit (the future you or other developers that will work on your code will thank you). There are two strategies (non mutually exclusive) that you can decide to use: the first one you is to clearly state in the documentation which initializer is the designated one, but better yet you can be nice with your compiler and by using the compiler directive <code>__attribute__((objc_designated_initializer))</code> you can signal your intent.
+Using that directive will also helps the compiler helping you and in fact the compiler will issue a warning if in your new designate initializer you don&apos;t call your superclass&apos;s designated initializer.
+There are, though, cases in which not calling the class designated initializer (and in turn providing the required parameters) and calling another designated initializer in the class hierarchy will bring the class in an useless state. Referring to the previous example, there is no point in instantiating a <code>ZOCNewsViewController</code> that should present a news, without the news itself. In this case you can enforce even more the need to call a very specific designated initializer by simply making all the other designated initializers not available. It is possible to do that by using another compiler directive <code>__attribute__((unavailable(&quot;Invoke the designated initializer&quot;)))</code>, decorating a method with this attribute will make the compiler issuing an error if you try to call this method.</p>
+<p>Here the header relative to the implementation of the previous example (note the use of macros to don&apos;t repeat the code and being less verbose).</p>
+<pre><code class="lang-objective-c">
+@interface ZOCNewsViewController : UIViewController
+
+- (instancetype)initWithNews:(ZOCNews *)news ZOC_DESIGNATED_INITIALIZER;
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil ZOC_UNAVAILABLE_INSTEAD(initWithNews:);
+- (instancetype)init ZOC_UNAVAILABLE_INSTEAD(initWithNews:);
+
+@end
+</code></pre>
+<p>A corollary of what described above is that you should never call a secondary initializer from within the designated one (if the secondary initializer respects the contract, it will call the designated one). Doing so, the call is very likely to invoke one of the subclass&apos;s overridden init methods and it will result in infinite recursion.</p>
+<p>There is however an exception to all the rules laid out before that is whether an object conforms to the <code>NSCoding</code> protocol and it is initialized through the method <code>initWithCoder:</code>.
+We should distinguish between the case where the superclass is adopting <code>NSCoding</code> and when not. 
+In the former case, if you just call <code>[super initWithCoder:]</code> you will probably have some shared initialization code with the designated initializer. A good way to handle this is to extract this code in a private method (i.e.  <code>p_commonInit</code>).
+When your superclass does not adopt <code>NSCoding</code> the recommendation is to threat <code>initWithCoder:</code> as a secondary initializer and therefore call the <code>self</code> designated initializer. Note that this is against what suggested by Apple in the <a href="https://developer.apple.com/library/mac/documentation/cocoa/Conceptual/Archiving/Articles/codingobjects.html#//apple_ref/doc/uid/20000948-BCIHBJDE" target="_blank">Archives and Serializations Programming Guide</a> where is stated:</p>
+<blockquote>
+<p>the object should first invoke its superclass&apos;s designated initializer to initialize inherited state</p>
+</blockquote>
+<p>following this will actually lead to a non-deterministic behavior that will change if your class is or not a direct subclass of <code>NSObject</code>.</p>
+<h4 id="secondary-initializer">Secondary Initializer</h4>
+<p>As stated in the previous paragraph, a secondary initializer is a sort of convenience method to provide default values / behaviors to the designated initializer.
+That said, it seems clear that you should not do any mandatory initialization in such method and you should never assume that this method will gets called. Again, the only methods that we are guaranteed to get called are the designated initializer.
+This imply that in your designated initializer you should always call another secondary initializer or your <code>self</code> designated initializer.  Sometimes, by mistake, one can type <code>super</code>; doing this will cause not to respect the aforementioned sequence of initialization (in this specific case by skipping the initialization of the current class).</p>
+<h5 id="references">References</h5>
+<ul>
+<li><a href="https://developer.apple.com/library/ios/Documentation/General/Conceptual/DevPedia-CocoaCore/ObjectCreation.html" target="_blank">https://developer.apple.com/library/ios/Documentation/General/Conceptual/DevPedia-CocoaCore/ObjectCreation.html</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html" target="_blank">https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html</a></li>
+<li><a href="https://developer.apple.com/library/ios/Documentation/General/Conceptual/DevPedia-CocoaCore/MultipleInitializers.html" target="_blank">https://developer.apple.com/library/ios/Documentation/General/Conceptual/DevPedia-CocoaCore/MultipleInitializers.html</a></li>
+<li><a href="https://blog.twitter.com/2014/how-to-objective-c-initializer-patterns" target="_blank">https://blog.twitter.com/2014/how-to-objective-c-initializer-patterns</a></li>
+</ul>
+<h3 id="instancetype">instancetype</h3>
+<p>One often doesn&apos;t realize that Cocoa is full of conventions, and they can help the compiler being a little bit more smart. Whether the compiler encounters <code>alloc</code> or <code>init</code> methods, it will know that, even though the return type of both method is <code>id</code>, those methods will always return objects that are an instance of the receiving class&apos;s type. As a consequence, this allows the compiler to provide and enforce the type checking (i.e. check that the methods called on the returned instance are valid). This kind of Clang smartness is due to what is called <a href="http://clang.llvm.org/docs/LanguageExtensions.html#related-result-types" target="_blank">related result type</a>, meaning that </p>
+<blockquote>
+<p>messages sent to one of alloc and init methods will have the same static type as the instance of the receiver class</p>
+</blockquote>
+<p>To have more information about the convention that allow to automatically identify the related result type please refer to the <a href="(http:/clang.llvm.org/docs/LanguageExtensions.html#related-result-types">appropriate section</a>) in the Clang Language Extensions guide.
+A related result type can be explicitly stated using the <code>instancetype</code> keyword as return type and this can be very helpful in situation where a factory method or convenience constructor is used. This will hint the compiler with the correct type checking and, probably more important, will behave correctly also when subclassing.</p>
+<pre><code class="lang-objective-c">@interface ZOCPerson
++ (instancetype)personWithName:(NSString *)name;
+@end
+</code></pre>
+<p>Even though, according to the clang specification, <code>id</code> can be promoted to <code>instancetype</code> by the compiler. In the case of <code>alloc</code> or <code>init</code> we strongly encourage to use the return type <code>instancetype</code> for all class and instance methods that returns an instance of the class.
+This is mostly to form the habit and to be consistent (and possibly having a more readable interface) in all your APIs. Once again, by making small adjustments to your code you can improve the readability: with a simple glance you will be able to distinguish which methods are returning an instance of your class. Sort of details you will appreciate in the long run.</p>
+<h5 id="reference">Reference</h5>
+<ul>
+<li><a href="http://tewha.net/2013/02/why-you-should-use-instancetype-instead-of-id/" target="_blank">http://tewha.net/2013/02/why-you-should-use-instancetype-instead-of-id/</a></li>
+<li><a href="http://tewha.net/2013/01/when-is-id-promoted-to-instancetype/" target="_blank">http://tewha.net/2013/01/when-is-id-promoted-to-instancetype/</a></li>
+<li><a href="http://clang.llvm.org/docs/LanguageExtensions.html#related-result-types" target="_blank">http://clang.llvm.org/docs/LanguageExtensions.html#related-result-types</a></li>
+<li><a href="http://nshipster.com/instancetype/" target="_blank">http://nshipster.com/instancetype/</a></li>
+</ul>
+<h3 id="initialization-patterns">Initialization Patterns</h3>
+<h4 id="class-cluster">Class cluster</h4>
+<p>Class cluster as described in the Apple&apos;s documentation is</p>
+<blockquote>
+<p>an architecture that groups a number of private, concrete subclasses under a public, abstract superclass.</p>
+</blockquote>
+<p>If this description sounds familiar probably your instinct is correct. Class cluster is the Apple lingo for the <a href="http://en.wikipedia.org/wiki/Abstract_factory_pattern" target="_blank">Abstract Factory</a> design pattern.
+The idea with class cluster is very simple: you typically have an abstract class that during the initialization process uses information, generally provided as parameters of the initializer method or available in the environment, to apply a logic and instantiate a concrete subclass. This &quot;public facing&quot; class should internally have a good knowledge of its subclass to be able to return the private subclass that best suited the task.
+This pattern is very useful because it removes the complexity of this initialization logic from the caller that only knows about the interface to comunicate with the object, without actually caring about the underlying  implementation.
+Class clusters are widely used in the Apple&apos;s frameworks; some of the most notably examples are <code>NSNumber</code> that can return an appropriate subclass depending of the type of number provided (Integer, Float, etc...) or <code>NSArray</code> that will return a concrete subclass with the best storage policy.
+The beauty of this pattern is that the caller can be completely unaware of the concrete subclass; in fact it can be used when designing a library to be able to swap the underlaying returned class without leaking any implementation detail as long as is respectful of the contract established in the abstract class.</p>
+<p>In our experience the use of a Class Cluster can be very helpful in removing a lot of conditional code.
+A typical example of this is when you have the same UIViewController subclass for both iPhone and iPad, but the behavior is slightly different depending on the the device.
+The na&#xEF;ve implementation is to put some conditional code checking the device in the methods where the different logic is needed, even though initially the place where this conditional logic is applied may be quite few they naturally tend to grow producing an explosion of code paths.
+A better design can be achieved by creating an abstract and generic view controller that will contain all the shared logic and then two specializing subclass for every device. 
+The generic view controller will check the current device idiom and depending on that it will return the appropriate subclass.</p>
+<pre><code class="lang-objective-c">@implementation ZOCKintsugiPhotoViewController
+
+- (id)initWithPhotos:(NSArray *)photos
+{
+    if ([self isMemberOfClass:ZOCKintsugiPhotoViewController.class]) {
+        self = nil;
+
+        if ([UIDevice isPad]) {
+            self = [[ZOCKintsugiPhotoViewController_iPad alloc] initWithPhotos:photos];
+        }
+        else {
+            self = [[ZOCKintsugiPhotoViewController_iPhone alloc] initWithPhotos:photos];
+        }
+        return self;
+    }
+    return [super initWithNibName:nil bundle:nil];
+}
+
+@end
+</code></pre>
+<p>The previous code example show how to create a class cluster. First of all the <code>[self isMemberOfClass:ZOCKintsugiPhotoViewController.class]</code> is done to prevent the necessity to override the init method in the subclass in order to prevent an infinite recursion. 
+When <code>[[ZOCKintsugiPhotoViewController alloc] initWithPhotos:photos]</code> will get called the previous check will be true, the <code>self = nil</code> is to remove every reference to the instance of <code>ZOCKintsugiPhotoViewController</code> that it will be deallocated , following there is the logic to choose which subclass should be initialized. 
+Let&apos;s assume that we are running this code on an iPhone and that <code>ZOCKintsugiPhotoViewController_iPhone</code> is not overriding <code>initWithPhotos:</code>; in this case, when executing <code>self = [[ZOCKintsugiPhotoViewController_iPhone alloc] initWithPhotos:photos];</code> the <code>ZOCKintsugiPhotoViewController</code> will be called and here is when the first check comes handy, given that now is not exactly  <code>ZOCKintsugiPhotoViewController</code> the check will be false calling the <code>return [super initWithNibName:nil bundle:nil];</code> this will make continue the initialization following the correct initialization path highlighted in the previous session.</p>
+<h4 id="singleton">Singleton</h4>
+<p>Generally avoid using them if possible, use dependency injection instead.
+Nevertheless, unavoidable singleton objects should use a thread-safe pattern for creating their shared instance. As of GCD, it is possible to use the <code>dispatch_once()</code> function to</p>
+<pre><code class="lang-objective-c">+ (instancetype)sharedInstance
+{
+   static id sharedInstance = nil;
+   static dispatch_once_t onceToken = 0;
+   dispatch_once(&amp;onceToken, ^{
+      sharedInstance = [[self alloc] init];
+   });
+   return sharedInstance;
+}
+</code></pre>
+<p>The use of dispatch_once(), which is synchronous, replaces the following, yet obsolete, idiom:</p>
+<pre><code class="lang-objective-c">+ (instancetype)sharedInstance
+{
+    static id sharedInstance;
+    @synchronized(self) {
+        if (sharedInstance == nil) {
+            sharedInstance = [[MyClass alloc] init];
+        }
+    }
+    return sharedInstance;
+}
+</code></pre>
+<p>The benefits of <code>dispatch_once()</code> over this are that it&apos;s faster, it&apos;s also semantically cleaner, because the entire idea of dispatch_once() is &quot;perform something once and only once&quot;, which is precisely what we&apos;re doing. This approach will also prevent <a href="http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html" target="_blank">possible and sometimes prolific crashes</a>.</p>
+<p>Classic examples of acceptable singleton objects are the GPS and the accelerometer of a device. Even though Singleton objects can be subclassed, the cases where this comes useful are rare. The interface should put in evidence that the given class is intended to be used as a Singleton. Therefore, often a single public <code>sharedInstance</code> class method would suffice and no writable properties should be exposed.</p>
+<p>Trying to use a Singleton as a container for objects to share across the code or layer of your application is ugly and nasty, and should be interpreted as a design smell.</p>
+<h2 id="properties">Properties</h2>
+<p>Properties should be named as descriptively as possible, avoiding abbreviation, and camel-case with the leading word being lowercase. Luckily our tool of choice is able to autocomplete everything we type (well... almost everything. Yes, I&apos;m looking at you Xcode&apos;s Derived Data) so there is no reason to save a couple of chars, and it&apos;s better to convey as much information as possible in your source code.</p>
+<p><strong>For example:</strong></p>
+<pre><code class="lang-objective-c">NSString *text;
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">NSString* text;
+NSString * text;
+</code></pre>
+<p>(Note: this preference is different for constants. This is actually a matter of common sense and readability: C++ developers often prefer to separate the type from the name of the variable, and as the type in its pure form would be <code>NSString*</code> (for objects allocated on the heap, as in C++ it&apos;d be possible to allocate objects on the stack) the format <code>NSString* text;</code> is used.)</p>
+<p>Use auto-synthesize for properties rather than manual <code>@synthesize</code> statements unless your properties are part of a protocol rather than a concrete class. If Xcode can automatically synthesize the variable, then let it do so; moreover it&apos;d be a part of the code that is just redundant and that you have to maintain without a real benefit.</p>
+<p>You should always use the setter and getter to access the property, except for the <code>init</code> and <code>dealloc</code> methods. Generally speaking, using the property gives you an increased visual clue that what you&apos;re accessing is outside you current scope and therefor is subject to side-effect.</p>
+<p>You should always prefer the setter because:</p>
+<ul>
+<li>Using the setter will respect the defined memory-management semantics (<code>strong</code>, <code>weak</code>, <code>copy</code> etc...). This was definitely more relevant before ARC but it&apos;s still relevant; think, for example, the <code>copy</code> semantic, every time you use the setter the passed value is copied without any additional operation;</li>
+<li>KVO notifications (<code>willChangeValueForKey</code>, <code>didChangeValueForKey</code>) are fired automatically;</li>
+<li>It is easier to debug: you can set a breakpoint on the property declaration and the breakpoint will fire every time the getter/setter is called, or you can set a breakpoint inside a custom setter/getter;</li>
+<li>It allows to add extra logic when setting a value in a single place.</li>
+</ul>
+<p>You should alway prefer the getter:</p>
+<ul>
+<li>It is resilient to future change (e.g. the property is dynamically generated);</li>
+<li>It allows subclassing;</li>
+<li>It is easier to debug (i.e. Is possible to put a breakpoint in the getter and see who&apos;s accessing that specific getter);</li>
+<li>It makes the intent clear and explicit: by accessing an ivar <code>_anIvar</code> you are actually accessing <code>self-&gt;_anIvar</code>. This can lead to problems, for instance, accessing the iVar inside a block (you&apos;re capturing and retaining self even if you don&apos;t explicitly see the keyword <code>self</code>);</li>
+<li>It automatically fires KVO notifications;</li>
+<li>The overhead introduced by the message sending is very low and in the most of the case is negligible. For more information on the performance penalty introduced by the property you may find an interesting performance rundown  <a href="http://blog.bignerdranch.com/4005-should-i-use-a-property-or-an-instance-variable/" target="_blank">Should I Use a Property or an Instance Variable?</a></li>
+</ul>
+<h4 id="init-and-dealloc">Init and Dealloc</h4>
+<p>There is however an exception to what stated before: you must never use the setter (or the getter) in the <code>init</code> (and other initializer method), and instead you should always access directly the variable using the instance variable. This is to be defensive against subclassing: eventually a subclass can override the setter (or getter) and trying to call other methods, access properties or iVars that aren&apos;t in a consistent state or fully-initialized. Remember that an object is considered fully initialized and in a consistent state only after the init returns. The same applies for the <code>dealloc</code> method (during the <code>dealloc</code> method an object can be in a inconsistent state). This is also clearly stated many times over time:</p>
+<ul>
+<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmPractical.html#//apple_ref/doc/uid/TP40004447-SW6" target="_blank">Advanced Memory Management Programming Guide</a> under the self-explanatory section &quot;Don&apos;t Use Accessor Methods in Initializer Methods and dealloc&quot;;</li>
+<li><a href="http://adcdownload.apple.com//wwdc_2012/wwdc_2012_session_pdfs/session_413__migrating_to_modern_objectivec.pdf" target="_blank">Migrating to Modern Objective-C</a> at WWDC 2012 at slide 27;</li>
+<li>in a <a href="https://github.com/NYTimes/objective-c-style-guide/issues/6" target="_blank">pull request</a> form Dave DeLong&apos;s. </li>
+</ul>
+<p>Moreover, using the setter in the init will not play nicely with <code>UIAppearence</code> proxy (please refer to <a href="http://petersteinberger.com/blog/2013/uiappearance-for-custom-views/" target="_blank">UIAppearance for Custom Views</a> for additional informations).</p>
+<h4 id="dot-notation">Dot-Notation</h4>
+<p>When using the setter/getter always prefer the dot notation.
+Dot-notation should <em>always</em> be used for accessing and mutating properties.</p>
+<p><strong>For example:</strong></p>
+<pre><code class="lang-objective-c">view.backgroundColor = [UIColor orangeColor];
+[UIApplication sharedApplication].delegate;
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">[view setBackgroundColor:[UIColor orangeColor]];
+UIApplication.sharedApplication.delegate;
+</code></pre>
+<p>Using the dot notation will ensure a visual clue to help distinguish between a property or a typical method call.</p>
+<h3 id="property-declaration">Property Declaration</h3>
+<p>The preferred way to declare a property is the following format</p>
+<pre><code class="lang-objective-c">@property (nonatomic, readwrite, copy) NSString *name;
+</code></pre>
+<p>The property attributes should be ordered as following: atomicity, read/write and memory-managements storage. By doing this your attributes are more likely to change in the right most position and it&apos;s easier to scan with your eyes.</p>
+<p>You must use <code>nonatomic</code> attribute, unless strictly necessary. On iOS, the locking introduced by <code>atomic</code> can significantly affect the performances.</p>
+<p>Properties that stores a block, in order to keep it alive after the end of the declaration scope, must be <code>copy</code> (the block is initially created on the stack, calling <code>copy</code> cause the block to be copied on the heap).</p>
+<p>In order to achieve a public getter and a private setter, you can declare the public property as <code>readonly</code> and re-declare the same property in the the class extension as <code>readwrite</code>:</p>
+<pre><code class="lang-objective-c">@interface MyClass : NSObject
+@property (nonatomic, readonly) NSObject *object
+@end
+
+@implementation MyClass ()
+@property (nonatomic, readwrite, strong) NSObject *object
+@end
+</code></pre>
+<p>If the name of a <code>BOOL</code> property is expressed as an adjective, the property can omit the &quot;is&quot; prefix but specifies the conventional name for the get accessor, for example:</p>
+<pre><code class="lang-objective-c">@property (assign, getter=isEditable) BOOL editable;
+</code></pre>
+<p>Text and example taken from the <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingIvarsAndTypes.html#//apple_ref/doc/uid/20001284-BAJGIIJE" target="_blank">Cocoa Naming Guidelines</a>.</p>
+<p>In the implementation file avoid the use of <code>@synthesize</code>, Xcode is already adding this for you.</p>
+<h4 id="private-properties">Private Properties</h4>
+<p>Private properties should be declared in class extensions (anonymous categories) in the implementation file of a class. Named categories (e.g. <code>ZOCPrivate</code>) should never be used unless extending another class.</p>
+<p><strong>For example:</strong></p>
+<pre><code class="lang-objective-c">@interface ZOCViewController ()
+@property (nonatomic, strong) UIView *bannerView;
+@end
+</code></pre>
+<h3 id="mutable-object">Mutable Object</h3>
+<p>Any property that potentially can be set with a mutable object (e.g. <code>NSString</code>,<code>NSArray</code>,<code>NSURLRequest</code>) must have the memory-management type to <code>copy</code>. This is done in order to ensure the encapsulation and prevent that the value is changed after the property is set without that the object know it.</p>
+<p>You should also avoid to expose mutable object in the public interface, because this allows clients of your class to change your own internal representation and break the encapsulation. You can provide a read-only property that returns an immutable copy of your object:</p>
+<pre><code class="lang-objective-c">/* .h */
+@property (nonatomic, readonly) NSArray *elements
+
+/* .m */
+- (NSArray *)elements {
+  return [self.mutableElements copy];
+}
+</code></pre>
+<h3 id="lazy-loading">Lazy Loading</h3>
+<p>There are cases when instantiating an object can be expensive and/or needs to be configured once and has some configuration involved that you don&apos;t want to clutter the caller method.</p>
+<p>In this case, instead of allocating the object in the init method one could opt for overriding the property getter for lazy instantiation. Usually the template for this kind of operation is the following:</p>
+<pre><code class="lang-objective-c">- (NSDateFormatter *)dateFormatter {
+  if (!_dateFormatter) {
+    _dateFormatter = [[NSDateFormatter alloc] init];
+        NSLocale *enUSPOSIXLocale = [[NSLocale alloc] initWithLocaleIdentifier:@&quot;en_US_POSIX&quot;];
+        [dateFormatter setLocale:enUSPOSIXLocale];
+        [dateFormatter setDateFormat:@&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSSS&quot;];
+  }
+  return _dateFormatter;
+}
+</code></pre>
+<p>Even though this can be beneficial in some circumstance we advice to be thoughtful when you decide to do, and actually this should be avoided. The following are the arguments against the use of property with lazy initialization:</p>
+<ul>
+<li>The getter should not have side effect. By looking a getter on the right-hand side you&apos;re not thinking that this is causing an object to be allocated or will lead to side effect. In fact, trying to call a getter without using the returned value the compiler will emit the warning &quot;getter should not used for side effect&quot;;</li>
+<li>You&apos;re moving the cost of the initialization as side effect of the first access, this will lead to difficulties to optimize performance issues (that are also hard to instrument);</li>
+<li>The moment of instantiation can be non deterministic: for example you&apos;re expecting that this property is first accessed by a method but as soon as you change the class implementation, the accessor gets called before your original expectation. This can cause problems especially if the instantiation logic has dependencies on other state of the class that may be different. In general is better to explicitly express the dependency;</li>
+<li>This behavior might not be KVO friendly. If the getter changes the reference it should fire a KVO notification for notify the change, it can be weird to receive a change notification when accessing a getter.</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<h3 id="parameter-assert">Parameter Assert</h3>
+<p>Your method may require some parameter to satisfy certain condition (i.e. not to be nil): in such cases it&apos;s a good practice to use <code>NSParameterAssert()</code> to assert the condition and eventually throwing an exception.</p>
+<h3 id="private-methods">Private methods</h3>
+<p>Never prefix your private method with a single underscore <code>_</code>, this prefix is reserved by Apple, doing otherwise expose you to the risk of overriding an existing Apple&apos;s private method.</p>
+<h2 id="equality">Equality</h2>
+<p>In case you need to implement equality remember the contract: you need to implement both the <code>isEqual</code> and the <code>hash</code> methods. If two objects are considered equal through <code>isEqual</code>, the <code>hash</code> method must return the same value, but if <code>hash</code> returns the same value the object are not guaranteed to be equals.</p>
+<p>This contracts boils down to how the lookup of those objects is done when are stored in collections (i.e. <code>NSDictionary</code> and <code>NSSet</code> use hash table data structure underneath).</p>
+<pre><code class="lang-objective-c">@implementation ZOCPerson
+
+- (BOOL)isEqual:(id)object {
+    if (self == object) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[ZOCPerson class]]) {
+        return NO;
+    }
+
+    // check objects properties (name and birthday) for equality
+    ...
+    return propertiesMatch;
+}
+
+- (NSUInteger)hash {
+    return [self.name hash] ^ [self.birthday hash];
+}
+
+@end
+</code></pre>
+<p>It is important to notice that the hash method must not return a constant. This is a typical error and causes serious problems as it will cause 100% of collisions in the hash table as the value returned by the hash method is actually used as key in the hash table.</p>
+<p>You should also always implement a typed equality check method with the following format <code>isEqualTo&lt;#class-name-without-prefix#&gt;:</code>
+If you can, it&apos;s always preferable to call the typed equal method in order to avoid the type checking overhead.</p>
+<p>A complete pattern for the isEqual* method should be as so:</p>
+<pre><code class="lang-objective-c">- (BOOL)isEqual:(id)object {
+    if (self == object) {
+      return YES;
+    }
+
+    if (![object isKindOfClass:[ZOCPerson class]]) {
+      return NO;
+    }
+
+    return [self isEqualToPerson:(ZOCPerson *)object];
+}
+
+- (BOOL)isEqualToPerson:(Person *)person {
+    if (!person) {
+        return NO;
+    }
+
+    BOOL namesMatch = (!self.name &amp;&amp; !person.name) ||
+                       [self.name isEqualToString:person.name];
+    BOOL birthdaysMatch = (!self.birthday &amp;&amp; !person.birthday) ||
+                           [self.birthday isEqualToDate:person.birthday];
+
+  return haveEqualNames &amp;&amp; haveEqualBirthdays;
+}
+</code></pre>
+<p>Given an object instance the computation of the <code>hash</code> should be deterministic, this is extremely important if the object is added to a container object (i.e. <code>NSArray</code>, <code>NSSet</code>, or <code>NSDictionary</code>) otherwise the behavior will be undefined (all container objects use the object&apos;s hash to do the lookup and enforce specific property like the uniqueness of the objects contained). That said, the calculation of the hash should always be made only by using immutable properties or, better yet, by guarantee the immutability of the objects.</p>
+<h1 id="categories">Categories</h1>
+<p>It is ugly, we know, but categories should always be prefixed with your lower case prefix and an underscore i.e. <code>- (id)zoc_myCategoryMethod</code>. This practice is also <a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW4" target="_blank">recommended by Apple</a>.</p>
+<p>This is absolutely needed because implementing a category method with a name already existing in the extended object or in another category may result in an undefined behavior. Practically, what is going to happen is that the implementation of the last category loaded will be the one that gets called. </p>
+<p>In case you want to be sure that you&apos;re not replacing any implementation with your own category you can set the environment variable <code>OBJC_PRINT_REPLACED_METHODS</code> to <code>YES</code>, this will print in the console the names of the methods that have been replaced. 
+At the time of writing LLVM 5.1 does not emit any warning or error for this, so be careful and don&apos;t override methods in categories.</p>
+<p>A good practice is to use prefix also for category names.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-objective-c">@interface NSDate (ZOCTimeExtensions)
+- (NSString *)zoc_timeAgoShort;
+@end
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">@interface NSDate (ZOCTimeExtensions)
+- (NSString *)timeAgoShort;
+@end
+</code></pre>
+<p>Category can be used to group related method in a header file. This is a very common practice in Apple&apos;s framework (nearby is proposed an extract from <code>NSDate</code> header) and we strongly encourage to do the same in your code. 
+In our experience creating this groups can be helpful in further refactoring: when the interface of a class starts growing can be a signal that your class is doing to much and therefore violating the Single Responsibility Principle, the previously created groups be used to better understand the different responsibilities and help in breaking down the class in more self-contained components.</p>
+<pre><code class="lang-objective-c">
+@interface NSDate : NSObject <NSCopying, NSSecureCoding="">
+
+@property (readonly) NSTimeInterval timeIntervalSinceReferenceDate;
+
+@end
+
+@interface NSDate (NSDateCreation)
+
++ (instancetype)date;
++ (instancetype)dateWithTimeIntervalSinceNow:(NSTimeInterval)secs;
++ (instancetype)dateWithTimeIntervalSinceReferenceDate:(NSTimeInterval)ti;
++ (instancetype)dateWithTimeIntervalSince1970:(NSTimeInterval)secs;
++ (instancetype)dateWithTimeInterval:(NSTimeInterval)secsToBeAdded sinceDate:(NSDate *)date;
+// ...
+@end
+</NSCopying,></code></pre>
+<h1 id="protocols">Protocols</h1>
+<p>A great miss in the Objective-C world is the outcome of the latest decades about abstract interfaces. The term interface is typically used to refer to the <code>.h</code> file of a class but it has also another meaning well known to Java programmers which is basically used to describe to a set of methods not backed by a concrete implementation.
+In Objective-C the latter case is achieved by using protocols. For historical reasons, protocols (used as Java interfaces) are not so much used in Objective-C code and in general by the community. It&apos;s mainly because the majority of the code developed at Apple don&apos;t embrace this approach and almost all developers tend to follow Apple&apos;s patterns and guidelines. Apple uses protocols almost only for the delegation pattern.
+The concept of abstract interface is very powerful, has roots in the computer science history and there are no reasons to pretend it can&apos;t be used in Objective-C.</p>
+<p>Here will be explained a powerful usage of protocols (intended as abstract interfaces) going through a concrete example: starting from a very bad designed architecture up to reaching a very well and reusable piece of code.</p>
+<p>The example presented is the implementation of a RSS feed reader (think of it as a common test task asked during technical interviews).</p>
+<p>The requirement is straightforward: presenting a remote RSS feed in a table view.</p>
+<p>A very na&#xEF;ve approach would be to create a <code>UITableViewController</code> subclass and code the entire logic for the retrieving of the feed data, the parsing and the displaying in one place, which is, in other words, a MVC (Massive View Controller). This would work but it&apos;s very poorly designed and unfortunately it&apos;d suffice to pass the interview step in some not-so-demanding tech startups.</p>
+<p>A minimal step forward would be to follow the Single Responsibility Principle and create at least 2 components to do the different tasks:</p>
+<ul>
+<li>a feed parser to parse the results gathered from an endpoint</li>
+<li>a feed reader to display the results</li>
+</ul>
+<p>The interfaces for these classes could be as so:</p>
+<pre><code class="lang-objective-c">
+@interface ZOCFeedParser : NSObject
+
+@property (nonatomic, weak) id <ZOCFeedParserDelegate> delegate;
+@property (nonatomic, strong) NSURL *url;
+
+- (id)initWithURL:(NSURL *)url;
+
+- (BOOL)start;
+- (void)stop;
+
+@end
+</ZOCFeedParserDelegate></code></pre>
+<pre><code class="lang-objective-c">
+@interface ZOCTableViewController : UITableViewController
+
+- (instancetype)initWithFeedParser:(ZOCFeedParser *)feedParser;
+
+@end
+</code></pre>
+<p>The <code>ZOCFeedParser</code> is initialized with a <code>NSURL</code> to the endpoint to fetch the RSS feed (under the hood it will probably use NSXMLParser and NSXMLParserDelegate to create meaningful data) and the <code>ZOCTableViewController</code> is initialized with the parser. We want it to display the values retrieved by the parser and we do it using delegation with the following protocol:</p>
+<pre><code class="lang-objective-c">
+@protocol ZOCFeedParserDelegate <NSObject>
+@optional
+- (void)feedParserDidStart:(ZOCFeedParser *)parser;
+- (void)feedParser:(ZOCFeedParser *)parser didParseFeedInfo:(ZOCFeedInfoDTO *)info;
+- (void)feedParser:(ZOCFeedParser *)parser didParseFeedItem:(ZOCFeedItemDTO *)item;
+- (void)feedParserDidFinish:(ZOCFeedParser *)parser;
+- (void)feedParser:(ZOCFeedParser *)parser didFailWithError:(NSError *)error;
+@end
+</NSObject></code></pre>
+<p>It&apos;s a perfectly reasonable and suitable protocol to deal with RSS, I&apos;d say. The view controller will conform to it in the public interface:</p>
+<pre><code class="lang-objective-c">@interface ZOCTableViewController : UITableViewController <ZOCFeedParserDelegate>
+</ZOCFeedParserDelegate></code></pre>
+<p>and the final creation code is like so: </p>
+<pre><code class="lang-objective-c">NSURL *feedURL = [NSURL URLWithString:@&quot;http://bbc.co.uk/feed.rss&quot;];
+
+ZOCFeedParser *feedParser = [[ZOCFeedParser alloc] initWithURL:feedURL];
+
+ZOCTableViewController *tableViewController = [[ZOCTableViewController alloc] initWithFeedParser:feedParser];
+feedParser.delegate = tableViewController;
+</code></pre>
+<p>So far so good and you&apos;re probably happy with this new code, but how much of this code can be effectively reused? The view controller can only deal with objects of type <code>ZOCFeedParser</code>: at this point we just split the code in 2 components without any additional and tangible value than separation of responsibilities.</p>
+<p>The responsibility of the view controller should be to &quot;display items provided by <someone>&quot; but if we are allowed to pass to it only <code>ZOCFeedParser</code> objects this can&apos;t hold. Here surfaces the need for a more general type of object to be used by the view controller.</someone></p>
+<p>We modify our feed parser introducing the <code>ZOCFeedParserProtocol</code> protocol (in the ZOCFeedParserProtocol.h file where also <code>ZOCFeedParserDelegate</code> will be).</p>
+<pre><code class="lang-objective-c">
+@protocol ZOCFeedParserProtocol <NSObject>
+
+@property (nonatomic, weak) id <ZOCFeedParserDelegate> delegate;
+@property (nonatomic, strong) NSURL *url;
+
+- (BOOL)start;
+- (void)stop;
+
+@end
+
+@protocol ZOCFeedParserDelegate <NSObject>
+@optional
+- (void)feedParserDidStart:(id<ZOCFeedParserProtocol>)parser;
+- (void)feedParser:(id<ZOCFeedParserProtocol>)parser didParseFeedInfo:(ZOCFeedInfoDTO *)info;
+- (void)feedParser:(id<ZOCFeedParserProtocol>)parser didParseFeedItem:(ZOCFeedItemDTO *)item;
+- (void)feedParserDidFinish:(id<ZOCFeedParserProtocol>)parser;
+- (void)feedParser:(id<ZOCFeedParserProtocol>)parser didFailWithError:(NSError *)error;
+@end
+</ZOCFeedParserProtocol></ZOCFeedParserProtocol></ZOCFeedParserProtocol></ZOCFeedParserProtocol></ZOCFeedParserProtocol></NSObject></ZOCFeedParserDelegate></NSObject></code></pre>
+<p>Notice that the delegate protocol now deals with objects conforming to our new protocol and the interface file of the ZOCFeedParser would be more skinny:</p>
+<pre><code class="lang-objective-c">
+@interface ZOCFeedParser : NSObject <ZOCFeedParserProtocol>
+
+- (id)initWithURL:(NSURL *)url;
+
+@end
+</ZOCFeedParserProtocol></code></pre>
+<p>As <code>ZOCFeedParser</code>now conforms to <code>ZOCFeedParserProtocol</code>, it must implement all the required methods.
+At this point the view controller can accept any object conforming to the new protocol, having the certaincy that the object will respond to <code>start</code> and <code>stop</code> methods and that it will provide info through the delegate property. This is all the view controller should know about the given objects and no implementation details should concern it.</p>
+<pre><code class="lang-objective-c">
+@interface ZOCTableViewController : UITableViewController <ZOCFeedParserDelegate>
+
+- (instancetype)initWithFeedParser:(id<ZOCFeedParserProtocol>)feedParser;
+
+@end
+</ZOCFeedParserProtocol></ZOCFeedParserDelegate></code></pre>
+<p>The change in the above snippet of code might seem a minor change, but actually it is a huge improvement as the view controller would work against a contract rather than a concrete implementation. This leads to many advantages:</p>
+<ul>
+<li>the view controller can now accept any object that provide some information via the delegate property: this can be a RSS remote feed parser, a local one, a service that read other types of data remotely or even a service that fetch data from the local database;</li>
+<li>the feed parser object can be totally reused (as it was before after the first refactoring step);</li>
+<li><code>ZOCFeedParser</code> and <code>ZOCFeedParserDelegate</code> can be reused by other components;</li>
+<li><code>ZOCViewController</code> (UI logic apart) can be reused;</li>
+<li>it is easier to test as it&apos;d be possible to use a mock object conforming to the expected protocol.</li>
+</ul>
+<p>When implementing a protocol you should always strive to adhere to the <a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle" target="_blank">Liskov Substitution Principle</a>. This principle states that you should be able to replace one implementation of an interface (&quot;protocol&quot; in the Objective-C lingo) with another without breaking either the client or the implementation.</p>
+<p>In other words this means that your protocol should not leak the detail of the implementing classes; be even more careful when designing the abstraction expressed by you protocol and always keep in mind that the underlay implementation is irrelevant, what really matters is the contract that the abstraction expose to the consumer.</p>
+<p>Everything that is designed to be reused in future is implicitly better code and should be always the programmer&apos;s goal. Code designed this way is what makes the difference between an experienced programmer and a newbie.</p>
+<p>The final code proposed here can be found <a href="http://github.com/albertodebortoli/ADBFeedReader" target="_blank">here</a>.</p>
+<h1 id="nsnotification">NSNotification</h1>
+<p>When you define your own <code>NSNotification</code> you should define your notification&apos;s name as a string constant. Like any string constant that you want to make available to other classes, it should be declared as <code>extern</code> in the public interface, and defined privately in the corresponding implementation. 
+Because you&apos;re exposing this symbol in the header you should follow the usual namespace rule prefixing the notification name with the class name that belongs to.
+It&apos;s also good practice to name the notification using the verb Did/Will and terminate the name with the word &quot;Notifications&quot;.</p>
+<pre><code class="lang-objective-c">// Foo.h
+extern NSString * const ZOCFooDidBecomeBarNotification
+
+// Foo.m
+NSString * const ZOCFooDidBecomeBarNotification = @&quot;ZOCFooDidBecomeBarNotification&quot;;
+</code></pre>
+<h1 id="beautifying-the-code">Beautifying the code</h1>
+<h3 id="spacing">Spacing</h3>
+<ul>
+<li>Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode.</li>
+<li>Method braces and other braces (<code>if</code>/<code>else</code>/<code>switch</code>/<code>while</code> etc.) always open on the same line as the statement but close on a new line.</li>
+</ul>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">if (user.isHappy) {
+    //Do something
+}
+else {
+    //Do something else
+}
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">if (user.isHappy)
+{
+  //Do something
+} else {
+  //Do something else
+}
+</code></pre>
+<ul>
+<li>There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.</li>
+<li>Prefer using auto-synthesis. But if necessary, <code>@synthesize</code> and <code>@dynamic</code> should each be declared on new lines in the implementation.</li>
+<li>Colon-aligning method invocation should often be avoided. There are cases where a method signature may have more than 3 colons and colon-aligning makes the code more readable. Always colon align methods, even if they contain blocks.</li>
+</ul>
+<p><strong>Preferred:</strong></p>
+<pre><code class="lang-objective-c">[UIView animateWithDuration:1.0
+                 animations:^{
+                     // something
+                 }
+                 completion:^(BOOL finished) {
+                     // something
+                 }];
+</code></pre>
+<p><strong>Not Preferred:</strong></p>
+<pre><code class="lang-objective-c">[UIView animateWithDuration:1.0 animations:^{
+    // something 
+} completion:^(BOOL finished) {
+    // something
+}];
+</code></pre>
+<p>If auto indentation falls into bad readability, declare blocks in variables before or reconsider your method signature.</p>
+<h3 id="line-breaks">Line Breaks</h3>
+<p>Line breaks are an important topic since this style guide is focused for print and online readability.</p>
+<p>For example:</p>
+<pre><code class="lang-objective-c">self.productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
+</code></pre>
+<p>A long line of code like the one above should be carried on to the second line adhering to this style guide&apos;s Spacing section (two spaces).</p>
+<pre><code class="lang-objective-c">self.productsRequest = [[SKProductsRequest alloc] 
+  initWithProductIdentifiers:productIdentifiers];
+</code></pre>
+<h3 id="brackets">Brackets</h3>
+<p>Use <a href="https://en.wikipedia.org/wiki/Indent_style#K.26R_style" target="_blank">Egyptian brackets</a> for:</p>
+<ul>
+<li>control structures (if-else, for, switch)</li>
+</ul>
+<p>Non-Egyptian brackets are accepted for:</p>
+<ul>
+<li>class implementations (if any)</li>
+<li>method implementations</li>
+</ul>
+<h1 id="code-organization">Code Organization</h1>
+<p><a href="http://nshipster.com/pragma/" target="_blank">Quoting</a> Mattt Thompson</p>
+<blockquote>
+<p>code organization is a matter of hygiene</p>
+</blockquote>
+<p>We could not agree more. Having you code clearly organized in a clean and defined manner is a way to show respect for yourself and other people that will read and change you code (consider the future you included).</p>
+<h2 id="exploit-code-block">Exploit Code Block</h2>
+<p>A very obscure GCC behavior that it is also supported by Clang is the ability of a code block to return the value of the latest statement if enclosing in round bracket.</p>
+<pre><code class="lang-objective-c">NSURL *url = ({
+    NSString *urlString = [NSString stringWithFormat:@&quot;%@/%@&quot;, baseURLString, endpoint];
+    [NSURL URLWithString:urlString];
+});
+</code></pre>
+<p>This feature can be nicely organized to group small chunk of code that usually are necessary only for the sole purpose of setting up a class.
+This gives a reader an important visual clue and help reduce the visual noise focusing on the most important variable in the function.
+Additionally, this technique has the advantage that all the variables declared inside the code block, as one might expect, are valid only inside that scope, this mean that the your not polluting the method&apos;s stack trace and you can reuse the variable name without having duplicated symbols.</p>
+<h2 id="pragma">Pragma</h2>
+<h3 id="pragma-mark">Pragma Mark</h3>
+<p><code>#pragma mark -</code> is a great way to organize the code inside a class and helps you grouping methods implementation.
+We suggest to use <code>#pragma mark -</code>to separate:</p>
+<ul>
+<li>methods in functional groupings </li>
+<li>protocols implementations.</li>
+<li>methods overridden from a superclass</li>
+</ul>
+<pre><code class="lang-objective-c">
+- (void)dealloc { /* ... */ }
+- (instancetype)init { /* ... */ }
+
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad { /* ... */ }
+- (void)viewWillAppear:(BOOL)animated { /* ... */ }
+- (void)didReceiveMemoryWarning { /* ... */ }
+
+#pragma mark - Custom Accessors
+
+- (void)setCustomProperty:(id)value { /* ... */ }
+- (id)customProperty { /* ... */ }
+
+#pragma mark - IBActions
+
+- (IBAction)submitData:(id)sender { /* ... */ }
+
+#pragma mark - Public
+
+- (void)publicMethod { /* ... */ }
+
+#pragma mark - Private
+
+- (void)zoc_privateMethod { /* ... */ }
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { /* ... */ }
+
+#pragma mark - ZOCSuperclass
+
+// ... overridden methods from ZOCSuperclass
+
+#pragma mark - NSObject
+
+- (NSString *)description { /* ... */ }
+</code></pre>
+<p>The above marks will help to visually separate and organize the code. One of the pros is that you can cmd+click on the mark to jump to the symbol definition.
+Be aware that even though the use of pragma mark is a sign of craftsmanship, it&apos;s not a good reason to make grow the number of methods in your class in a unbounded fashion: having too many of them should be a warning sign that your class has too many responsibilities and a good opportunity for refactoring.</p>
+<h3 id="notes-about-pragma">Notes about pragma</h3>
+<p>At <a href="http://raptureinvenice.com/pragmas-arent-just-for-marks" target="_blank">http://raptureinvenice.com/pragmas-arent-just-for-marks</a> there&apos;s a great discussion about pragmas, reported in part here.</p>
+<p>While most iOS developers don&apos;t play around much with compiler options, some options are useful to control how strictly to check (or not check) your code for errors. Sometimes, though, you want to make an exception directly in your code using a pragma, which purpose is to temporarily disable a compiler behavior.</p>
+<p>When you use ARC, the compiler inserts memory-management calls for you. There are cases, though, where it can get confused. One such case is when you use <code>NSSelectorFromString</code> to have a dynamically-named selector called. Since ARC can&apos;t know what the method will be and what kind of memory management to use, you&apos;ll be warned with <code>performSelector may cause a leak because its selector is unknown</code>.</p>
+<p>If you know your code won&apos;t leak, you can suppress the warning for just this instance by wrapping it like this:</p>
+<pre><code class="lang-objective-c">#pragma clang diagnostic push
+#pragma clang diagnostic ignored &quot;-Warc-performSelector-leaks&quot;
+
+[myObj performSelector:mySelector withObject:name];
+
+#pragma clang diagnostic pop
+</code></pre>
+<p>Note how we disable the -Warc-performSelector-leaks check by pushing and popping the change around our code. This assures us we don&apos;t disable it globally, which would be a huge mistake.</p>
+<p>The entire list of options that can be enable or disabled can be found at <a href="http://clang.llvm.org/docs/UsersManual.html" target="_blank">The Clang User&apos;s Manual</a> to learn about all of them.</p>
+<p>Suppressing warnings for unused variables</p>
+<p>It&apos;s useful to be told that a variable you&apos;ve defined is going unused. In most cases, you want to remove these references to improve performance (however slightly), but sometimes you want to keep them. Why? Perhaps they have a future usage or the functionality is only temporarily removed. Either way, a smarter way to suppress the warning without brutally commenting out the relevant lines, is to use the <code>#pragma unused()</code>:</p>
+<pre><code class="lang-objective-c">- (void)giveMeFive
+{
+    NSString *foo;
+    #pragma unused (foo)
+
+    return 5;
+}
+</code></pre>
+<p>Now you can keep your code in place without the compiler complaining about it. And yes, that pragma needs to go below the offending code.</p>
+<h2 id="explicit-warnings-and-errors">Explicit warnings and errors</h2>
+<p>The compiler is a robot: it will mark what&apos;s wrong with your code using a set of rules that&apos;ve been defined by Clang. But, every so often you&apos;re smarter than it. Often, you might find some offending code that you know will lead to problems but, for whatever reason, can&apos;t fix yourself at the moment. You can explicitly signal errors like this:</p>
+<pre><code class="lang-objective-c">- (NSInteger)divide:(NSInteger)dividend by:(NSInteger)divisor
+{
+    #error Whoa, buddy, you need to check for zero here!
+    return (dividend / divisor);
+}
+</code></pre>
+<p>You can signal warnings similarly:</p>
+<pre><code class="lang-objective-c">- (float)divide:(float)dividend by:(float)divisor
+{
+    #warning Dude, don&apos;t compare floating point numbers like this!
+    if (divisor != 0.0) {
+        return (dividend / divisor);
+    }
+    else {
+        return NAN;
+    }
+}
+</code></pre>
+<h2 id="docstrings">Docstrings</h2>
+<p>All non-trivial methods, interfaces, categories, and protocol declarations should have accompanying comments describing their purpose and how they fit into the larger picture. For more examples, see the Google Style Guide around <a href="http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml#File_Comments" target="_blank">File and Declaration Comments</a>.</p>
+<p>To summarize: There are two types of docstrings, long-form and short-form.</p>
+<p>A short-form docstring fits entirely on one line, including the comment slashes. It is used for simple functions, especially (though by no means exclusively) ones that are not part of a public API:</p>
+<pre><code>// Return a user-readable form of a Frobnozz, html-escaped.
+</code></pre><p>Note that the text is specified as an action (&quot;return&quot;) rather than a description (&quot;returns&quot;).</p>
+<p>If the description spills past one line, you should move to the long-form docstring: a summary line (one physical line) preceded by an opening block comment with two asterisks on a line of its own (/**, terminated by a period, question mark, or exclamation point, followed by a blank line, followed by the rest of the doc string starting at the same cursor position as the first quote of the first line, ending with an end-block comment (*/) on a line by itself.</p>
+<pre><code>/**
+ This comment serves to demonstrate the format of a docstring.
+
+ Note that the summary line is always at most one line long, and
+ after the opening block comment, and each line of text is preceded
+ by a single space.
+*/
+</code></pre><p>A function must have a docstring unless it meets all of the following criteria:</p>
+<ul>
+<li>not externally visible</li>
+<li>very short</li>
+<li>obvious</li>
+</ul>
+<p>The docstring should describe the function&apos;s calling syntax and its semantics, not its implementation.</p>
+<h2 id="comments">Comments</h2>
+<p>When they are needed, comments should be used to explain why a particular piece of code does something. Any comments that are used must be kept up-to-date or deleted.</p>
+<p>Block comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. <em>Exception: This does not apply to those comments used to generate documentation.</em></p>
+<h3 id="header-documentation">Header Documentation</h3>
+<p>The documentation of class should be done using the Doxygen/AppleDoc syntax only in the .h files when possible. Documentation should be provided for methods and properties.</p>
+<p><strong>For example:</strong></p>
+<pre><code class="lang-objective-c">/**
+ *  Designated initializer.
+ *
+ *  @param  store  The store for CRUD operations.
+ *  @param  searchService The search service used to query the store.
+ *
+ *  @return A ZOCCRUDOperationsStore object.
+ */
+- (instancetype)initWithOperationsStore:(id<ZOCGenericStoreProtocol>)store
+                          searchService:(id<ZOCGenericSearchServiceProtocol>)searchService;
+</ZOCGenericSearchServiceProtocol></ZOCGenericStoreProtocol></code></pre>
+<h1 id="inter-object-communication">Inter-Object Communication</h1>
+<p>Every non-trivial software is based on objects that need to communicate with each other to meet complex goals. This chapter is about design concepts going first into deep explanations on how the armory will achieve great architectures works and how it should be used.</p>
+<h2 id="blocks">Blocks</h2>
+<p>Blocks are the Objective-C version of well-knows constructs called lambdas or closures available in other languages for many years now.</p>
+<p>They are a great way to design asynchronous APIs as so:</p>
+<pre><code class="lang-objective-c">- (void)downloadObjectsAtPath:(NSString *)path
+                   completion:(void(^)(NSArray *objects, NSError *error))completion;
+</code></pre>
+<p>When designing something like the above, try to declare functions and methods to take no more than one block and always make the blocks be the last arguments. It is a good approach to try to combine data and error in one block instead of two separate blocks (usually one for the success and one for the failure).</p>
+<p>You should do this because:</p>
+<ul>
+<li>Usually there are part of code that are shared between them (i.e. dismiss a progress or an activity indicator);</li>
+<li>Apple is doing the same, and it is always good to be consistent with the platform;</li>
+<li>Since Blocks are typically multiple lines of code, having the block be other than the last argument would break up the call site<a href="https://github.com/NYTimes/objective-c-style-guide/issues/6)" target="_blank">1</a>;</li>
+<li>Taking more than one block as arguments would make the call site potentially unwieldy in length. It also introduces complexity<a href="https://github.com/NYTimes/objective-c-style-guide/issues/6)" target="_blank">1</a>.</li>
+</ul>
+<p>Consider the above method, the signature of the completion block is very common: the first parameter regards the data the caller is interested in, the second parameter is the error encountered. The contract should be therefore as follow:</p>
+<ul>
+<li>if <code>objects</code> is not nil, then <code>error</code> must be nil</li>
+<li>if <code>objects</code> is nil, then <code>error</code> must not be nil</li>
+</ul>
+<p>as the caller of this method is first interested in the actual data, an implementation like so is preferred:</p>
+<pre><code class="lang-objective-c">- (void)downloadObjectsAtPath:(NSString *)path
+                   completion:(void(^)(NSArray *objects, NSError *error))completion {
+    if (objects) {
+        // do something with the data
+    }
+    else {
+        // some error occurred, &apos;error&apos; variable should not be nil by contract
+    }
+}
+</code></pre>
+<p>Moreover, as for synchronous methods, some of Apple&apos;s APIs write garbage values to the error parameter (if non-NULL) in successful cases, so checking the error can cause false positives.</p>
+<h3 id="under-the-hood">Under the Hood</h3>
+<p>Some key points:</p>
+<ul>
+<li>Blocks are created on the stack</li>
+<li>Blocks can be copied to the heap</li>
+<li>Blocks have their own private const copies of stack variables (and pointers)</li>
+<li>Mutable stack variables and pointers must be declared with the __block keyword</li>
+</ul>
+<p>If blocks aren&apos;t kept around anywhere, will remain on the stack and will go away when their stack frame returns. While on the stack, a block has no effect on the storage or lifetime of anything it accesses. If blocks need to exist after the stack frame returns, they can be copied to the heap and this action is an explicit operation. This way, a block will gain reference-counting as all objects in Cocoa. When they are copied, they take their captured scope with them, retaining any objects they refer. If a block references a stack variable or pointer, then when the block is initialized it is given its own copy of that variable declared const, so assignments won&apos;t work. When a block is copied, the <code>__block</code> stack variables it reference are copied to the heap and after the copy operation both block on the stack and brand new block on the heap refer to the variables on the heap.</p>
+<p>LLDB shows that a block is a nice piece of things.</p>
+<p><img src="images/blocks_debugger.png" alt=""></p>
+<p>The most important thing to note is that <code>__block</code> variables and pointers are treated inside the block as structs that obviously handle the reference to the real value/object.</p>
+<p>Blocks are first-class citizens in the Objective-C runtime: they have an <code>isa</code> pointer which defines a class through which the Objective-C runtime can access methods and storage. In a non-ARC environment you can mess things up for sure, and cause crashes due to dangling pointers. <code>__block</code> applies only when using the variables in the block, it simply says to the block:</p>
+<blockquote>
+<p>Hey, this pointer or primitive type relies on the stack with its own address. Please refer to this little friend with a new variable on the stack. I mean&#x2026; refer to the object with double dereference, and don&apos;t retain it.
+Thank you, sir.</p>
+</blockquote>
+<p>If at some time after the declaration but before the invocation of the block, the object has been released and deallocated, the execution of the block will cause a crash. <code>__block</code> variables are not retained within the block. In the deep end&#x2026; it&apos;s all about pointers, references, dereferences and retain count stuff.</p>
+<h3 id="retain-cycles-on-self">Retain cycles on self</h3>
+<p>It&apos;s important not to get into retain cycles when using blocks and asynchronous dispatches. Always set a <code>weak</code> reference to any variable that could cause a retain cycle. Moreover, it is a good practice to nil the properties holding the blocks (i.e. <code>self.completionBlock = nil</code>) this will break potential retain cycle introduced by the block capturing the scope. </p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-objective-c">__weak __typeof(self) weakSelf = self;
+[self executeBlock:^(NSData *data, NSError *error) {
+    [weakSelf doSomethingWithData:data];
+}];
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">[self executeBlock:^(NSData *data, NSError *error) {
+    [self doSomethingWithData:data];
+}];
+</code></pre>
+<p><strong>Example with multiple statements:</strong></p>
+<pre><code class="lang-objective-c">__weak __typeof(self)weakSelf = self;
+[self executeBlock:^(NSData *data, NSError *error) {
+    __strong __typeof(weakSelf) strongSelf = weakSelf;
+    if (strongSelf) {
+        [strongSelf doSomethingWithData:data];
+        [strongSelf doSomethingWithData:data];
+    }
+}];
+</code></pre>
+<p><strong>Not:</strong></p>
+<pre><code class="lang-objective-c">__weak __typeof(self)weakSelf = self;
+[self executeBlock:^(NSData *data, NSError *error) {
+    [weakSelf doSomethingWithData:data];
+    [weakSelf doSomethingWithData:data];
+}];
+</code></pre>
+<p>You should add these two lines as snippets to Xcode and always use them exactly like this:</p>
+<pre><code class="lang-objective-c">__weak __typeof(self)weakSelf = self;
+__strong __typeof(weakSelf)strongSelf = weakSelf;
+</code></pre>
+<p>Here we dig further about the subtle things to consider about the <code>__weak</code> and the <code>__strong</code> qualifiers for self inside blocks. To summarize, we can refer to self in three different ways inside a block:</p>
+<ol>
+<li>using the keyword <code>self</code> directly inside the block</li>
+<li>declaring a <code>__weak</code> reference to self outside the block and referring to the object via this weak reference inside the block</li>
+<li>declaring a <code>__weak</code> reference to self outside the block and creating a <code>__strong</code> reference to self using the weak reference inside the block</li>
+</ol>
+<p><strong>Case 1: using the keyword <code>self</code> inside a block</strong></p>
+<p>If we use directly the keyword <code>self</code> inside a block, the object is retained at block declaration time within the block (actually when the block is <a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/Blocks/Articles/bxVariables.html#//apple_ref/doc/uid/TP40007502-CH6-SW4" target="_blank">copied</a> but for sake of simplicity we can forget about it) . A const reference to self has its place inside the block and this affects the reference counting of the object. If the block is used by other classes and/or passed around we may want to retain self as well as all the other objects used by the block since they are <em>needed</em> for the execution of the block. </p>
+<pre><code class="lang-objective-c">dispatch_block_t completionBlock = ^{
+    NSLog(@&quot;%@&quot;, self);
+}
+
+MyViewController *myController = [[MyViewController alloc] init...];
+[self presentViewController:myController
+                   animated:YES
+                 completion:completionHandler];
+</code></pre>
+<p>No big deal. But... what if the block is retained by self in a property (as the following example) and therefore the object (self) retains the block?</p>
+<pre><code class="lang-objective-c">self.completionHandler = ^{
+    NSLog(@&quot;%@&quot;, self);
+}
+
+MyViewController *myController = [[MyViewController alloc] init...];
+[self presentViewController:myController
+                   animated:YES
+                 completion:self.completionHandler];
+</code></pre>
+<p>This is what is well known as a retain cycle and retain cycles usually should be avoided. The warning we receive from CLANG is:</p>
+<pre><code class="lang-objective-c">Capturing &apos;self&apos; strongly in this block is likely to lead to a retain cycle
+</code></pre>
+<p>Here comes in the <code>__weak</code> qualifier.</p>
+<p><strong>Case 2: declaring a <code>__weak</code> reference to self outside the block and use it inside the block</strong></p>
+<p>Declaring a <code>__weak</code> reference to self outside the block and referring to it via this weak reference inside the block avoids retain cycles. This is what we usually want to do if the block is already retained by self in a property.</p>
+<pre><code class="lang-objective-c">__weak typeof(self) weakSelf = self;
+self.completionHandler = ^{
+    NSLog(@&quot;%@&quot;, weakSelf);
+};
+
+MyViewController *myController = [[MyViewController alloc] init...];
+[self presentViewController:myController
+                   animated:YES
+                 completion:self.completionHandler];
+</code></pre>
+<p>In this example the block does not retain the object and the object retains the block in a property. Cool. We are sure that we can refer to self safely, at worst, it is nilled out by someone. The question is: how is it possible for self to be &quot;destroyed&quot; (deallocated) within the scope of a block?</p>
+<p>Consider the case of a block being copied from an object to another (let&apos;s say myController) as a result of the assignment of a property. The former object is then released before the copied block has had a chance to execute.</p>
+<p>The next step is interesting.</p>
+<p><strong>Case 3: declaring a <code>__weak</code> reference to self outside the block and use a <code>__strong</code> reference inside the block</strong></p>
+<p>You may think, at first, this is a trick to use self inside the block avoiding the retain cycle warning. This is not the case. The strong reference to self is created at <em>block execution time</em> while using self in the block is evaluated at <em>block declaration time</em>, thus retaining the object.</p>
+<p><a href="http://developer.apple.com/library/mac/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html" target="_blank">Apple documentation</a> reports that &quot;For non-trivial cycles, however, you should use&quot; this approach: </p>
+<pre><code class="lang-objective-c">MyViewController *myController = [[MyViewController alloc] init...];
+// ...
+MyViewController * __weak weakMyController = myController;
+myController.completionHandler =  ^(NSInteger result) {
+    MyViewController *strongMyController = weakMyController;
+    if (strongMyController) {
+        // ...
+        [strongMyController dismissViewControllerAnimated:YES completion:nil];
+        // ...
+    }
+    else {
+        // Probably nothing...
+    }
+};
+</code></pre>
+<p>First of all, this example looks wrong to me. How can self be deallocated and be nilled out if the block itself is retained in the <code>completionHandler</code> property? The <code>completionHandler</code> property can be declared as <code>assign</code> or <code>unsafe_unretained</code> to allow the object to be deallocated after the block is passed around.
+I can&apos;t see the reason for doing that. If other objects need the object (self), the block that is passed around should retain the object and therefore the block should not be assigned to a property. No <code>__weak</code>/<code>__strong</code> usage should be involved in this case.</p>
+<p>Anyway, in other cases it is possible for weakSelf to become nil just like the second case explained (declaring a weak reference outside the block and use it inside). </p>
+<p>Moreover, what is the meaning of &quot;trivial block&quot; for Apple? It is my understanding that a trivial block is a block that is not passed around, it&apos;s used within a well defined and controlled scope and therefore the usage of the weak qualifier is just to avoid a retain cycle.</p>
+<p>As <a href="http://dhoerl.wordpress.com/2013/04/23/i-finally-figured-out-weakself-and-strongself/" target="_blank">a</a> <a href="http://blog.random-ideas.net/?p=160" target="_blank">lot</a> <a href="http://stackoverflow.com/questions/7904568/disappearing-reference-to-self-in-a-block-under-arc" target="_blank">of</a> <a href="http://stackoverflow.com/questions/12218767/objective-c-blocks-and-memory-management" target="_blank">online</a> <a href="https://github.com/AFNetworking/AFNetworking/issues/807" target="_blank">references</a>, books (<a href="http://www.effectiveobjectivec.com/" target="_blank">Effective Objective-C 2.0</a> by <a href="https://twitter.com/mattjgalloway" target="_blank">Matt Galloway</a> and <a href="http://www.amazon.it/Pro-Multithreading-Memory-Management-Ios/dp/1430241160" target="_blank">Pro Multithreading and Memory Management for iOS and OS X</a> by Kazuki Sakamoto &amp; Tomohiko Furumoto) discuss this edge case, the topic is not well understood yet by the majority of the developers.</p>
+<p>The real benefit of using the strong reference inside of a block is to be robust to preemption. Going again through the above 3 cases, during the execution of a block:</p>
+<p><strong>Case 1: using the keyword <code>self</code> inside a block</strong></p>
+<p>If the block is retained by a property, a retain cycle is created between self and the block and both objects can&apos;t be destroyed anymore. If the block is passed around and copied by others, self is retained for each copy.</p>
+<p><strong>Case 2: declaring a <code>__weak</code> reference to self outside the block and use it inside the block</strong></p>
+<p>There is no retain cycle and no matter if the block is retained or not by a property. If the block is passed around and copied by others, when executed, weakSelf can have been turned nil.
+The execution of the block can be preempted and different subsequent evaluations of the weakSelf pointer can lead to different values (i.e. weakSelf can become nil at a certain evaluation).</p>
+<pre><code class="lang-objective-c">__weak typeof(self) weakSelf = self;
+dispatch_block_t block =  ^{
+    [weakSelf doSomething]; // weakSelf != nil
+    // preemption, weakSelf turned nil
+    [weakSelf doSomethingElse]; // weakSelf == nil
+};
+</code></pre>
+<p><strong>Case 3: declaring a <code>__weak</code> reference to self outside the block and use a <code>__strong</code> reference inside the block</strong></p>
+<p>There is no retain cycle and, again, no matter if the block is retained or not by a property. If the block is passed around and copied by others, when executed, <code>weakSelf</code> can have been turned nil. When the strong reference is assigned and it is not nil, we are sure that the object is retained for the entire execution of the block if preemption occurs and therefore subsequent evaluations of strongSelf will be consistent and will lead to the same value since the object is now retained. If strongSelf evaluates to nil usually the execution is returned since the block cannot execute properly.</p>
+<pre><code class="lang-objective-c">__weak typeof(self) weakSelf = self;
+myObj.myBlock =  ^{
+    __strong typeof(self) strongSelf = weakSelf;
+    if (strongSelf) {
+      [strongSelf doSomething]; // strongSelf != nil
+      // preemption, strongSelf still not nil
+      [strongSelf doSomethingElse]; // strongSelf != nil
+    }
+    else {
+        // Probably nothing...
+        return;
+    }
+};
+</code></pre>
+<p>In an ARC-based environment, the compiler itself alerts us with an error if trying to access an instance variable using the <code>-&gt;</code> notation. The error is very clear:</p>
+<pre><code class="lang-objective-c">Dereferencing a __weak pointer is not allowed due to possible null value caused by race condition, assign it to a strong variable first.
+</code></pre>
+<p>It can be shown with the following code:</p>
+<pre><code class="lang-objective-c">__weak typeof(self) weakSelf = self;
+myObj.myBlock =  ^{
+    id localVal = weakSelf-&gt;someIVar;
+};
+</code></pre>
+<p>In the very end:</p>
+<ul>
+<li><p><strong>Case 1</strong>: should be used only when the block is not assigned to a property, otherwise it will lead to a retain cycle.</p>
+</li>
+<li><p><strong>Case 2</strong>: should be used when the block is assigned to a property.</p>
+</li>
+<li><p><strong>Case 3</strong>: it is related to concurrent executions. When asynchronous services are involved, the blocks that are passed to them can be executed at a later period and there is no certainty about the existence of the self object.</p>
+</li>
+</ul>
+<h2 id="delegate-and-datasource">Delegate and DataSource</h2>
+<p>Delegation is a widespread pattern throughout Apple&apos;s frameworks and it is one of the most important patterns in the Gang of Four&apos;s book &quot;Design Patterns&quot;. The delegation pattern is unidirectional, the message sender (the delegant) needs to know about the recipient (the delegate), but not the other way around. The coupling between the objects is loosen the sender only knows that its delegate conforms to a specific protocol.</p>
+<p>In its pure form, delegation is about providing callbacks to the delegate, which means that the delegate implements a set of methods with void return type.</p>
+<p>Unfortunately this has not been respected over years by the APIs from Apple and therefore developers acted imitating this misleading approach. A classic example is the <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UITableViewDelegate_Protocol/Reference/Reference.html" target="_blank">UITableViewDelegate</a> protocol.</p>
+<p>While some methods have void return type and look like callbacks:</p>
+<pre><code class="lang-objective-c">- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath;
+</code></pre>
+<p>others are definitely not:</p>
+<pre><code class="lang-objective-c">- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender;
+</code></pre>
+<p>When the delegant asks for some kind of information to the delegate object, the direction implied is from the delegate to the delegant and to the other way around anymore. This is conceptually different and a new name should be use to describe the pattern: DataSource.</p>
+<p>One could argue that Apple has a <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UITableViewDataSource_Protocol/Reference/Reference.html" target="_blank">UITableViewDataSouce</a> protocol for it (forced under the name of the delegate pattern) but in reality it is used for methods providing information about how the real data should be presented.</p>
+<pre><code class="lang-objective-c">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+</code></pre>
+<p>Moreover, in the above 2 methods Apple mixed the presentation layer with the data layer which is clearly ugly and in the end very few developers felt bad about it over times and even here we&apos;ll call delegate methods both methods with void return type and not void for simplicity.</p>
+<p>To split the concepts, the following approach should be used:</p>
+<ul>
+<li>delegate pattern: when the delegant needs to notify the delegate about event occurred</li>
+<li>datasource pattern: when the delegant needs to fetch information from the datasource object</li>
+</ul>
+<p>Here is a concrete example:</p>
+<pre><code class="lang-objective-c">@class ZOCSignUpViewController;
+
+@protocol ZOCSignUpViewControllerDelegate <NSObject>
+- (void)signUpViewControllerDidPressSignUpButton:(ZOCSignUpViewController *)controller;
+@end
+
+@protocol ZOCSignUpViewControllerDataSource <NSObject>
+- (ZOCUserCredentials *)credentialsForSignUpViewController:(ZOCSignUpViewController *)controller;
+@end
+
+@protocol ZOCSignUpViewControllerDataSource <NSObject>
+
+@interface ZOCSignUpViewController : UIViewController
+
+@property (nonatomic, weak) id<ZOCSignUpViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<ZOCSignUpViewControllerDataSource> dataSource;
+
+@end
+</ZOCSignUpViewControllerDataSource></ZOCSignUpViewControllerDelegate></NSObject></NSObject></NSObject></code></pre>
+<p>Delegate methods should be always have the caller as first parameter as in the above example otherwise delegate objects could not be able to distinguish between different instances of delegants. In other words, if the caller is not passed to the delegate object, there would be no way for any delegate to deal with 2 delegant object. So, following is close to blasphemy:</p>
+<pre><code class="lang-objective-c">- (void)calculatorDidCalculateValue:(CGFloat)value;
+</code></pre>
+<p>By default, methods in protocols are required to be implemented by delegate objects. It is possible to mark some of them as optional and to be explicit about the required method using the <code>@required</code> and <code>@optional</code> keywords as so: </p>
+<pre><code class="lang-objective-c">@protocol ZOCSignUpViewControllerDelegate <NSObject>
+@required
+- (void)signUpViewController:(ZOCSignUpViewController *)controller didProvideSignUpInfo:(NSDictionary *);
+@optional
+- (void)signUpViewControllerDidPressSignUpButton:(ZOCSignUpViewController *)controller;
+@end
+</NSObject></code></pre>
+<p>For optional methods, the delegant must check if the delegate actually implements a specific method before sending the message to it (otherwise a crash would occur) as so:</p>
+<pre><code class="lang-objective-c">if ([self.delegate respondsToSelector:@selector(signUpViewControllerDidPressSignUpButton:)]) {
+    [self.delegate signUpViewControllerDidPressSignUpButton:self];
+}
+</code></pre>
+<h3 id="inheritance">Inheritance</h3>
+<p>Sometimes you may need to override delegate methods. Consider the case of having two UIViewController subclasses: UIViewControllerA and UIViewControllerB, with the following class hierarchy.</p>
+<p><code>UIViewControllerB &lt; UIViewControllerA &lt; UIViewController</code></p>
+<p><code>UIViewControllerA</code> conforms to <code>UITableViewDelegate</code> and implements <code>- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath</code>.</p>
+<p>You want to provide a different implementation for the method above in <code>UIViewControllerB</code>. An implementation like the following will work:</p>
+<pre><code class="lang-objective-c">
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat retVal = 0;
+    if ([super respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
+        retVal = [super tableView:self.tableView heightForRowAtIndexPath:indexPath];
+    }
+    return retVal + 10.0f;
+}
+</code></pre>
+<p>But what if the given method was not implemented in the superclass (<code>UIViewControllerA</code>)?</p>
+<p>The invocation</p>
+<pre><code class="lang-objective-c">[super respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]
+</code></pre>
+<p>will use the NSObject&apos;s implementation that will lookup, under the hood, in the context of <code>self</code> and clearly self implements the method but the app will crash at the next line with the following error:</p>
+<pre><code>*** Terminating app due to uncaught exception &apos;NSInvalidArgumentException&apos;, reason: &apos;-[UIViewControllerB tableView:heightForRowAtIndexPath:]: unrecognized selector sent to instance 0x8d82820&apos;
+</code></pre><p>In this case we need to ask if instances of a specific class can respond to a given selector. The following code would do the trick:</p>
+<pre><code class="lang-objective-c">
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat retVal = 0;
+    if ([[UIViewControllerA class] instancesRespondToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
+        retVal = [super tableView:self.tableView heightForRowAtIndexPath:indexPath];
+    }
+    return retVal + 10.0f;
+}
+</code></pre>
+<p>As code as the one above is ugly, often it&apos;d be better to design the architecture in a way that delegate methods don&apos;t need to be overridden.</p>
+<h3 id="multiple-delegation">Multiple Delegation</h3>
+<p>Multiple delegation is a very fundamental concept that, unfortunately, the majority of developers are hardly familiar with and too often NSNotifications are used instead. As you may have noticed, delegation and datasource are inter-object communication pattern involving only 2 objects: 1 delegant and 1 delegate.</p>
+<p>DataSource pattern is forced to be 1 to 1 as the information the sender asks for can be provided by one and only one object. Things are different for the delegate pattern and it would be perfectly reasonable to have many delegate objects waiting for the callbacks.</p>
+<p>There are cases where at least 2 objects are interested in receiving the callbacks from a particular delegant and the latter wants to know all of its delegates. This approach maps better a distributed system and more generically how complex flows of information usually go in wide software.</p>
+<p>Multiple delegation can be achieved in many ways and the reader is dared to find a proper personal implementation. A very neat implementation of multiple delegation using the forward mechanism is given by Luca Bernardi in his <a href="https://github.com/lukabernardi/LBDelegateMatrioska" target="_blank">LBDelegateMatrioska</a>.</p>
+<p>A basic implementation is given here to unfold the concept. Even if in Cocoa there are ways to store weak references in a data structure to avoid retain cycles, here we use a class to hold a weak reference to the delegate object as single delegation does.</p>
+<pre><code class="lang-objective-c">@interface ZOCWeakObject : NSObject
+
+@property (nonatomic, weak, readonly) id object;
+
++ (instancetype)weakObjectWithObject:(id)object;
+- (instancetype)initWithObject:(id)object;
+
+@end
+</code></pre>
+<pre><code class="lang-objective-c">@interface ZOCWeakObject ()
+@property (nonatomic, weak) id object;
+@end
+
+@implementation ZOCWeakObject
+
++ (instancetype)weakObjectWithObject:(id)object {
+    return [[[self class] alloc] initWithObject:object];
+}
+
+- (instancetype)initWithObject:(id)object {
+    if ((self = [super init])) {
+        _object = object;
+    }
+    return self;
+}
+
+- (BOOL)isEqual:(id)object {
+    if (self == object) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[object class]]) {
+        return NO;
+    }
+
+    return [self isEqualToWeakObject:(ZOCWeakObject *)object];
+}
+
+- (BOOL)isEqualToWeakObject:(ZOCWeakObject *)object {
+    if (!object) {
+        return NO;
+    }
+
+    BOOL objectsMatch = [self.object isEqual:object.object];
+    return objectsMatch;
+}
+
+- (NSUInteger)hash {
+    return [self.object hash];
+}
+
+@end
+</code></pre>
+<p>A simple component using weak objects to achieve multiple delegation:</p>
+<pre><code class="lang-objective-c">@protocol ZOCServiceDelegate <NSObject>
+@optional
+- (void)generalService:(ZOCGeneralService *)service didRetrieveEntries:(NSArray *)entries;
+@end
+
+@interface ZOCGeneralService : NSObject
+- (void)registerDelegate:(id<ZOCServiceDelegate>)delegate;
+- (void)deregisterDelegate:(id<ZOCServiceDelegate>)delegate;
+@end
+
+@interface ZOCGeneralService ()
+@property (nonatomic, strong) NSMutableSet *delegates;
+@end
+</ZOCServiceDelegate></ZOCServiceDelegate></NSObject></code></pre>
+<pre><code class="lang-objective-c">@implementation ZOCGeneralService
+- (void)registerDelegate:(id<ZOCServiceDelegate>)delegate {
+    if ([delegate conformsToProtocol:@protocol(ZOCServiceDelegate)]) {
+        [self.delegates addObject:[[ZOCWeakObject alloc] initWithObject:delegate]];
+    }
+}
+
+- (void)deregisterDelegate:(id<ZOCServiceDelegate>)delegate {
+    if ([delegate conformsToProtocol:@protocol(ZOCServiceDelegate)]) {
+        [self.delegates removeObject:[[ZOCWeakObject alloc] initWithObject:delegate]];
+    }
+}
+
+- (void)_notifyDelegates {
+    ...
+    for (ZOCWeakObject *object in self.delegates) {
+        if (object.object) {
+            if ([object.object respondsToSelector:@selector(generalService:didRetrieveEntries:)]) {
+                [object.object generalService:self didRetrieveEntries:entries];
+            }
+        }
+    }
+}
+
+@end
+</ZOCServiceDelegate></ZOCServiceDelegate></code></pre>
+<p>With the <code>registerDelegate:</code> and <code>deregisterDelegate:</code> methods, it is easy to connect/disconnect cables between components: if at some point in time a delegate object is not interested in receiving the callbacks from a delegant, it has the chance to just &apos;unsubscribe&apos;.
+This can be useful when there are different views waiting for some callback to update the shown info: if a view is temporarily hidden (but still alive) it could make sense for it to just unsubscribe to those callbacks.</p>
+<h1 id="aspect-oriented-programming">Aspect Oriented Programming</h1>
+<p>Aspect Oriented Programming (AOP) is something not well-known in the Objective-C community but it should be as the runtime is so powerful that AOP should be one of the first things that comes to the mind. Unfortunately, as there is no standard de facto library, nothing comes ready to use out-of-the-box from Apple and the topic is far from being trivial, developers still don&apos;t think of it in nowadays. </p>
+<p>Quoting the <a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming" target="_blank">Aspect Oriented Programming</a> Wikipedia page:</p>
+<blockquote>
+<p>An aspect can alter the behavior of the base code (the non-aspect part of a program) by applying advice (additional behavior) at various join points (points in a program) specified in a quantification or query called a pointcut (that detects whether a given join point matches).</p>
+</blockquote>
+<p>In the world of Objective-C this means using the runtime features to add <em>aspects</em> to specific methods. The additional behaviors given by the aspect can be either:</p>
+<ul>
+<li>add code to be performed before a specific method call on a specific class</li>
+<li>add code to be performed after a specific method call on a specific class</li>
+<li>add code to be performed instead of the original implementation of a specific method call on a specific class</li>
+</ul>
+<p>There are many ways to achieve this we are not digging into deep here, basically all of them leverage the power of the runtime. 
+<a href="https://twitter.com/steipete" target="_blank">Peter Steinberger</a> wrote a library, <a href="https://github.com/steipete/Aspects" target="_blank">Aspects</a> that fits the AOP approach perfectly. We found it reliable and well-designed and we are going to use it here for sake of simplicity.
+As said for all the AOP-ish libraries, the library does some cool magic with the runtime, replacing and adding methods (further tricks over the method swizzling technique).
+The API of Aspect are interesting and powerful:</p>
+<pre><code class="lang-objective-c">+ (id<AspectToken>)aspect_hookSelector:(SEL)selector
+                      withOptions:(AspectOptions)options
+                       usingBlock:(id)block
+                            error:(NSError **)error;
+- (id<AspectToken>)aspect_hookSelector:(SEL)selector
+                      withOptions:(AspectOptions)options
+                       usingBlock:(id)block
+                            error:(NSError **)error;
+</AspectToken></AspectToken></code></pre>
+<p>For instance, the following code will perform the block parameter after the execution of the method <code>myMethod:</code> (instance or class method that be) on the class <code>MyClass</code>.</p>
+<pre><code class="lang-objective-c">[MyClass aspect_hookSelector:@selector(myMethod:)
+                 withOptions:AspectPositionAfter
+                  usingBlock:^(id<AspectInfo> aspectInfo) {
+            ...
+        }
+                       error:nil];
+</AspectInfo></code></pre>
+<p>In other words: the code provided in the block parameter will always be executed after each call of the <code>@selector</code> parameter on any object of type <code>MyClass</code> (or on the class itself if the method is a class method).</p>
+<p>We added an aspect on <code>MyClass</code> for the method <code>myMethod:</code>.</p>
+<p>Usually AOP is used to implement cross cutting concern. Perfect example to leverage are analytics or logging.</p>
+<p>In the following we will present the use of AOP for analytics. Analytics are a popular &quot;feature&quot; to include in iOS projects, with a huge variety of choices ranging from Google Analytics, Flurry, MixPanel, etc.
+Most of them have tutorials describing how to track specific views and events including a few lines of code inside each class.</p>
+<p>On Ray Wenderlich&apos;s blog there is a long <a href="http://www.raywenderlich.com/53459/google-analytics-ios" target="_blank">article</a> with some sample code to include in your view controller in order to track an event with <a href="https://developers.google.com/analytics/devguides/collection/ios/" target="_blank">Google Analytics</a>:</p>
+<pre><code class="lang-objective-c">- (void)logButtonPress:(UIButton *)button {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@&quot;UX&quot;
+                                                          action:@&quot;touch&quot;
+                                                           label:[button.titleLabel text]
+                                                           value:nil] build]];
+}
+</GAITracker></code></pre>
+<p>The code above sends an event with context information whenever a button is tapped. Things get worse when you want to track a screen view:</p>
+<pre><code class="lang-objective-c">- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@&quot;Stopwatch&quot;];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+}
+</GAITracker></code></pre>
+<p>This should look like a code smell to the most of the experienced iOS developers. We are actually making the view controller dirty adding lines of code that should not belong there as it&apos;s not responsibility of the view controller to track events. You could argue that you usually have a specific object responsible for analytics tracking and you inject this object inside the view controller but the problem is still there and no matter where you hide the tracking logic: you eventually end up inserting some lines of code in the <code>viewDidAppear:</code>.</p>
+<p>We can use AOP to track screen views on specific <code>viewDidAppear:</code> methods, and moreover, we could use the same approach to add event tracking in other methods we are interested in, for instance when the user taps on a button (i.e. trivially calling the corresponding IBAction).</p>
+<p>This approach is clean and unobtrusive:</p>
+<ul>
+<li>the view controllers will not get dirty with code that does not naturally belongs to them</li>
+<li>it becomes possible to specify a SPOC file (single point of customization) for all the aspects to add to our code</li>
+<li>the SPOC should be used to add the aspects at the very startup of the app</li>
+<li>if the SPOC file is malformed and at least one selector or class is not recognized, the app will crash at startup (which is cool for our purposes) </li>
+<li>the team in the company responsible for managing the analytics usually provides a document with the list of <em>things</em> to track; this document could then be easily mapped to a SPOC file</li>
+<li>as the logic for the tracking is now abstracted, it becomes possible to scale with a grater number of analytics providers</li>
+<li>for screen views it is enough to specify in the SPOC file the classes involved (the corresponding aspect will be added to the <code>viewDidAppear:</code> method), for events it is necessary to specify the selectors. To send both screen views and events, a tracking label and maybe extra meta data are needed to provide extra information (depending on the analytics provider).</li>
+</ul>
+<p>We may want a SPOC file similar to the following (also a .plist file would perfectly fit as well):</p>
+<pre><code class="lang-objective-c">NSDictionary *analyticsConfiguration()
+{
+    return @{
+        @&quot;trackedScreens&quot; : @[
+            @{
+                @&quot;class&quot; : @&quot;ZOCMainViewController&quot;,
+                @&quot;label&quot; : @&quot;Main screen&quot;
+                }
+             ],
+        @&quot;trackedEvents&quot; : @[
+            @{
+                @&quot;class&quot; : @&quot;ZOCMainViewController&quot;,
+                @&quot;selector&quot; : @&quot;loginViewFetchedUserInfo:user:&quot;,
+                @&quot;label&quot; : @&quot;Login with Facebook&quot;
+                },
+            @{
+                @&quot;class&quot; : @&quot;ZOCMainViewController&quot;,
+                @&quot;selector&quot; : @&quot;loginViewShowingLoggedOutUser:&quot;,
+                @&quot;label&quot; : @&quot;Logout with Facebook&quot;
+                },
+            @{
+                @&quot;class&quot; : @&quot;ZOCMainViewController&quot;,
+                @&quot;selector&quot; : @&quot;loginView:handleError:&quot;,
+                @&quot;label&quot; : @&quot;Login error with Facebook&quot;
+                },
+            @{
+                @&quot;class&quot; : @&quot;ZOCMainViewController&quot;,
+                @&quot;selector&quot; : @&quot;shareButtonPressed:&quot;,
+                @&quot;label&quot; : @&quot;Share button&quot;
+                }
+             ]
+    };
+}
+</code></pre>
+<p>The architecture proposed is hosted on GitHub on the <a href="https://github.com/ef-ctx/JohnnyEnglish/blob/master/CTXUserActivityTrackingManager.m" target="_blank">EF Education First</a> profile.</p>
+<pre><code class="lang-objective-c">- (void)setupWithConfiguration:(NSDictionary *)configuration
+{
+    // screen views tracking
+    for (NSDictionary *trackedScreen in configuration[@&quot;trackedScreens&quot;]) {
+        Class clazz = NSClassFromString(trackedScreen[@&quot;class&quot;]);
+
+        [clazz aspect_hookSelector:@selector(viewDidAppear:)
+                       withOptions:AspectPositionAfter
+                        usingBlock:^(id<AspectInfo> aspectInfo) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSString *viewName = trackedScreen[@&quot;label&quot;];
+                [tracker trackScreenHitWithName:viewName];
+            });
+        }];
+
+    }
+
+    // events tracking
+    for (NSDictionary *trackedEvents in configuration[@&quot;trackedEvents&quot;]) {
+        Class clazz = NSClassFromString(trackedEvents[@&quot;class&quot;]);
+        SEL selektor = NSSelectorFromString(trackedEvents[@&quot;selector&quot;]);
+
+        [clazz aspect_hookSelector:selektor
+                       withOptions:AspectPositionAfter
+                        usingBlock:^(id<AspectInfo> aspectInfo) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                UserActivityButtonPressedEvent *buttonPressEvent = [UserActivityButtonPressedEvent eventWithLabel:trackedEvents[@&quot;label&quot;]];
+                [tracker trackEvent:buttonPressEvent];
+            });
+        }];
+
+    }
+}
+</AspectInfo></AspectInfo></code></pre>
+<h1 id="references">References</h1>
+<p>Here are some of the documents from Apple that informed the style guide:</p>
+<ul>
+<li><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html" target="_blank">The Objective-C Programming Language</a></li>
+<li><a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html" target="_blank">Cocoa Fundamentals Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html" target="_blank">Coding Guidelines for Cocoa</a></li>
+<li><a href="http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html" target="_blank">iOS App Programming Guide</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Conventions/Conventions.html" target="_blank">Apple Objective-C conventions</a>: code conventions from Apple;</li>
+</ul>
+<p>Others:</p>
+<ul>
+<li><a href="http://objclean.com" target="_blank">Objcetive-Clean</a>: an attempt to write a standard for writing Objective-C code with Xcode integration;</li>
+<li><a href="http://uncrustify.sourceforge.net/" target="_blank">Uncrustify</a>: source code beautifier.</li>
+</ul>
+<h3 id="other-objective-c-style-guides">Other Objective-C Style Guides</h3>
+<p>Here are some of the documents from Apple that informed the style guide. If something has not been mentioned in this book, it&apos;s probably covered in great detail in one of these:</p>
+<p>From Apple:</p>
+<ul>
+<li><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html" target="_blank">The Objective-C Programming Language</a></li>
+<li><a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html" target="_blank">Cocoa Fundamentals Guide</a></li>
+<li><a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html" target="_blank">Coding Guidelines for Cocoa</a></li>
+<li><a href="http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html" target="_blank">iOS App Programming Guide</a></li>
+</ul>
+<p>From the community:</p>
+<ul>
+<li><a href="https://github.com/NYTimes/objetive-c-style-guide" target="_blank">NYTimes Objective-C Style Guide</a></li>
+<li><a href="http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml" target="_blank">Google</a></li>
+<li><a href="https://github.com/github/objective-c-conventions" target="_blank">GitHub</a></li>
+<li><a href="https://trac.adium.im/wiki/CodingStyle" target="_blank">Adium</a></li>
+<li><a href="https://gist.github.com/soffes/812796" target="_blank">Sam Soffes</a></li>
+<li><a href="http://cocoadevcentral.com/articles/000082.php" target="_blank">CocoaDevCentral</a></li>
+<li><a href="http://lukeredpath.co.uk/blog/my-objective-c-style-guide.html" target="_blank">Luke Redpath</a></li>
+<li><a href="http://www.cimgf.com/zds-code-style-guide/" target="_blank">Marcus Zarra</a></li>
+<li><a href="https://github.com/raywenderlich/objective-c-style-guide" target="_blank">Ray Wenderlich</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

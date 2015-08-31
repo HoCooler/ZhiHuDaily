@@ -10,8 +10,10 @@
 #import "NewsDetailInfo.h"
 
 @interface NewsDetailWebView : UIWebView<UIWebViewDelegate>
+
 @property (nonatomic, strong) NewsDetailInfo *info;
 @property (nonatomic, strong) UIView *headView;
+@property (nonatomic, strong) RACCommand *previousCommand;
 
 - (id)initWithFrame:(CGRect)newFrame header:(UIView *)header;
 @end

@@ -11,6 +11,7 @@
 @interface NewsDetailWebView()
 
 @property (nonatomic, assign) CGSize headViewSize;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 @implementation NewsDetailWebView
@@ -26,12 +27,27 @@
         self.frame = newFrame;
         self.headView = header;
         _headViewSize = header.frame.size;
-        self.backgroundColor = [UIColor grayColor];
-//        self.scrollView.contentInset = UIEdgeInsetsMake(header.frame.size.height, 0.0f, 0.0f, 0.0f);
+        self.backgroundColor = [UIColor whiteColor];
         self.headView.frame = CGRectMake(0, 0, header.frame.size.width, header.frame.size.height);
         [self.scrollView addSubview:self.headView];
+        
+        _refreshControl = [UIRefreshControl new];
+        [self.refreshControl addTarget:self action:@selector(LoadPreviousNews) forControlEvents:UIControlEventValueChanged];
+        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"上拉获取上一篇"];
+        [self.scrollView addSubview:self.refreshControl];
     }
     return self;
+}
+
+- (void)LoadPreviousNews
+{
+    if(self.previousCommand){
+        [self.previousCommand execute:nil];
+    }
+    
+    if (self.refreshControl.isRefreshing) {
+        [self.refreshControl endRefreshing];
+    }
 }
 
 - (void)setInfo:(NewsDetailInfo *)info

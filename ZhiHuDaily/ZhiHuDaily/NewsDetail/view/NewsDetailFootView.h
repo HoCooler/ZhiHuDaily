@@ -10,4 +10,8 @@
 
 @interface NewsDetailFootView : UIView
 
+@property (nonatomic, strong) id dataSource;
+@property (nonatomic, strong) RACCommand *backCommand;
+@property (nonatomic, strong) RACCommand *nextCommand;
+
 @end

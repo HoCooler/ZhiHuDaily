@@ -15,7 +15,7 @@
 {
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        NSString *prefix = @"http://news-at.zhihu.com/api/4/news/";
+        NSString *prefix = @"http://news-at.zhihu.com/api/4/story/";
         NSString *path = [NSString stringWithFormat:@"%@%@", prefix, newsID];
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {

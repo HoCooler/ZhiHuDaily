@@ -10,15 +10,31 @@
 	<string>ZhiHuDaily</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0</key>
+		<string>https://github.com/ipader/SwiftGuide.git</string>
+		<key>6C66D6B3D899F44FFB9C28C8920B919283708B86</key>
+		<string>https://github.com/nixzhu/dev-blog.git</string>
 		<key>7220A93D1A5E08B0C8E5DED0604C1504075F2D7D</key>
 		<string>https://github.com/brain-cooler/ZhiHuDaily.git</string>
+		<key>923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA</key>
+		<string>https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques.git</string>
+		<key>BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7</key>
+		<string>https://github.com/brain-cooler/free-programming-books.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ZhiHuDaily/ZhiHuDaily.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0</key>
+		<string>../../ZhiHuDaily/ZhiHuDaily/GitBook/SwiftGuide/</string>
+		<key>6C66D6B3D899F44FFB9C28C8920B919283708B86</key>
+		<string>../../ZhiHuDaily/ZhiHuDaily/GitBook/dev-blog/</string>
 		<key>7220A93D1A5E08B0C8E5DED0604C1504075F2D7D</key>
 		<string>../../..</string>
+		<key>923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA</key>
+		<string>../../ZhiHuDaily/ZhiHuDaily/GitBook/iOS-Core-Animation-Advanced-Techniques/</string>
+		<key>BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7</key>
+		<string>../../ZhiHuDaily/ZhiHuDaily/GitBook/free-programming-books/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/brain-cooler/ZhiHuDaily.git</string>
@@ -35,6 +51,38 @@
 			<string>7220A93D1A5E08B0C8E5DED0604C1504075F2D7D</string>
 			<key>IDESourceControlWCCName</key>
 			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C66D6B3D899F44FFB9C28C8920B919283708B86</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dev-blog</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>free-programming-books</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Core-Animation-Advanced-Techniques</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftGuide</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
