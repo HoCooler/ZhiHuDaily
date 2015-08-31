@@ -10,12 +10,15 @@
 #import "NewsDetailWebView.h"
 #import "NewsDetailViewModel.h"
 #import "NewsDetailHeadView.h"
+#import "NewsDetailFootView.h"
+#import "UIColor+ZHDAddition.h"
 
 @interface NewsDetailViewController ()
 
 @property (nonatomic, strong) NewsDetailWebView *webView;
-@property (nonatomic, strong) UIView *actionView;
 @property (nonatomic, strong) NewsDetailHeadView *headView;
+@property (nonatomic, strong) NewsDetailFootView *footView;
+
 @property (nonatomic, strong) NewsDetailViewModel *viewModel;
 
 @end
@@ -37,11 +40,14 @@
     _headView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
     
     _webView = [[NewsDetailWebView alloc] initWithFrame:CGRectZero header:_headView];
-    _webView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_webView];
     
-    RAC(self, webView.info) = RACObserve(self, viewModel.info);
-    RAC(self, headView.headInfo) = RACObserve(self, viewModel.info);
+    _footView = [NewsDetailFootView new];
+    [self.view addSubview:_footView];
+    
+    RACSignal *viewModelSignal = RACObserve(self, viewModel.info);
+    RAC(self, webView.info) = viewModelSignal;
+    RAC(self, headView.headInfo) = viewModelSignal;
 
     [self.viewModel.fetchNewsDetailCommand execute:nil];
 
@@ -50,27 +56,17 @@
 
 - (void)updateViewConstraints
 {
-    [self.actionView mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.webView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.height.equalTo(@0);
+        make.bottom.equalTo(self.footView.mas_top);
     }];
     
-    [self.webView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.actionView.mas_bottom);
+    [self.footView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.left.right.equalTo(self.view);
+        make.height.equalTo(@40);
     }];
     
     [super updateViewConstraints];
-}
-
-- (UIView *)actionView
-{
-    if (!_actionView) {
-        _actionView = [[UIView alloc] init];
-        _actionView.backgroundColor = [UIColor greenColor];
-        [self.view addSubview:_actionView];
-    }
-    return _actionView;
 }
 
 @end

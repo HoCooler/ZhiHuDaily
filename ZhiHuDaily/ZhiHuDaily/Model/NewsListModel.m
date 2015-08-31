@@ -37,7 +37,7 @@
 
         NSString *path;
         if (!self.themeID || [self.themeID integerValue] == 1) {
-            path = @"http://news-at.zhihu.com/api/4/news/latest";
+            path = @"http://news-at.zhihu.com/api/4/news/latest?client=0";
         } else if ([self.themeID integerValue] > 1 && [self.themeID integerValue] <= 13){
             path = [NSString stringWithFormat:@"http://news-at.zhihu.com/api/4/theme/%@", self.themeID];
         } else {

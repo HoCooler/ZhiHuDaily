@@ -9,6 +9,9 @@
 #import "NewsDetailWebView.h"
 
 @interface NewsDetailWebView()
+
+@property (nonatomic, assign) CGSize headViewSize;
+
 @end
 @implementation NewsDetailWebView
 
@@ -22,6 +25,8 @@
         
         self.frame = newFrame;
         self.headView = header;
+        _headViewSize = header.frame.size;
+        self.backgroundColor = [UIColor grayColor];
 //        self.scrollView.contentInset = UIEdgeInsetsMake(header.frame.size.height, 0.0f, 0.0f, 0.0f);
         self.headView.frame = CGRectMake(0, 0, header.frame.size.width, header.frame.size.height);
         [self.scrollView addSubview:self.headView];
@@ -33,6 +38,13 @@
 {
     if (![_info isEqual:info]) {
         _info = info;
+        
+        if (info.imageURL.absoluteString.length) {
+            self.headView.frame = CGRectMake(0, 0, self.headViewSize.width, self.headViewSize.height);
+        } else {
+            self.headView.frame = CGRectMake(0, 0, self.headViewSize.width, 0);
+        }
+        
         NSURL *cssURL = [NSURL URLWithString:(info.cssArray.count ? info.cssArray[0] : nil)];
         NSString *htmlString = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=%@ /></head><body>%@</body></html>", cssURL.absoluteString, info.body];
         [self loadHTMLString:htmlString baseURL:nil];
