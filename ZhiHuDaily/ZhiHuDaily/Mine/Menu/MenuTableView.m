@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSArray *themeNames;  //主题名称
 @property (nonatomic, strong) NSArray *themeStatus; //主题是否被订阅
-@property (nonatomic, strong) NSArray *orders; //默认列表展示顺序（版本号：2.5.2）
+@property (nonatomic, strong) NSArray *orders; //默认列表展示顺序（版本号：2.5.3）
 @property (nonatomic, strong) ThemeViewModel *viewModel;
 
 @end
