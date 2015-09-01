@@ -15,7 +15,7 @@ What we should draw attention is that the new API is different from the 2.5.2 ve
 3.4 pull up and drag down to refresh or load more
 3.5 pull up and drag down in the news detail;
 
-4. The 3rd party in the project:
+4.The 3rd party in the project:
 CocoaPod : the 3rd party managerment of the project
 AFnetworking ：the web request
 Masonry ：Autolayout 
@@ -29,7 +29,7 @@ ECSlidingViewController：the drawer effect (temporary)
 5.2 pod install under the project catalogue
 5.3 open ZhiHuDaily.xcworkspace
 
-6. other explain：
+6.other explain：
 The code is used for the IOS study. Everybody is forbidded using for business. Contact me if you have any problem.
 
 1.工程介绍：
