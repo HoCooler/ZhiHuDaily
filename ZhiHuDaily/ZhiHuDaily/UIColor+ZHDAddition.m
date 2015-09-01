@@ -8,7 +8,7 @@
 
 #import "UIColor+ZHDAddition.h"
 
-@implementation UIColor(ZHDAddition)
+@implementation UIColor(Addition)
 
 +(UIColor *)ZHDbackgroundcolor
 {

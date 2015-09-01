@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NewsDetailExtraInfo;
 
 @interface NewsDetailFootView : UIView
 
-@property (nonatomic, strong) id dataSource;
+@property (nonatomic, strong) NewsDetailExtraInfo *extraInfo;
 @property (nonatomic, strong) RACCommand *backCommand;
 @property (nonatomic, strong) RACCommand *nextCommand;
 

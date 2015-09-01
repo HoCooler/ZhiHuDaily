@@ -8,17 +8,20 @@
 
 #import "NewsDetailFootView.h"
 #import "UIColor+ZHDAddition.h"
+#import "NewsDetailExtraInfo.h"
+#import "TKAlertCenter.h"
 
 @interface NewsDetailFootView()
 
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *nextButton;
 @property (nonatomic, strong) UIButton *shareButton;//学习遮盖层
-@property (nonatomic, strong) UIButton *voteButton; //animotion
+@property (nonatomic, strong) UIButton *voteButton; //学习animotion
 @property (nonatomic, strong) UIButton *commentButton;
 @property (nonatomic, strong) UILabel *commentNumberLabel;
 @property (nonatomic, strong) UILabel *voteNumberLabel;
 
+@property (nonatomic, assign) BOOL isVoted;
 @end
 
 @implementation NewsDetailFootView
@@ -124,6 +127,13 @@
         _shareButton = [UIButton new];
         _shareButton.backgroundColor = [UIColor clearColor];
         [_shareButton setImage:[UIImage imageNamed:@"News_Navigation_Share"] forState:UIControlStateNormal];
+        @weakify(self)
+        _shareButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"I should have presented a viewController here, but I'm too lazy! " message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"I know", nil];
+            [alertView show];
+            return [RACSignal empty];
+        }];
         [self addSubview:_shareButton];
     }
     return _shareButton;
@@ -135,6 +145,25 @@
         _voteButton = [UIButton new];
         _voteButton.backgroundColor = [UIColor clearColor];
         [_voteButton setImage:[UIImage imageNamed:@"News_Navigation_Vote"] forState:UIControlStateNormal];
+        @weakify(self)
+        _voteButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            if (self.isVoted) {
+                [self.voteButton setImage:[UIImage imageNamed:@"News_Navigation_Vote"] forState:UIControlStateNormal];
+                self.extraInfo.voteNumber = [@([self.extraInfo.voteNumber integerValue] - 1) stringValue];
+            } else {
+                [self.voteButton setImage:[UIImage imageNamed:@"News_Navigation_Voted"] forState:UIControlStateNormal];
+                self.extraInfo.voteNumber = [@([self.extraInfo.voteNumber integerValue] + 1) stringValue];
+            }
+            
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:(self.isVoted ? @"-1" : @"+1")];
+            self.isVoted = !self.isVoted;
+            self.voteNumberLabel.text = self.extraInfo.voteNumber;
+
+            //Should add the request here;
+
+            return [RACSignal empty];
+        }];
         [self addSubview:_voteButton];
     }
     return _voteButton;
@@ -146,6 +175,13 @@
         _commentButton = [UIButton new];
         _commentButton.backgroundColor = [UIColor clearColor];
         [_commentButton setImage:[UIImage imageNamed:@"News_Navigation_Comment"] forState:UIControlStateNormal];
+        @weakify(self)
+        _commentButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"I should have jumped a  new viewController, but I'm too lazy! " message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"I know", nil];
+            [alertView show];
+            return [RACSignal empty];
+        }];
         [self addSubview:_commentButton];
     }
     return _commentButton;
@@ -156,7 +192,7 @@
     if (!_commentNumberLabel) {
         _commentNumberLabel = [UILabel new];
         _commentNumberLabel.font = [UIFont systemFontOfSize:8];
-        _commentNumberLabel.text = @"123";
+        _commentNumberLabel.text = @"...";
         [self addSubview:_commentNumberLabel];
     }
     return _commentNumberLabel;
@@ -167,9 +203,19 @@
     if (!_voteNumberLabel) {
         _voteNumberLabel = [UILabel new];
         _voteNumberLabel.font = [UIFont systemFontOfSize:8];
-        _voteNumberLabel.text = @"123";
         [self addSubview:_voteNumberLabel];
     }
     return _voteNumberLabel;
+}
+
+-(void)setExtraInfo:(NewsDetailExtraInfo *)extraInfo
+{
+    if (_extraInfo != extraInfo) {
+        _extraInfo = extraInfo;
+        self.commentNumberLabel.text = extraInfo.commentNumber;
+        self.voteNumberLabel.text = extraInfo.voteNumber;
+        
+        //other Information should set here;
+    }
 }
 @end

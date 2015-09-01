@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor(ZHDAddition)
+@interface UIColor(Addition)
 
 +(UIColor *)ZHDbackgroundcolor;
 

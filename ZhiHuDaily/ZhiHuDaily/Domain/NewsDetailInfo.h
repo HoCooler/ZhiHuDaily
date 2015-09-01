@@ -17,4 +17,5 @@
 @property (nonatomic, strong) NSURL *shareURL;
 @property (nonatomic, strong) NSArray *cssArray;
 @property (nonatomic, strong) NSString *body;
+
 @end

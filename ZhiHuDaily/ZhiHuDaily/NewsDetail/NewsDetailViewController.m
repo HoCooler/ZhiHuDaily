@@ -14,6 +14,7 @@
 #import "UIColor+ZHDAddition.h"
 #import "NewsListItem.h"
 #import "TKAlertCenter.h"
+#import "NewsDetailExtraViewModel.h"
 
 @interface NewsDetailViewController ()
 
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) NewsDetailFootView *footView;
 
 @property (nonatomic, strong) NewsDetailViewModel *viewModel;
+@property (nonatomic, strong) NewsDetailExtraViewModel *extralViewModel;
 
 @property (nonatomic, strong) RACCommand *backCommand;
 @property (nonatomic, strong) RACCommand *nextCommand;
@@ -41,6 +43,7 @@
     _newsID = ((NewsListItem *)self.newsListItems[self.index]).newsID;
     
     _viewModel = [[NewsDetailViewModel alloc] init];
+    _extralViewModel = [[NewsDetailExtraViewModel alloc] init];
     
     _headView = [[NewsDetailHeadView alloc] init];
     _headView.backgroundColor = [UIColor grayColor];
@@ -56,6 +59,9 @@
     RAC(self, webView.info) = viewModelSignal;
     RAC(self, headView.headInfo) = viewModelSignal;
     RAC(self, viewModel.newsID) = RACObserve(self, newsID);
+    RAC(self, extralViewModel.newsID) = RACObserve(self, newsID);
+    RAC(self, footView.extraInfo) = RACObserve(self, extralViewModel.extraInfo);
+    
     self.footView.backCommand = self.backCommand;
     self.footView.nextCommand = self.nextCommand;
     self.webView.previousCommand = self.previousCommand;
@@ -83,6 +89,7 @@
 -(void)refresh
 {
     [self.viewModel.fetchNewsDetailCommand execute:nil];
+    [self.extralViewModel.fetchNewsDetailExtraCommand execute:nil];
 }
 
 - (RACCommand *)backCommand
