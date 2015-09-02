@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1515170CC36462EA051A8D6F /* libPods-ZhiHuDaily.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E21A4FA8C58F18813206F9 /* libPods-ZhiHuDaily.a */; };
 		1C0FFF1C1B5AA48D000CB182 /* NewsBannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0FFF1B1B5AA48D000CB182 /* NewsBannerItem.m */; };
 		1C2A88381B63F4240065F915 /* NewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A88371B63F4240065F915 /* NewsDetailModel.m */; };
 		1C2A883B1B63F5350065F915 /* NewsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A883A1B63F5350065F915 /* NewsDetailViewModel.m */; };
@@ -53,7 +52,6 @@
 		1CC66FB21B63D3EB00E4C791 /* NewsDetailWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC66FB11B63D3EB00E4C791 /* NewsDetailWebView.m */; };
 		1CE81F261B8CB90E009DBCF5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE81F251B8CB90E009DBCF5 /* icon.png */; };
 		1CF7811B1B6141B8008583D8 /* NSTimer+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF7811A1B6141B8008583D8 /* NSTimer+Extention.m */; };
-		6B4690C3E2623451E0DBCA94 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 362D0F643511FD639CB6B01F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,8 +156,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4690C3E2623451E0DBCA94 /* libPods.a in Frameworks */,
-				1515170CC36462EA051A8D6F /* libPods-ZhiHuDaily.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
