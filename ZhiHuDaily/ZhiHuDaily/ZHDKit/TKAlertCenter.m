@@ -32,7 +32,7 @@
 #import "TKAlertCenter.h"
 //#import "UIView+TKCategory.h"
 //#import "TKGlobal.h"
-#import "UIColor+ZHDAddition.h"
+//#import "UIColor+ZHDAddition.h"
 
 #pragma mark - TKAlertView
 @interface TKAlertView : UIView {
@@ -72,8 +72,8 @@
 	CGContextDrawPath(context, kCGPathFill);
 }
 - (void) drawRect:(CGRect)rect{
-//	[[UIColor colorWithWhite:0 alpha:0.8] set];
-    [[UIColor ZHDbackgroundcolor] set];
+	[[UIColor colorWithWhite:0.5 alpha:0.8] set];
+//    [[UIColor ZHDbackgroundcolor] set];
 	[self _drawRoundRectangleInRect:rect withRadius:10];
 	[[UIColor whiteColor] set];
 

@@ -54,7 +54,10 @@
 {
     if (!_leftButton) {
         _leftButton = [UIButton new];
-        _leftButton.backgroundColor = [UIColor redColor];
+        _leftButton.backgroundColor = [UIColor clearColor];
+        [_leftButton setImage:[UIImage imageNamed:@"Dark_Menu_Icon_Setting"] forState:UIControlStateNormal];
+        [_leftButton setTitle:@" 设置" forState:UIControlStateNormal];
+        _leftButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_leftButton];
     }
     return _leftButton;
@@ -64,7 +67,10 @@
 {
     if (!_rightButton) {
         _rightButton = [UIButton new];
-        _rightButton.backgroundColor = [UIColor redColor];
+        _rightButton.backgroundColor = [UIColor clearColor];
+        [_rightButton setImage:[UIImage imageNamed:@"Menu_Day"] forState:UIControlStateNormal];
+        [_rightButton setTitle:@" 白天" forState:UIControlStateNormal];
+        _rightButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_rightButton];
     }
     return _rightButton;

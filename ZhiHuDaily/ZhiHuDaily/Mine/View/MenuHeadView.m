@@ -25,7 +25,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor ZHDbackgroundcolor];
     }
     return self;
 }
@@ -37,14 +37,13 @@
 
 - (void)updateConstraints
 {
-    CGFloat kButtonSpace = 15;
+    CGFloat kButtonSpace = 10;
 //    CGFloat klineSapce = 15;
     
     [self.userImage mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kButtonSpace);
         make.top.equalTo(self).offset(20);
         make.bottom.equalTo(self.leftButton.mas_top).offset(-10);
-//        make.width.lessThanOrEqualTo(self.leftButton.mas_width);
         make.width.equalTo(self.userImage.mas_height);
     }];
     
@@ -77,45 +76,17 @@
     [super updateConstraints];
 }
 
--(UIButton *)leftButton
-{
-    if (!_leftButton) {
-        _leftButton = [UIButton new];
-        _leftButton.backgroundColor = [UIColor redColor];
-        [self addSubview:_leftButton];
-    }
-    return _leftButton;
-}
-
--(UIButton *)middleButton
-{
-    if (!_middleButton) {
-        _middleButton = [UIButton new];
-        _middleButton.backgroundColor = [UIColor redColor];
-        [self addSubview:_middleButton];
-    }
-    return _middleButton;
-}
-
--(UIButton *)rightButton
-{
-    if (!_rightButton) {
-        _rightButton = [UIButton new];
-        _rightButton.backgroundColor = [UIColor redColor];
-        [self addSubview:_rightButton];
-    }
-    return _rightButton;
-}
-
 -(UIView *)userImage
 {
     if (!_userImage) {
         _userImage = [UIView new];
-        _userImage.backgroundColor = [UIColor redColor];
+        _userImage.backgroundColor = [UIColor clearColor];
+        UIImage *image = [UIImage imageNamed:@"Menu_Avatar"];
+        _userImage.layer.cornerRadius = image.size.width;
         _userImage.layer.masksToBounds = YES;
-        _userImage.layer.borderWidth = 5;
+        _userImage.layer.borderWidth = 1;
         _userImage.layer.borderColor = [[UIColor whiteColor] CGColor];
-        _userImage.layer.contents = (id)[[UIImage imageNamed:@"NavigationBar_background"] CGImage];
+        _userImage.layer.contents = (id)[image CGImage];
         [self addSubview:_userImage];
     }
     return _userImage;
@@ -125,10 +96,50 @@
 {
     if (!_userLabel) {
         _userLabel = [UILabel new];
-        _userLabel.backgroundColor = [UIColor redColor];
-        _userLabel.text = @"Please Log in";
+        _userLabel.backgroundColor = [UIColor clearColor];
+        _userLabel.text = @"请登录";
         [self addSubview:_userLabel];
     }
     return _userLabel;
 }
+
+-(UIButton *)leftButton
+{
+    if (!_leftButton) {
+        _leftButton = [UIButton new];
+        _leftButton.backgroundColor = [UIColor clearColor];
+        [_leftButton setImage:[UIImage imageNamed:@"Menu_Icon_Message"] forState:UIControlStateNormal];
+        [_leftButton setTitle:@" 消息" forState:UIControlStateNormal];
+        _leftButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self addSubview:_leftButton];
+    }
+    return _leftButton;
+}
+
+-(UIButton *)middleButton
+{
+    if (!_middleButton) {
+        _middleButton = [UIButton new];
+        _middleButton.backgroundColor = [UIColor clearColor];
+        [_middleButton setImage:[UIImage imageNamed:@"Menu_Icon_Collect"] forState:UIControlStateNormal];
+        [_middleButton setTitle:@" 收藏" forState:UIControlStateNormal];
+        _middleButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self addSubview:_middleButton];
+    }
+    return _middleButton;
+}
+
+-(UIButton *)rightButton
+{
+    if (!_rightButton) {
+        _rightButton = [UIButton new];
+        _rightButton.backgroundColor = [UIColor clearColor];
+        [_rightButton setImage:[UIImage imageNamed:@"Menu_Download"] forState:UIControlStateNormal];
+        [_rightButton setTitle:@" 离线下载" forState:UIControlStateNormal];
+        _rightButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self addSubview:_rightButton];
+    }
+    return _rightButton;
+}
+
 @end

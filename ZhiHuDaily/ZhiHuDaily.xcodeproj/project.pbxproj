@@ -54,6 +54,14 @@
 		1CF27DA51B99FF9D002AF1B6 /* NSTimer+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF27DA21B99FF9D002AF1B6 /* NSTimer+Extention.m */; };
 		1CF27DA61B99FF9D002AF1B6 /* UIColor+ZHDAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF27DA41B99FF9D002AF1B6 /* UIColor+ZHDAddition.m */; };
 		1CF27DA91B9A69DE002AF1B6 /* MenuFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF27DA81B9A69DE002AF1B6 /* MenuFooterView.m */; };
+		1CF27DB21B9AF20B002AF1B6 /* Account_Avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DAB1B9AF20B002AF1B6 /* Account_Avatar@2x.png */; };
+		1CF27DB31B9AF20B002AF1B6 /* Dark_Menu_Icon_Setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DAC1B9AF20B002AF1B6 /* Dark_Menu_Icon_Setting@2x.png */; };
+		1CF27DB41B9AF20B002AF1B6 /* Menu_Dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DAD1B9AF20B002AF1B6 /* Menu_Dark@2x.png */; };
+		1CF27DB51B9AF20B002AF1B6 /* Menu_Day@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DAE1B9AF20B002AF1B6 /* Menu_Day@2x.png */; };
+		1CF27DB61B9AF20B002AF1B6 /* Menu_Download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DAF1B9AF20B002AF1B6 /* Menu_Download@2x.png */; };
+		1CF27DB71B9AF20B002AF1B6 /* Menu_Icon_Collect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DB01B9AF20B002AF1B6 /* Menu_Icon_Collect@2x.png */; };
+		1CF27DB81B9AF20B002AF1B6 /* Menu_Icon_Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DB11B9AF20B002AF1B6 /* Menu_Icon_Message@2x.png */; };
+		1CF27DBA1B9B2360002AF1B6 /* Menu_Avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF27DB91B9B2360002AF1B6 /* Menu_Avatar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +158,14 @@
 		1CF27DA41B99FF9D002AF1B6 /* UIColor+ZHDAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ZHDAddition.m"; path = "ZKDUtil/UIColor+ZHDAddition.m"; sourceTree = "<group>"; };
 		1CF27DA71B9A69DE002AF1B6 /* MenuFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuFooterView.h; path = Mine/View/MenuFooterView.h; sourceTree = "<group>"; };
 		1CF27DA81B9A69DE002AF1B6 /* MenuFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuFooterView.m; path = Mine/View/MenuFooterView.m; sourceTree = "<group>"; };
+		1CF27DAB1B9AF20B002AF1B6 /* Account_Avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Account_Avatar@2x.png"; path = "Resource/Menu/Account_Avatar@2x.png"; sourceTree = "<group>"; };
+		1CF27DAC1B9AF20B002AF1B6 /* Dark_Menu_Icon_Setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dark_Menu_Icon_Setting@2x.png"; path = "Resource/Menu/Dark_Menu_Icon_Setting@2x.png"; sourceTree = "<group>"; };
+		1CF27DAD1B9AF20B002AF1B6 /* Menu_Dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Dark@2x.png"; path = "Resource/Menu/Menu_Dark@2x.png"; sourceTree = "<group>"; };
+		1CF27DAE1B9AF20B002AF1B6 /* Menu_Day@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Day@2x.png"; path = "Resource/Menu/Menu_Day@2x.png"; sourceTree = "<group>"; };
+		1CF27DAF1B9AF20B002AF1B6 /* Menu_Download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Download@2x.png"; path = "Resource/Menu/Menu_Download@2x.png"; sourceTree = "<group>"; };
+		1CF27DB01B9AF20B002AF1B6 /* Menu_Icon_Collect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Icon_Collect@2x.png"; path = "Resource/Menu/Menu_Icon_Collect@2x.png"; sourceTree = "<group>"; };
+		1CF27DB11B9AF20B002AF1B6 /* Menu_Icon_Message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Icon_Message@2x.png"; path = "Resource/Menu/Menu_Icon_Message@2x.png"; sourceTree = "<group>"; };
+		1CF27DB91B9B2360002AF1B6 /* Menu_Avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_Avatar@2x.png"; path = "Resource/Menu/Menu_Avatar@2x.png"; sourceTree = "<group>"; };
 		291C20FDB12AA200F7F27131 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		362D0F643511FD639CB6B01F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E21A4FA8C58F18813206F9 /* libPods-ZhiHuDaily.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZhiHuDaily.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +223,7 @@
 		1C3F06101B4ADE8800756388 /* ZhiHuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				1CF27DBB1B9B2FE2002AF1B6 /* ZHDBase */,
 				1C4520061B9344BE00305548 /* ZHDUtil */,
 				1C4520021B9340D200305548 /* ZHDKit */,
 				1CC66FA81B63375800E4C791 /* NewsDetail */,
@@ -277,6 +294,7 @@
 		1C4607DF1B764FF40002337A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1CF27DAA1B9AF1FB002AF1B6 /* Menu */,
 				1C9615DE1B949BB50005FC4B /* News_Navigation */,
 				1C2AF0411B8CBE5A0073659C /* NavigationBar_background@2x.png */,
 				1C2AF03F1B8CBCDA0073659C /* Home_Icon@2x.png */,
@@ -410,6 +428,28 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		1CF27DAA1B9AF1FB002AF1B6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1CF27DB91B9B2360002AF1B6 /* Menu_Avatar@2x.png */,
+				1CF27DAB1B9AF20B002AF1B6 /* Account_Avatar@2x.png */,
+				1CF27DAC1B9AF20B002AF1B6 /* Dark_Menu_Icon_Setting@2x.png */,
+				1CF27DAD1B9AF20B002AF1B6 /* Menu_Dark@2x.png */,
+				1CF27DAE1B9AF20B002AF1B6 /* Menu_Day@2x.png */,
+				1CF27DAF1B9AF20B002AF1B6 /* Menu_Download@2x.png */,
+				1CF27DB01B9AF20B002AF1B6 /* Menu_Icon_Collect@2x.png */,
+				1CF27DB11B9AF20B002AF1B6 /* Menu_Icon_Message@2x.png */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		1CF27DBB1B9B2FE2002AF1B6 /* ZHDBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ZHDBase;
+			sourceTree = "<group>";
+		};
 		B450BD99E2FFAEA5D4D0AB94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,20 +544,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C2AF0421B8CBE5A0073659C /* NavigationBar_background@2x.png in Resources */,
+				1CF27DB81B9AF20B002AF1B6 /* Menu_Icon_Message@2x.png in Resources */,
+				1CF27DBA1B9B2360002AF1B6 /* Menu_Avatar@2x.png in Resources */,
 				1C3F061D1B4ADE8800756388 /* Main.storyboard in Resources */,
 				1C9615F11B949C010005FC4B /* News_Navigation_Share@2x.png in Resources */,
 				1CE81F261B8CB90E009DBCF5 /* icon.png in Resources */,
 				1C9615EB1B949C010005FC4B /* News_Navigation_Arrow_Highlight@2x.png in Resources */,
 				1C9615F21B949C010005FC4B /* News_Navigation_Unnext@2x.png in Resources */,
 				1C9615F41B949C010005FC4B /* News_Navigation_Voted@2x.png in Resources */,
+				1CF27DB61B9AF20B002AF1B6 /* Menu_Download@2x.png in Resources */,
 				1C9615F01B949C010005FC4B /* News_Navigation_Share_Highlight@2x.png in Resources */,
+				1CF27DB71B9AF20B002AF1B6 /* Menu_Icon_Collect@2x.png in Resources */,
 				1C3F06221B4ADE8800756388 /* LaunchScreen.xib in Resources */,
+				1CF27DB31B9AF20B002AF1B6 /* Dark_Menu_Icon_Setting@2x.png in Resources */,
 				1C2AF0401B8CBCDA0073659C /* Home_Icon@2x.png in Resources */,
+				1CF27DB21B9AF20B002AF1B6 /* Account_Avatar@2x.png in Resources */,
 				1C3F061F1B4ADE8800756388 /* Images.xcassets in Resources */,
 				1C9615F31B949C010005FC4B /* News_Navigation_Vote@2x.png in Resources */,
 				1C9615EC1B949C010005FC4B /* News_Navigation_Arrow@2x.png in Resources */,
+				1CF27DB41B9AF20B002AF1B6 /* Menu_Dark@2x.png in Resources */,
 				1C9615EF1B949C010005FC4B /* News_Navigation_Next@2x.png in Resources */,
 				1C9615ED1B949C010005FC4B /* News_Navigation_Comment@2x.png in Resources */,
+				1CF27DB51B9AF20B002AF1B6 /* Menu_Day@2x.png in Resources */,
 				1C9615EE1B949C010005FC4B /* News_Navigation_Next_Highlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

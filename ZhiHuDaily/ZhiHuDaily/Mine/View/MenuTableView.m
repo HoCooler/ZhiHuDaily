@@ -80,7 +80,8 @@
 //                [self themeReorder:index];
             }];
             [self themeReorder:index];
-            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"原本应该订阅成功，但是现在请求验证错误"];
+//            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"原本应该订阅成功，但是现在请求验证错误"];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"订阅成功"];
         }
         return [RACSignal empty];
     }];
