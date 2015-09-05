@@ -9,12 +9,14 @@
 #import "MineViewController.h"
 #import "MenuTableView.h"
 #import "UIColor+ZHDAddition.h"
+#import "MenuHeadView.h"
+#import "MenuFooterView.h"
 
 @interface MineViewController ()
 
-@property (nonatomic, strong) UIView *headView;
+@property (nonatomic, strong) MenuHeadView *headView;
 @property (nonatomic, strong) MenuTableView *listView;
-@property (nonatomic, strong) UIView *footView;
+@property (nonatomic, strong) MenuFooterView *footView;
 
 @end
 
@@ -40,21 +42,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _headView = [UIView new];
-    _headView.backgroundColor = [UIColor ZHDbackgroundcolor];
+    _headView = [[MenuHeadView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_headView];
     
     [_headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@100);
+//        make.height.equalTo(@100);
         make.left.right.top.equalTo(self.view);
     }];
     
-    _footView = [UIView new];
-    _footView.backgroundColor = [UIColor ZHDbackgroundcolor];
+    _footView = [[MenuFooterView alloc] initWithFrame:CGRectZero];
+//    _footView.backgroundColor = [UIColor ZHDbackgroundcolor];
     [self.view addSubview:_footView];
     [_footView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.height.equalTo(@44);
+//        make.height.equalTo(@44);
     }];
     
     _listView = [[MenuTableView alloc] init];
