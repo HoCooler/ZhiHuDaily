@@ -56,7 +56,7 @@
         _leftButton = [UIButton new];
         _leftButton.backgroundColor = [UIColor clearColor];
         [_leftButton setImage:[UIImage imageNamed:@"Dark_Menu_Icon_Setting"] forState:UIControlStateNormal];
-        [_leftButton setTitle:@" 设置" forState:UIControlStateNormal];
+        [_leftButton setTitle:@" 离线下载" forState:UIControlStateNormal];
         _leftButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_leftButton];
     }

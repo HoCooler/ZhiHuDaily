@@ -109,7 +109,7 @@
         _leftButton = [UIButton new];
         _leftButton.backgroundColor = [UIColor clearColor];
         [_leftButton setImage:[UIImage imageNamed:@"Menu_Icon_Message"] forState:UIControlStateNormal];
-        [_leftButton setTitle:@" 消息" forState:UIControlStateNormal];
+        [_leftButton setTitle:@" 收藏" forState:UIControlStateNormal];
         _leftButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_leftButton];
     }
@@ -122,7 +122,7 @@
         _middleButton = [UIButton new];
         _middleButton.backgroundColor = [UIColor clearColor];
         [_middleButton setImage:[UIImage imageNamed:@"Menu_Icon_Collect"] forState:UIControlStateNormal];
-        [_middleButton setTitle:@" 收藏" forState:UIControlStateNormal];
+        [_middleButton setTitle:@" 消息" forState:UIControlStateNormal];
         _middleButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_middleButton];
     }
@@ -135,7 +135,7 @@
         _rightButton = [UIButton new];
         _rightButton.backgroundColor = [UIColor clearColor];
         [_rightButton setImage:[UIImage imageNamed:@"Menu_Download"] forState:UIControlStateNormal];
-        [_rightButton setTitle:@" 离线下载" forState:UIControlStateNormal];
+        [_rightButton setTitle:@" 设置" forState:UIControlStateNormal];
         _rightButton.titleLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:_rightButton];
     }
