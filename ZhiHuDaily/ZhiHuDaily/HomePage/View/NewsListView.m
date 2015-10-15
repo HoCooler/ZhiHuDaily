@@ -107,9 +107,9 @@ static NSString *cellIdentifier = @"newsListCell";
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    NSString *newsID =((NewsListItem *)self.news[indexPath.row]).newsID;
-    if (/*newsID &&*/ self.jumpCommand) {
-        [self.jumpCommand execute:@(indexPath.row)];
+    NSString *newsID =((NewsListItem *)self.news[indexPath.row]).newsID;
+    if (newsID && self.jumpCommand) {
+        [self.jumpCommand execute:newsID];
     }
 }
 @end

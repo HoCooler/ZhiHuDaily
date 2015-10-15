@@ -168,12 +168,12 @@
 {
     if (!_jumpCommand) {
         @weakify(self)
-        _jumpCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSNumber *index) {
+        _jumpCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *newsID) {
             @strongify(self)
             NewsDetailViewController *detailVC = [[NewsDetailViewController alloc] init];
-//            detailVC.newsID = newsID;
+            detailVC.newsID = newsID;
             detailVC.newsListItems = self.viewModel.newsListInfo.items;
-            detailVC.index = [index integerValue];
+//            detailVC.index = [index integerValue];
             [self.navigationController pushViewController:detailVC animated:YES];
             return [RACSignal empty];
         }];

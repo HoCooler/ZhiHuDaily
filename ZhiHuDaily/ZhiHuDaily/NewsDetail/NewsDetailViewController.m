@@ -29,6 +29,8 @@
 @property (nonatomic, strong) RACCommand *nextCommand;
 @property (nonatomic, strong) RACCommand *previousCommand;
 
+@property (nonatomic, assign) NSInteger newsIndex;
+
 @end
 
 @implementation NewsDetailViewController
@@ -39,8 +41,6 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"新闻详情";
-    
-    _newsID = ((NewsListItem *)self.newsListItems[self.index]).newsID;
     
     _viewModel = [[NewsDetailViewModel alloc] init];
     _extralViewModel = [[NewsDetailExtraViewModel alloc] init];
@@ -111,8 +111,9 @@
         @weakify(self)
         _nextCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self)
-            if ((self.index + 1)< self.newsListItems.count) {
-                self.index = self.index + 1;
+            NSInteger index = self.newsIndex;
+            if (index < 0 || (index + 1)< self.newsListItems.count) {
+                self.newsID = ((NewsListItem *)self.newsListItems[index + 1]).newsID;
             } else {
                 [[TKAlertCenter defaultCenter] postAlertWithMessage:@"已经是最后一篇了"];
             }
@@ -128,8 +129,9 @@
         @weakify(self)
         _previousCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self)
-            if (self.index > 0) {
-                self.index = self.index - 1;
+            NSInteger index = self.newsIndex;
+            if (index > 0) {
+                self.newsID = ((NewsListItem *)self.newsListItems[index - 1]).newsID;
             } else {
                 [[TKAlertCenter defaultCenter] postAlertWithMessage:@"已经是第一篇了"];
             }
@@ -139,13 +141,23 @@
     return _previousCommand;
 }
 
--(void)setIndex:(NSInteger)index
+- (void)setNewsID:(NSString *)newsID
 {
-    if (_index != index) {
-        _index = index;
-        self.newsID = ((NewsListItem *)self.newsListItems[self.index]).newsID;
+    if (_newsID != newsID) {
+        _newsID = newsID;
         [self refresh];
     }
 }
 
+- (NSInteger)newsIndex
+{
+    NSInteger __block index = -1;
+    [self.newsListItems enumerateObjectsUsingBlock:^(NewsListItem *item, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([item.newsID isEqual:self.newsID]) {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    return index;
+}
 @end
