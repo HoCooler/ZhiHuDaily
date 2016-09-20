@@ -46,9 +46,7 @@
     
     [super viewDidLoad];
     
-//        [[NSUserDefaults standardUserDefaults] setBool:NO
-//                                                forKey:@"UIViewShowAlignmentRects"];
-//        [[NSUserDefaults standardUserDefaults] synchronize];
+    [NSThread sleepForTimeInterval:2.0];
     
     self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_listView];
@@ -68,24 +66,6 @@
     UIBarButtonItem *titleItem = [[UIBarButtonItem alloc] initWithCustomView:_titleLabel];
     
     self.navigationItem.leftBarButtonItems = @[menuButtonItem, titleItem];
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:1]];
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithWhite:1.0f alpha:0.0f]];
-//    self.navigationController.navigationBarHidden = YES;
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
-//    self.navigationController.navigationBar.alpha = 0.0;
-//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-//    self.edgesForExtendedLayout = UIRectEdgeAll;
-//    self.extendedLayoutIncludesOpaqueBars = YES;
-//    self.modalPresentationCapturesStatusBarAppearance = YES;
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//     [self imageWithColor:[UIColor colorWithWhite:249.0f / 255.0f alpha:0]] forBarMetrics:UIBarMetricsDefault]];
-//    [self imageWithColor:[UIColor colorWithWhite:249.0f / 255.0f alpha:0] path:nil];
-//    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:249.0f / 255.0f alpha:0] path:nil]];
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithWhite:249.0f/255.0f alpha:0.5]];
-//    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:52.0/255 green:185.0/255 blue:253.0/255 alpha:1.0]];
-//    [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor colorWithWhite:1 alpha:0.6] path:nil] forBarMetrics:UIBarMetricsDefault];
-
     
     _refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
@@ -159,7 +139,6 @@
 {
     if (!_bannerView) {
         _bannerView = [[NewsBannerView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
-//        [self.view addSubview:_bannerView];
     }
     return _bannerView;
 }

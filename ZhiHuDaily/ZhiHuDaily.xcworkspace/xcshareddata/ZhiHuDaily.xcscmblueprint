@@ -1,24 +1,24 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++BDAC986",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++6528D33",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++BDAC986" : 0,
-    "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++E0E5E8D" : 0,
-    "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++734670E" : 0,
-    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++8534C04" : 0,
-    "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++999406D" : 0,
-    "6C66D6B3D899F44FFB9C28C8920B919283708B86+++6FD0F94" : 0
+    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++6528D33" : 0,
+    "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++94C52A0" : 0,
+    "6C66D6B3D899F44FFB9C28C8920B919283708B86+++161BBEE" : 0,
+    "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++51437F9" : 0,
+    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++415D7C1" : 0,
+    "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++1181743" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4953D6AB-9D50-4BEA-A992-0923946370CC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++BDAC986" : "ZhiHuDaily",
-    "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++E0E5E8D" : "GitBook\/iOS-Core-Animation-Advanced-Techniques",
-    "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++734670E" : "GitBook\/SwiftGuide",
-    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++8534C04" : "",
-    "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++999406D" : "GitBook\/free-programming-books",
-    "6C66D6B3D899F44FFB9C28C8920B919283708B86+++6FD0F94" : "GitBook\/dev-blog"
+    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++6528D33" : "ZhiHuDaily\/",
+    "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++94C52A0" : "GitBook\/free-programming-books",
+    "6C66D6B3D899F44FFB9C28C8920B919283708B86+++161BBEE" : "GitBook\/dev-blog",
+    "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++51437F9" : "GitBook\/SwiftGuide",
+    "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++415D7C1" : "",
+    "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++1181743" : "GitBook\/iOS-Core-Animation-Advanced-Techniques"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ZhiHuDaily",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -27,32 +27,32 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ipader\/SwiftGuide.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++734670E"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BAA3C4E1BA8A71E6ABBA0DC44C3E8DDBD26A2C0+++51437F9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nixzhu\/dev-blog.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6C66D6B3D899F44FFB9C28C8920B919283708B86+++6FD0F94"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6C66D6B3D899F44FFB9C28C8920B919283708B86+++161BBEE"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/brain-cooler\/ZhiHuDaily.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++8534C04"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++415D7C1"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/brain-cooler\/ZhiHuDaily.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++BDAC986"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7220A93D1A5E08B0C8E5DED0604C1504075F2D7D+++6528D33"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AttackOnDobby\/iOS-Core-Animation-Advanced-Techniques.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++E0E5E8D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "923923BD5D94EDD5EFF2DBA6A712A99B930A4BEA+++1181743"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/brain-cooler\/free-programming-books.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++999406D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BC47EE78FEC85EAFAE92B35C47D4468BB50CFDE7+++94C52A0"
     }
   ]
 }
